@@ -8,7 +8,7 @@ public class A_Star_PF : MonoBehaviour
 {
     public GridManager gridManager;
 
-    public List<Node> FindPath(Vector2Int start, Vector2Int target)
+    public List<Node> FindPath(Vector2 start, Vector2 target)
     {
         Dictionary<Vector2, Node> grid = gridManager.grid;
 

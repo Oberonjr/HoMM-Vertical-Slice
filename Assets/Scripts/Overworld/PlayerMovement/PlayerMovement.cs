@@ -11,14 +11,15 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 3f;
     public GameObject pathSpritePrefab; // Sprite for visualizing the path
     public GameObject destinationSpritePrefab; // Sprite for the destination
+    public GameObject temp;
     public TurnManager turnManager;
     public Player player;
     private List<Node> currentPath;
     private List<Node> remainingPath;
     private bool isMoving = false;
-    private Vector2Int selectedDestination;
+    private Node selectedDestination;
     private bool pathShown = false;
-    
+    private Node currentNodePosition;
 
     
     void Start()
@@ -33,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3Int playerGridPosition = gridManager.tilemap.WorldToCell(playerTransform.position);
         Vector3 snappedPosition = gridManager.tilemap.GetCellCenterWorld(playerGridPosition);
         playerTransform.position = snappedPosition;
+        currentNodePosition = ClosestNode(snappedPosition);
     }
 
     void StartPlayerTurn()
@@ -64,13 +66,15 @@ public class PlayerMovement : MonoBehaviour
         {
             // Allow destination setting if player has no movement points left.
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3Int clickedCell = gridManager.tilemap.WorldToCell(mousePosition);
-            Vector2Int clickedTile = new Vector2Int(clickedCell.x, clickedCell.y);
-            Debug.Log("Click");
-            if (gridManager.grid.ContainsKey(clickedTile) && gridManager.grid[clickedTile].IsWalkable)
+            Instantiate(temp, mousePosition, Quaternion.identity);
+            Node clickedNode = ClosestNode(mousePosition);
+            //Vector3Int clickedCell = gridManager.tilemap.WorldToCell(mousePosition);
+            //Vector2Int clickedTile = new Vector2Int(clickedCell.x, clickedCell.y);
+            //Debug.Log("Click");
+            if (gridManager.grid.ContainsValue(clickedNode) && clickedNode.IsWalkable)
             {
-                Debug.Log("Tile is valid");
-                if (clickedTile == selectedDestination && pathShown)
+                //Debug.Log("Tile is valid");
+                if (clickedNode == selectedDestination && pathShown)
                 {
                     StartCoroutine(MoveAlongPath(currentPath));
                     pathShown = false;
@@ -78,8 +82,8 @@ public class PlayerMovement : MonoBehaviour
                 else
                 {
                     // Generate path 
-                    selectedDestination = clickedTile;
-                    currentPath = pathfinding.FindPath(new Vector2Int(Mathf.RoundToInt(playerTransform.position.x), Mathf.RoundToInt(playerTransform.position.y)), clickedTile);
+                    selectedDestination = clickedNode;
+                    currentPath = pathfinding.FindPath(currentNodePosition.GridPosition, clickedNode.GridPosition);
 
                     if (currentPath != null)
                     {
@@ -135,12 +139,32 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    Node ClosestNode(Vector2 clickedPosition)
+    {
+        float shortestDistance = Mathf.Infinity;
+        Node closestNode = null;
+        foreach (Node node in gridManager.grid.Values)
+        {
+            float specificDistance = Vector2.Distance(node.GridPosition, clickedPosition);
+            if (specificDistance < shortestDistance)
+            {
+                shortestDistance = specificDistance;
+                closestNode = node;
+            }
+        }
+        
+        Debug.Log("Mouse click position is: " + clickedPosition);
+        Debug.Log("Closest node attributed to that is: " + closestNode.GridPosition);
+        return closestNode;
+    }
+    
+    //TODO:Swap v3 movement to be nose-based navigation
     IEnumerator MoveAlongPath(List<Node> path)
     {
         isMoving = true;
         int tilesMoved = 0;
 
-        foreach (var node in path)
+        foreach (Node node in path)
         {
             if (!player.CanMove(1)) break;
 

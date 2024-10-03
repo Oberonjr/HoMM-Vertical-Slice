@@ -80,26 +80,25 @@ public class GridManager : MonoBehaviour
         {
             ContactFilter2D filter = new ContactFilter2D();
             filter.NoFilter();
-            int  amount = currentNode.Collider.OverlapCollider(filter, cols);
-            
-            
-            
+            currentNode.Collider.OverlapCollider(filter, cols);
+
             cols.ForEach(col => currentNode.neighbours.Add(grid.Values.First(x => x.Collider.transform == col.transform),grid.Values.First(x => x.Collider.transform == col.transform).MovementCost));
             foreach (Node neighbour in currentNode.neighbours.Keys)
             {
-                Instantiate(temp, new Vector3(neighbour.GridPosition.x, neighbour.GridPosition.y, 0), Quaternion.identity);
+                //Instantiate(temp, new Vector3(neighbour.GridPosition.x, neighbour.GridPosition.y, 0), Quaternion.identity);
             }
         }
         int tempObjectCount = tempObjects.Count;
         for (int i = 0; i < tempObjectCount; i++)
         {
-            //Destroy(tempObjects[i]);
+            Destroy(tempObjects[i]);
         }
     }
     
 
     int GetMovementCost(TileBase tile)
     {
+        Debug.Log(tile.name);
         if (tile == null) return int.MaxValue;
         switch (tile.name)
         {
