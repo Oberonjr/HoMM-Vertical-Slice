@@ -6,12 +6,14 @@ using UnityEngine;
 
 public class A_Star_PF : MonoBehaviour
 {
-    
+    [Range(0, 1)]
+    [SerializeField] private float distanceWeight = 0.5f;
+    [Range(0, 1)]
+    [SerializeField] private float arbitraryCostWeight = 0.5f;
 
     public List<Node> FindPath(Vector2 start, Vector2 target, Dictionary<Vector2, Node> grid)
     {
         
-
         List<Node> openList = new List<Node>();
         HashSet<Node> closedList = new HashSet<Node>();
 
@@ -36,11 +38,21 @@ public class A_Star_PF : MonoBehaviour
             {
                 if (!neighbor.Key.IsWalkable || closedList.Contains(neighbor.Key)) continue;
 
-                float newMovementCostToNeighbor = currentNode.GCost + neighbor.Value;
+                // Calculate distance between current node and neighbor node
+                float distanceToNeighbor = Vector2.Distance(currentNode.GridPosition, neighbor.Key.GridPosition);
+
+                // Calculate the arbitrary cost from the other script (neighbor.Value in this case)
+                float arbitraryCost = neighbor.Value;
+
+                // Calculate the final movement cost using both the distance and arbitrary cost, weighted
+                float newMovementCostToNeighbor = 
+                    currentNode.GCost 
+                    + (distanceToNeighbor * distanceWeight) 
+                    + (arbitraryCost * arbitraryCostWeight);
                 if (newMovementCostToNeighbor < neighbor.Key.GCost || !openList.Contains(neighbor.Key))
                 {
                     neighbor.Key.GCost = newMovementCostToNeighbor;
-                    neighbor.Key.HCost = neighbor.Value;
+                    neighbor.Key.HCost = (distanceToNeighbor * distanceWeight) + (arbitraryCost * arbitraryCostWeight);
                     neighbor.Key.ParentNode = currentNode;
 
                     if (!openList.Contains(neighbor.Key))
@@ -48,7 +60,6 @@ public class A_Star_PF : MonoBehaviour
                 }
             }
         }
-
         return null; // No path found
     }
 
