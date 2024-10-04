@@ -7,7 +7,7 @@ using UnityEngine.Tilemaps;
 public class GridManager : MonoBehaviour
 {
     public Tilemap tilemap;
-    public Dictionary<Vector2, Node> grid;
+    public Dictionary<Vector2, Node> grid = new Dictionary<Vector2, Node>();
     public Vector3 tileSize; // Automatically detected tile size
     public Color gridColor = Color.black; // Set grid line color
     public float lineWidth = 0.05f; // Thickness of the lines
@@ -21,7 +21,7 @@ public class GridManager : MonoBehaviour
         Quaternion.AngleAxis(240, Vector3.forward) * Vector2.up, Quaternion.AngleAxis(300, Vector3.forward) * Vector2.up  
     };
     
-    void Start()
+    void Awake()
     {
         tileSize = tilemap.layoutGrid.cellSize;
         gridType = tilemap.layoutGrid;
@@ -33,7 +33,7 @@ public class GridManager : MonoBehaviour
     
     void GenerateGrid()
     {
-        grid = new Dictionary<Vector2, Node>();
+        
         List<GameObject> tempObjects = new List<GameObject>();
         int index = 0;
         foreach (var position in tilemap.cellBounds.allPositionsWithin)
@@ -98,7 +98,7 @@ public class GridManager : MonoBehaviour
 
     int GetMovementCost(TileBase tile)
     {
-        Debug.Log(tile.name);
+        //Debug.Log(tile.name);
         if (tile == null) return int.MaxValue;
         switch (tile.name)
         {

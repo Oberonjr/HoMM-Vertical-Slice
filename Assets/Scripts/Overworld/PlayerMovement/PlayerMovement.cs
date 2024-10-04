@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         {
             // Allow destination setting if player has no movement points left.
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Instantiate(temp, mousePosition, Quaternion.identity);
+            //Instantiate(temp, mousePosition, Quaternion.identity);
             Node clickedNode = ClosestNode(mousePosition);
             //Vector3Int clickedCell = gridManager.tilemap.WorldToCell(mousePosition);
             //Vector2Int clickedTile = new Vector2Int(clickedCell.x, clickedCell.y);
@@ -83,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     // Generate path 
                     selectedDestination = clickedNode;
-                    currentPath = pathfinding.FindPath(currentNodePosition.GridPosition, clickedNode.GridPosition);
+                    currentPath = pathfinding.FindPath(currentNodePosition.GridPosition, clickedNode.GridPosition, gridManager.grid);
 
                     if (currentPath != null)
                     {
@@ -104,12 +104,12 @@ public class PlayerMovement : MonoBehaviour
         for (int i = 0; i < path.Count; i++)
         {
             // Skip placing a sprite where the player is already positioned
-            if (path[i].GridPosition == new Vector2Int(Mathf.RoundToInt(playerTransform.position.x), Mathf.RoundToInt(playerTransform.position.y)))
+            if (path[i] == currentNodePosition)
             {
                 continue;
             }
 
-            Vector3 targetPosition = gridManager.tilemap.GetCellCenterWorld(new Vector3Int((int)path[i].GridPosition.x, (int)path[i].GridPosition.y, 0));
+            Vector3 targetPosition = path[i].GridPosition;
             GameObject pathSprite = Instantiate(pathSpritePrefab, targetPosition, Quaternion.identity);
         
             // Darken sprites if the path exceeds movement range
@@ -158,7 +158,7 @@ public class PlayerMovement : MonoBehaviour
         return closestNode;
     }
     
-    //TODO:Swap v3 movement to be nose-based navigation
+    //TODO:Swap v3 movement to be node-based navigation
     IEnumerator MoveAlongPath(List<Node> path)
     {
         isMoving = true;
@@ -168,13 +168,13 @@ public class PlayerMovement : MonoBehaviour
         {
             if (!player.CanMove(1)) break;
 
-            Vector3 targetPosition = gridManager.tilemap.GetCellCenterWorld(new Vector3Int((int)node.GridPosition.x, (int)node.GridPosition.y, 0));
-            while (Vector3.Distance(playerTransform.position, targetPosition) > 0.01f)
+            Vector3 targetPosition = node.GridPosition;
+            while (Vector3.Distance(playerTransform.position, targetPosition) > Mathf.Epsilon)
             {
                 playerTransform.position = Vector3.MoveTowards(playerTransform.position, targetPosition, moveSpeed * Time.deltaTime);
                 yield return null;
             }
-
+            currentNodePosition = node;
             player.ConsumeMovementPoints(1);
             tilesMoved++;
             turnManager.movementSlider.value = player.movementPoints;

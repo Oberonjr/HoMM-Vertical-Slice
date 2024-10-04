@@ -6,11 +6,11 @@ using UnityEngine;
 
 public class A_Star_PF : MonoBehaviour
 {
-    public GridManager gridManager;
+    
 
-    public List<Node> FindPath(Vector2 start, Vector2 target)
+    public List<Node> FindPath(Vector2 start, Vector2 target, Dictionary<Vector2, Node> grid)
     {
-        Dictionary<Vector2, Node> grid = gridManager.grid;
+        
 
         List<Node> openList = new List<Node>();
         HashSet<Node> closedList = new HashSet<Node>();
