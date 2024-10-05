@@ -47,9 +47,13 @@ public class PlayerMovement : MonoBehaviour
             if (remainingPath != null && remainingPath.Any())
             {
                 Debug.Log("Re-applying remainder path");
-                currentPath = remainingPath;
+                currentPath.AddRange(remainingPath);
                 VisualizePath(currentPath);
                 remainingPath.Clear();
+                foreach (Node n in currentPath)
+                {
+                    Debug.Log(n.GridPosition);
+                }
             }
         }
     }
@@ -66,10 +70,7 @@ public class PlayerMovement : MonoBehaviour
         {
             // Allow destination setting if player has no movement points left.
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            //Instantiate(temp, mousePosition, Quaternion.identity);
             Node clickedNode = ClosestNode(mousePosition);
-            //Vector3Int clickedCell = gridManager.tilemap.WorldToCell(mousePosition);
-            //Vector2Int clickedTile = new Vector2Int(clickedCell.x, clickedCell.y);
             //Debug.Log("Click");
             if (gridManager.grid.ContainsValue(clickedNode) && clickedNode.IsWalkable)
             {
@@ -77,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
                 if (clickedNode == selectedDestination && pathShown)
                 {
                     StartCoroutine(MoveAlongPath(currentPath));
-                    pathShown = false;
+                    
                 }
                 else
                 {
@@ -110,22 +111,23 @@ public class PlayerMovement : MonoBehaviour
             }
 
             Vector3 targetPosition = path[i].GridPosition;
-            GameObject pathSprite = Instantiate(pathSpritePrefab, targetPosition, Quaternion.identity);
-        
+            GameObject pathSprite;
+            if (i == path.Count - 1)
+            {
+                 pathSprite = Instantiate(destinationSpritePrefab, targetPosition, Quaternion.identity);
+            }
+            else
+            {
+                 pathSprite = Instantiate(pathSpritePrefab, targetPosition, Quaternion.identity);
+            }
+            
+            path[i].spriteHighlight = pathSprite;
             // Darken sprites if the path exceeds movement range
             if (i >= player.movementPoints)
             {
                 pathSprite.GetComponent<SpriteRenderer>().color = Color.gray;
             }
-
-            if (i == path.Count - 1) // Last node is the destination
-            {
-                GameObject destinationSprite = Instantiate(destinationSpritePrefab, targetPosition, Quaternion.identity);
-                if (i >= player.movementPoints)
-                {
-                    destinationSprite.GetComponent<SpriteRenderer>().color = Color.gray; // Darken if out of range
-                }
-            }
+            
         }
     }
 
@@ -133,7 +135,15 @@ public class PlayerMovement : MonoBehaviour
     void ClearPreviousPath()
     {
         //Debug.Log("Clearing previous path");
-        foreach (GameObject pathSprite in GameObject.FindGameObjectsWithTag("PathSprite"))
+        List<GameObject> currentPathSprites = new List<GameObject>();
+        foreach (Node node in gridManager.grid.Values)
+        {
+            if (node.spriteHighlight != null)
+            {
+                currentPathSprites.Add(node.spriteHighlight);
+            }
+        }
+        foreach (GameObject pathSprite in currentPathSprites)
         {
             Destroy(pathSprite);
         }
@@ -152,9 +162,8 @@ public class PlayerMovement : MonoBehaviour
                 closestNode = node;
             }
         }
-        
-        Debug.Log("Mouse click position is: " + clickedPosition);
-        Debug.Log("Closest node attributed to that is: " + closestNode.GridPosition);
+        //Debug.Log("Mouse click position is: " + clickedPosition);
+        //Debug.Log("Closest node attributed to that is: " + closestNode.GridPosition);
         return closestNode;
     }
     
@@ -166,7 +175,10 @@ public class PlayerMovement : MonoBehaviour
 
         foreach (Node node in path)
         {
-            if (!player.CanMove(1)) break;
+            if (!player.CanMove(1))
+            {
+                break;
+            }
 
             Vector3 targetPosition = node.GridPosition;
             while (Vector3.Distance(playerTransform.position, targetPosition) > Mathf.Epsilon)
@@ -175,6 +187,7 @@ public class PlayerMovement : MonoBehaviour
                 yield return null;
             }
             currentNodePosition = node;
+            Destroy(node.spriteHighlight);
             player.ConsumeMovementPoints(1);
             tilesMoved++;
             turnManager.movementSlider.value = player.movementPoints;
@@ -183,11 +196,17 @@ public class PlayerMovement : MonoBehaviour
         if (path.Count > tilesMoved)
         {
             Debug.Log("Remaining path initialized");
-            remainingPath = path.GetRange(tilesMoved, path.Count - tilesMoved); // Save remaining path for future turns.
+            remainingPath = path.GetRange(tilesMoved, path.Count - tilesMoved);
+            currentPath.Clear();
+            foreach (Node node in remainingPath)
+            {
+                Debug.Log(node.GridPosition);
+            }
         }
         else
         {
             currentPath = new List<Node>(); // Clear path if the destination is reached.
+            pathShown = false;
         }
 
         isMoving = false;

@@ -13,8 +13,10 @@ public class UnitStats : ScriptableObject
     public int initiative;
     public int movementSpeed;
    
-    public interface IAbilities
-    {
+    
+}
+
+public interface IAbilities
+{
         
-    }
 }
