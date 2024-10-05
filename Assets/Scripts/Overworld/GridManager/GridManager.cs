@@ -15,11 +15,6 @@ public class GridManager : MonoBehaviour
     
     private Grid gridType;
     
-    private Vector2[] directions = {
-        Quaternion.AngleAxis(0, Vector3.forward) * Vector2.up, Quaternion.AngleAxis(60, Vector3.forward) * Vector2.up,
-        Quaternion.AngleAxis(120, Vector3.forward) * Vector2.up, Quaternion.AngleAxis(180, Vector3.forward) * Vector2.up,
-        Quaternion.AngleAxis(240, Vector3.forward) * Vector2.up, Quaternion.AngleAxis(300, Vector3.forward) * Vector2.up  
-    };
     
     void Awake()
     {
@@ -29,7 +24,6 @@ public class GridManager : MonoBehaviour
         if(gridType.cellLayout == GridLayout.CellLayout.Rectangle) DrawGridLines();
     }
 
-    
     
     void GenerateGrid()
     {
@@ -152,67 +146,15 @@ public class GridManager : MonoBehaviour
         lineRenderer.sortingOrder = 10; // Ensure it's rendered on top
     }
 
-    public void GetNeighbors( Node node, Dictionary<Vector2, Node> grid)
-    {
-        if (gridType.cellLayout == GridLayout.CellLayout.Rectangle)
-        {
-            
-            for (int x = -1; x <= 1; x++)
-            {
-                for (int y = -1; y <= 1; y++)
-                {
-                    if (x == 0 && y == 0) continue;
-                    AddNeighbors(node, grid, x, y);
-                }
-            } 
-        }
-        else if(gridType.cellLayout == GridLayout.CellLayout.Hexagon)
-        {
-            
-
-
-            foreach (var dir in directions)
-            {
-                AddNeighbors(node, grid, node.GridPosition.x + dir.x, node.GridPosition.y + dir.y);
-            }
-        }
-        else
-        {
-            Debug.Log("Provided grid is not rectangular nor hexagonal");
-        }
-    }
-
-    void AddNeighbors(Node node, Dictionary<Vector2, Node> grid, float x, float y)
-    {
-        Vector2 neighborPosition;
-        if(gridType.cellLayout == GridLayout.CellLayout.Rectangle)
-             neighborPosition = new Vector2(node.GridPosition.x + (int)(x * tileSize.x), node.GridPosition.y + (int)(y * tileSize.y));
-        else if (gridType.cellLayout == GridLayout.CellLayout.Hexagon)
-            neighborPosition = CalculateHexWorldPosition(x, y);
-        else
-        {
-            Debug.Log("Provided grid is not rectangular nor hexagonal");
-            neighborPosition = new Vector2();
-        }
-        // Check if the neighbor position exists in the grid dictionary
-        if (grid.ContainsKey(neighborPosition))
-        {
-            Node neighborNode = grid[neighborPosition];
-            if (neighborNode == node || node.neighbours.ContainsKey(neighborNode)) return;
-            var length = Mathf.Sqrt(Mathf.Pow(x, 2) + Mathf.Pow(y, 2));
-                    
-            node.neighbours.Add(neighborNode, neighborNode.MovementCost * length);
-            //Instantiate(temp, new Vector3(neighborPosition.x, neighborPosition.y, 0), Quaternion.identity);
-        }
-    }
+    
     
     Vector2 CalculateHexWorldPosition(float x, float y)
     {
         //TODO: Remove hard-set numbers, figure out the exact variables that slot in here
-        float posX = x * (0.8659766f * 0.8659766f); //0.8... is the current x-size of the hexagons in the grid
+        float posX = y * tileSize.x + (x % 2 == 0 ? 0 : 1 / 2f); //0.8... is the current x-size of the hexagons in the grid
 
         // Calculate y position with the correct offset for staggered rows
-        float posY = y * 0.8659766f + (x % 2 == 0 ? 0 : 1 / 2.3f); // Adjust row stagger
+        float posY = x * (tileSize.x * 0.75f); // Adjust row stagger
         
         return new Vector2(posX, posY);
     }
