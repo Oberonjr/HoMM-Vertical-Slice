@@ -8,8 +8,9 @@ public class Unit : MonoBehaviour
     public int currentHP;
     public int currentMovementPoints;
     public bool hasRetaliated;  // Tracks if the unit has retaliated this round.
-
+    public Node currentNodePosition;
     public bool IsAI;
+    
     
     private void Start()
     {

@@ -6,8 +6,10 @@ using UnityEngine.Tilemaps;
 
 public class GridManager : MonoBehaviour
 {
-    public Tilemap tilemap;
-    public Dictionary<Vector2, Node> grid = new Dictionary<Vector2, Node>();
+    public static GridManager Instance;
+    
+    public static Tilemap tilemap;
+    public static Dictionary<Vector2, Node> grid = new Dictionary<Vector2, Node>();
     public Vector3 tileSize; 
     public Color gridColor = Color.black; 
     public float lineWidth = 0.05f; 
@@ -20,6 +22,14 @@ public class GridManager : MonoBehaviour
     
     void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(this);
+        }
         tileSize = tilemap.layoutGrid.cellSize;
         gridType = tilemap.layoutGrid;
         GenerateGrid();

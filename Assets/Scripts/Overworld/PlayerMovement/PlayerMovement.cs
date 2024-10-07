@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public A_Star_PF pathfinding;
-    public GridManager gridManager;
+    //public GridManager gridManager;
     public Transform playerTransform;
     public float moveSpeed = 3f;
     public GameObject pathSpritePrefab; // Sprite for visualizing the path
@@ -31,8 +31,8 @@ public class PlayerMovement : MonoBehaviour
 
     void SnapToGridCenter()
     {
-        Vector3Int playerGridPosition = gridManager.tilemap.WorldToCell(playerTransform.position);
-        Vector3 snappedPosition = gridManager.tilemap.GetCellCenterWorld(playerGridPosition);
+        Vector3Int playerGridPosition = GridManager.tilemap.WorldToCell(playerTransform.position);
+        Vector3 snappedPosition = GridManager.tilemap.GetCellCenterWorld(playerGridPosition);
         playerTransform.position = snappedPosition;
         currentNodePosition = ClosestNode(snappedPosition);
     }
@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Node clickedNode = ClosestNode(mousePosition);
             //Debug.Log("Click");
-            if (gridManager.grid.ContainsValue(clickedNode) && clickedNode.IsWalkable)
+            if (GridManager.grid.ContainsValue(clickedNode) && clickedNode.IsWalkable)
             {
                 //Debug.Log("Tile is valid");
                 if (clickedNode == selectedDestination && pathShown)
@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     // Generate path 
                     selectedDestination = clickedNode;
-                    currentPath = pathfinding.FindPath(currentNodePosition.GridPosition, clickedNode.GridPosition, gridManager.grid);
+                    currentPath = pathfinding.FindPath(currentNodePosition.GridPosition, clickedNode.GridPosition, GridManager.grid);
 
                     if (currentPath != null)
                     {
@@ -136,7 +136,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //Debug.Log("Clearing previous path");
         List<GameObject> currentPathSprites = new List<GameObject>();
-        foreach (Node node in gridManager.grid.Values)
+        foreach (Node node in GridManager.grid.Values)
         {
             if (node.spriteHighlight != null)
             {
@@ -153,7 +153,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float shortestDistance = Mathf.Infinity;
         Node closestNode = null;
-        foreach (Node node in gridManager.grid.Values)
+        foreach (Node node in GridManager.grid.Values)
         {
             float specificDistance = Vector2.Distance(node.GridPosition, clickedPosition);
             if (specificDistance < shortestDistance)
