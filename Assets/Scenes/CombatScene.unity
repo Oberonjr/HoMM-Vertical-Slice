@@ -3590,6 +3590,10 @@ PrefabInstance:
       propertyPath: tilemap
       value: 
       objectReference: {fileID: 1139937755}
+    - target: {fileID: 5857877479282901334, guid: b140281fb79079243a0425111b42fdcf, type: 3}
+      propertyPath: nodePlotting
+      value: 
+      objectReference: {fileID: 11400000, guid: e6e5d67a7e8d58740aede98a6a10ab77, type: 2}
     - target: {fileID: 8869953575301307725, guid: b140281fb79079243a0425111b42fdcf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

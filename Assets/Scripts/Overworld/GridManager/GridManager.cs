@@ -8,11 +8,13 @@ public class GridManager : MonoBehaviour
 {
     public Tilemap tilemap;
     public Dictionary<Vector2, Node> grid = new Dictionary<Vector2, Node>();
-    public Vector3 tileSize; // Automatically detected tile size
-    public Color gridColor = Color.black; // Set grid line color
-    public float lineWidth = 0.05f; // Thickness of the lines
+    public Vector3 tileSize; 
+    public Color gridColor = Color.black; 
+    public float lineWidth = 0.05f; 
     public GameObject temp;
     
+    [SerializeReference]
+    public INodePlotting nodePlotting;
     private Grid gridType;
     
     
@@ -27,7 +29,6 @@ public class GridManager : MonoBehaviour
     
     void GenerateGrid()
     {
-        
         List<GameObject> tempObjects = new List<GameObject>();
         int index = 0;
         foreach (var position in tilemap.cellBounds.allPositionsWithin)
@@ -36,16 +37,7 @@ public class GridManager : MonoBehaviour
             
             if (tile != null)
             {
-                Vector2 gridPosition;
-                if(gridType.cellLayout == GridLayout.CellLayout.Rectangle)  
-                    gridPosition = new Vector2(position.x + tileSize.x /2, position.y + tileSize.y /2);
-                else if (gridType.cellLayout == GridLayout.CellLayout.Hexagon)
-                    gridPosition = CalculateHexWorldPosition(position.y, position.x);
-                else
-                {
-                    Debug.Log("No valid grid found.");
-                    gridPosition = new Vector2();
-                }
+                Vector2 gridPosition = nodePlotting.GetNodePosition(position, tileSize);;
                 
                 bool isWalkable = tile != null;
                 int movementCost = GetMovementCost(tile);
