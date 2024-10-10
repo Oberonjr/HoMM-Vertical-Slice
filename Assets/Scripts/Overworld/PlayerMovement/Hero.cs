@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Hero : MonoBehaviour
 {
-    public bool isAI; // Is this player controlled by AI?
+    public bool isAI; 
     public int movementPoints;
     public int maxMovementPoints;
 

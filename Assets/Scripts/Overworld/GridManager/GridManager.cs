@@ -8,8 +8,8 @@ public class GridManager : MonoBehaviour
 {
     public static GridManager Instance;
     
-    public static Tilemap tilemap;
-    public static Dictionary<Vector2, Node> grid = new Dictionary<Vector2, Node>();
+    public Tilemap tilemap;
+    public Dictionary<Vector2, Node> grid = new Dictionary<Vector2, Node>();
     public Vector3 tileSize; 
     public Color gridColor = Color.black; 
     public float lineWidth = 0.05f; 

@@ -11,11 +11,18 @@ public class Unit : MonoBehaviour
     public Node currentNodePosition;
     public bool IsAI;
     
+    [HideInInspector]public bool isUnitTurn;
+    
     
     private void Start()
     {
         currentHP = unitStats.maxHP;
         currentMovementPoints = unitStats.movementSpeed;
+        CombatUnitMovement.Instance.SnapToGridCenter(this);
+        if (!isUnitTurn)
+        {
+            currentNodePosition.IsWalkable = false;
+        }
     }
 
     public void TakeDamage(int damage)

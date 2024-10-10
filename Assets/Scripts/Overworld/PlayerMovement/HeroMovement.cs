@@ -2,18 +2,19 @@ using System.Collections;
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class PlayerMovement : MonoBehaviour
+public class HeroMovement : MonoBehaviour
 {
     public A_Star_PF pathfinding;
     //public GridManager gridManager;
     public Transform playerTransform;
-    public float moveSpeed = 3f;
+    public float animationSpeed = 3f;
     public GameObject pathSpritePrefab; // Sprite for visualizing the path
     public GameObject destinationSpritePrefab; // Sprite for the destination
     public GameObject temp;
     public TurnManager turnManager;
-    public Player player;
+    [FormerlySerializedAs("player")] public Hero hero;
     private List<Node> currentPath;
     private List<Node> remainingPath;
     private bool isMoving = false;
@@ -31,8 +32,8 @@ public class PlayerMovement : MonoBehaviour
 
     void SnapToGridCenter()
     {
-        Vector3Int playerGridPosition = GridManager.tilemap.WorldToCell(playerTransform.position);
-        Vector3 snappedPosition = GridManager.tilemap.GetCellCenterWorld(playerGridPosition);
+        Vector3Int playerGridPosition = GridManager.Instance.tilemap.WorldToCell(playerTransform.position);
+        Vector3 snappedPosition = GridManager.Instance.tilemap.GetCellCenterWorld(playerGridPosition);
         playerTransform.position = snappedPosition;
         currentNodePosition = ClosestNode(snappedPosition);
     }
@@ -40,9 +41,9 @@ public class PlayerMovement : MonoBehaviour
     void StartPlayerTurn()
     {
         // If it's this player's turn, allow movement.
-        if (!player.isAI)
+        if (!hero.isAI)
         {
-            player.ReplenishMovementPoints(); // Replenish movement points at start of the turn
+            hero.ReplenishMovementPoints(); // Replenish movement points at start of the turn
             ClearPreviousPath();
             if (remainingPath != null && remainingPath.Any())
             {
@@ -72,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Node clickedNode = ClosestNode(mousePosition);
             //Debug.Log("Click");
-            if (GridManager.grid.ContainsValue(clickedNode) && clickedNode.IsWalkable)
+            if (clickedNode != null && clickedNode.IsWalkable)
             {
                 //Debug.Log("Tile is valid");
                 if (clickedNode == selectedDestination && pathShown)
@@ -84,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     // Generate path 
                     selectedDestination = clickedNode;
-                    currentPath = pathfinding.FindPath(currentNodePosition.GridPosition, clickedNode.GridPosition, GridManager.grid);
+                    currentPath = pathfinding.FindPath(currentNodePosition.GridPosition, clickedNode.GridPosition, GridManager.Instance.grid);
 
                     if (currentPath != null)
                     {
@@ -123,7 +124,7 @@ public class PlayerMovement : MonoBehaviour
             
             path[i].spriteHighlight = pathSprite;
             // Darken sprites if the path exceeds movement range
-            if (i >= player.movementPoints)
+            if (i >= hero.movementPoints)
             {
                 pathSprite.GetComponent<SpriteRenderer>().color = Color.gray;
             }
@@ -136,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //Debug.Log("Clearing previous path");
         List<GameObject> currentPathSprites = new List<GameObject>();
-        foreach (Node node in GridManager.grid.Values)
+        foreach (Node node in GridManager.Instance.grid.Values)
         {
             if (node.spriteHighlight != null)
             {
@@ -153,7 +154,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float shortestDistance = Mathf.Infinity;
         Node closestNode = null;
-        foreach (Node node in GridManager.grid.Values)
+        foreach (Node node in GridManager.Instance.grid.Values)
         {
             float specificDistance = Vector2.Distance(node.GridPosition, clickedPosition);
             if (specificDistance < shortestDistance)
@@ -164,10 +165,17 @@ public class PlayerMovement : MonoBehaviour
         }
         //Debug.Log("Mouse click position is: " + clickedPosition);
         //Debug.Log("Closest node attributed to that is: " + closestNode.GridPosition);
-        return closestNode;
+        if (Vector2.Distance(clickedPosition, closestNode.GridPosition) <= GridManager.Instance.tileSize.x / 2)
+        {
+            return closestNode;
+        }
+        else
+        {
+            Debug.Log("Clicked position is too far from closest eligible node.");
+            return null;
+        }
     }
     
-    //TODO:Swap v3 movement to be node-based navigation
     IEnumerator MoveAlongPath(List<Node> path)
     {
         isMoving = true;
@@ -175,7 +183,7 @@ public class PlayerMovement : MonoBehaviour
 
         foreach (Node node in path)
         {
-            if (!player.CanMove(1))
+            if (!hero.CanMove(1))
             {
                 break;
             }
@@ -183,14 +191,14 @@ public class PlayerMovement : MonoBehaviour
             Vector3 targetPosition = node.GridPosition;
             while (Vector3.Distance(playerTransform.position, targetPosition) > Mathf.Epsilon)
             {
-                playerTransform.position = Vector3.MoveTowards(playerTransform.position, targetPosition, moveSpeed * Time.deltaTime);
+                playerTransform.position = Vector3.MoveTowards(playerTransform.position, targetPosition, animationSpeed * Time.deltaTime);
                 yield return null;
             }
             currentNodePosition = node;
             Destroy(node.spriteHighlight);
-            player.ConsumeMovementPoints(1);
+            hero.ConsumeMovementPoints(1);
             tilesMoved++;
-            turnManager.movementSlider.value = player.movementPoints;
+            turnManager.movementSlider.value = hero.movementPoints;
         }
 
         if (path.Count > tilesMoved)

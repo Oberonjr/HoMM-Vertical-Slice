@@ -5,20 +5,33 @@ using UnityEngine;
 
 public class CombatTurnManager : MonoBehaviour
 {
+    public static CombatTurnManager Instance;  
+    
+    
     public List<Unit> unitsInCombat = new List<Unit>();
     public int currentTurnIndex = 0;
 
-    public static CombatTurnManager Instance;  // Singleton pattern.
 
+    private Unit currentUnit;
     private void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(this);
+        }
     }
 
     private void Start()
     {
-        StartCombat();
+        StartCoroutine(MyUtils.LateStart(0.1f, () =>
+        {
+            StartCombat();
+        }));
+
     }
 
     public void StartCombat()
@@ -35,29 +48,35 @@ public class CombatTurnManager : MonoBehaviour
             currentTurnIndex = 0;
         }
 
-        Unit currentUnit = unitsInCombat[currentTurnIndex];
-        currentUnit.ReplenishMovementPoints();
-
-        // If the unit is an AI, skip or handle its turn.
+        currentUnit = unitsInCombat[currentTurnIndex];
+        Debug.Log("Starting the turn of: " + currentUnit.name);
+        currentUnit.currentNodePosition.IsWalkable = true;
+        currentUnit.isUnitTurn = true;
         if (currentUnit.IsAI)
         {
             SkipTurn();
         }
         else
         {
-            // Enable player input for the current unit's turn.
+            
+            CombatUnitMovement.Instance.currentUnit = currentUnit;
         }
+        
+        currentUnit.ReplenishMovementPoints();
     }
 
     public void EndTurn()
     {
+        Debug.Log("Ending the turn of: " + currentUnit.name);
+        currentUnit.currentNodePosition.IsWalkable = false;
+        currentUnit.isUnitTurn = false;
         currentTurnIndex++;
         StartUnitTurn();
     }
 
     public void SkipTurn()
     {
-        // Handle skipping turn or unit's inaction.
+        Debug.Log("Skipping the turn of: " + currentUnit.name);
         EndTurn();
     }
 }

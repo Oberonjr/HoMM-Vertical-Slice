@@ -6,11 +6,11 @@ using UnityEngine.UI;
 
 public class TurnManager : MonoBehaviour
 {
-    public List<Player> players;  // List of players, configurable from Inspector.
+    public List<Hero> players;  // List of players, configurable from Inspector.
     public Button endTurnButton;  // End Turn Button in UI.
     public Slider movementSlider; // UI Slider to show movement points.
     private int currentPlayerIndex = 0;
-    private Player currentPlayer;
+    private Hero _currentHero;
 
     public event Action OnPlayerTurnStart;
     public event Action OnPlayerTurnEnd;
@@ -46,18 +46,18 @@ public class TurnManager : MonoBehaviour
 
     private void StartPlayerTurn()
     {
-        currentPlayer = players[currentPlayerIndex];
+        _currentHero = players[currentPlayerIndex];
         OnPlayerTurnStart?.Invoke();
 
         // If it's an AI player, simulate their turn.
-        if (currentPlayer.isAI)
+        if (_currentHero.isAI)
         {
             StartCoroutine(SimulateAITurn());
         }
         else
         {
             // Replenish movement points for the human player.
-            currentPlayer.ReplenishMovementPoints();
+            _currentHero.ReplenishMovementPoints();
             UpdateMovementSlider();
         }
     }
@@ -78,16 +78,16 @@ public class TurnManager : MonoBehaviour
 
     private void UpdateMovementSlider()
     {
-        if (!currentPlayer.isAI)
+        if (!_currentHero.isAI)
         {
-            movementSlider.maxValue = currentPlayer.movementPoints;
-            movementSlider.value = currentPlayer.movementPoints;
+            movementSlider.maxValue = _currentHero.movementPoints;
+            movementSlider.value = _currentHero.movementPoints;
         }
     }
 
     private void UpdateTurnUI()
     {
-        if (!currentPlayer.isAI)
+        if (!_currentHero.isAI)
         {
             // Enable the end turn button for human players.
             endTurnButton.interactable = true;

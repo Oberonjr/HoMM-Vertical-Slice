@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,10 +7,24 @@ using UnityEngine;
 
 public class A_Star_PF : MonoBehaviour
 {
+    public static A_Star_PF Instance;
+    
     [Range(0, 1)]
     [SerializeField] private float distanceWeight = 0.5f;
     [Range(0, 1)]
     [SerializeField] private float arbitraryCostWeight = 0.5f;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(this);
+        }
+    }
 
     public List<Node> FindPath(Vector2 start, Vector2 target, Dictionary<Vector2, Node> grid)
     {
