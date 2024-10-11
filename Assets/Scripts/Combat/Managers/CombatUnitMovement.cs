@@ -71,8 +71,10 @@ public class CombatUnitMovement : MonoBehaviour
                 currentUnitTransform.position = Vector3.MoveTowards(currentUnitTransform.position, targetPosition, animationSpeed * Time.deltaTime);
                 yield return null;
             }
+
+            currentUnit.currentNodePosition.stationedUnit = null;
             currentUnit.currentNodePosition = node;
-            Destroy(node.spriteHighlight);
+            currentUnit.currentNodePosition.stationedUnit = currentUnit;
             currentUnit.UseMovement(1);
             tilesMoved++;
             //turnManager.movementSlider.value = player.movementPoints;

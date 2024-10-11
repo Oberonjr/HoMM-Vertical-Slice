@@ -20,6 +20,7 @@ public class Unit : MonoBehaviour
         currentHP = unitStats.maxHP;
         currentMovementPoints = unitStats.movementSpeed;
         CombatUnitMovement.Instance.SnapToGridCenter(this);
+        currentNodePosition.stationedUnit = this;
         if (!isUnitTurn)
         {
             currentNodePosition.IsWalkable = false;

@@ -6,9 +6,10 @@ public class Node
 {
     public Vector2 GridPosition; 
     public bool IsWalkable; 
-    public Node ParentNode; //Obsolete, should work on removing
+    public Node ParentNode; 
     public BoxCollider2D Collider;
     public GameObject spriteHighlight;
+    public Unit stationedUnit { get; set; }
     public Dictionary<Node, float> neighbours = new Dictionary<Node, float>(); //Neighbour nodes stored with total cost for pathfinding
     public float GCost; // Cost from the start node
     public float HCost; // Heuristic cost to the end node
