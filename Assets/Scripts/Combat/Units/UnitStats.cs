@@ -9,7 +9,7 @@ public class UnitStats : ScriptableObject
     public int maxHP;
     public int attack;
     public int defense;
-    public Vector2Int damageRange;  // Min and Max damage
+    public Vector2Int damageRange;  
     public int initiative;
     public int movementSpeed;
    

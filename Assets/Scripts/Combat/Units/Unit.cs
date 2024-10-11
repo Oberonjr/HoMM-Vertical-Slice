@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Unit : MonoBehaviour
 {
     public UnitStats unitStats;
@@ -12,7 +13,7 @@ public class Unit : MonoBehaviour
     public bool IsAI;
     
     [HideInInspector]public bool isUnitTurn;
-    
+    [HideInInspector]public Animator animator;
     
     private void Start()
     {
@@ -23,6 +24,7 @@ public class Unit : MonoBehaviour
         {
             currentNodePosition.IsWalkable = false;
         }
+        animator = GetComponentInChildren<Animator>() ?? throw new System.Exception($"No animator component found on {name}'s VFX child");
     }
 
     public void TakeDamage(int damage)
@@ -37,6 +39,7 @@ public class Unit : MonoBehaviour
     public void Die()
     {
         // Handle unit death (remove from grid, remove from turn order, etc.)
+        CombatTurnManager.Instance.unitsInCombat.Remove(this);
         Destroy(gameObject);
     }
 
