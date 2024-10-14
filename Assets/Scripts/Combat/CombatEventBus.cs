@@ -11,6 +11,7 @@ public static class CombatEventBus<T> where T : Event
     {
         OnEvent?.Invoke(pEvent);
     }
+}
 
     public class AttackStartEvent : Event
     {
@@ -179,4 +180,4 @@ public static class CombatEventBus<T> where T : Event
     public class CombatStartEvent : Event { }
 
     public class CombatEndEvent : Event { }
-}
+

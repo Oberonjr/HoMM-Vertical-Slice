@@ -49,6 +49,11 @@ public class Unit : MonoBehaviour
         return currentMovementPoints >= movementCost;
     }
 
+    public bool CanReachNode(Node targetNode)
+    {
+        return  currentMovementPoints >= A_Star_PF.Instance.FindPath(transform.position, targetNode.GridPosition, GridManager.Instance.grid).Count ;
+    }
+
     public void UseMovement(int movementCost)
     {
         currentMovementPoints -= movementCost;
