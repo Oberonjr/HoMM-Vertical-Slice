@@ -13,7 +13,7 @@ public class CombatUnitMovement : MonoBehaviour
     
     [SerializeField] private float animationSpeed = 3;
     private Dictionary<Vector2, Node> currentGrid;
-    private bool isMoving;
+    
     private List<Node> currentPath;
 
     void Awake()
@@ -49,7 +49,7 @@ public class CombatUnitMovement : MonoBehaviour
     public IEnumerator MoveAlongPath(List<Node> path)
     {
         Transform currentUnitTransform = currentUnit.transform;
-        isMoving = true;
+        currentUnit.isMoving = true;
         int tilesMoved = 0;
         CombatEventBus<UnitStartMovingEvent>.Publish(new UnitStartMovingEvent(currentUnit));
         foreach (Node node in path)
@@ -75,7 +75,7 @@ public class CombatUnitMovement : MonoBehaviour
             //turnManager.movementSlider.value = player.movementPoints;
         }
         currentPath = new List<Node>();
-        isMoving = false;
+        currentUnit.isMoving = false;
         CombatEventBus<UnitEndMovingEvent>.Publish(new UnitEndMovingEvent(currentUnit));
         //CombatTurnManager.Instance.EndTurn();
     }

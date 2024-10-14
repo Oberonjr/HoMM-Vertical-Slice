@@ -33,6 +33,7 @@ public class CombatTurnManager : MonoBehaviour
         CombatEventBus<UnitTurnStartEvent>.OnEvent += StartUnitTurn;
         CombatEventBus<UnitTurnEndEvent>.OnEvent += EndTurn;
         CombatEventBus<UnitEndMovingEvent>.OnEvent += OnUnitArrival;
+        CombatEventBus<AttackStartEvent>.OnEvent += ApplyDamage;
         StartCoroutine(MyUtils.LateStart(0.1f, () =>
         {
             stateMachine.ChangeState(new CombatStartState(stateMachine));
@@ -157,14 +158,18 @@ public class CombatTurnManager : MonoBehaviour
         return finalDamage;
     }
 
-    public void ApplyDamage(Unit attacker, Unit defender)
+    public void ApplyDamage(AttackStartEvent e)
     {
+        Unit attacker = e.attacker;
+        Unit defender = e.defender;
         int damage = CalculateDamage(attacker, defender);
         defender.TakeDamage(damage);
-
+        
+        //TODO: Maybe handle retaliation logic someplace else...
         if (!defender.hasRetaliated && defender.currentHP > 0)
         {
             attacker.TakeDamage(CalculateDamage(defender, attacker));
+            defender.hasRetaliated = true;
         }
     }
 
@@ -174,6 +179,7 @@ public class CombatTurnManager : MonoBehaviour
         CombatEventBus<UnitTurnStartEvent>.OnEvent -= StartUnitTurn;
         CombatEventBus<UnitTurnEndEvent>.OnEvent -= EndTurn;
         CombatEventBus<UnitEndMovingEvent>.OnEvent -= OnUnitArrival;
+        CombatEventBus<AttackStartEvent>.OnEvent -= ApplyDamage;
     }
 }
 

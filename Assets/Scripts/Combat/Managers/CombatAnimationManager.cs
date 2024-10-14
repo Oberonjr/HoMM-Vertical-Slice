@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,23 +25,25 @@ public class CombatAnimationManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        CombatEventBus<UnitStartMovingEvent>.OnEvent += SetMovementTrue;
+        CombatEventBus<UnitEndMovingEvent>.OnEvent += SetMovementFalse;
+        CombatEventBus<AttackStartEvent>.OnEvent += TriggerAttack;
+        CombatEventBus<DamageReceivedEvent>.OnEvent += TriggerDamaged;
+    }
+    
+    void SetMovementTrue(UnitStartMovingEvent e)
+    {
+        e.unit.animator.SetBool("Walking", true);
+    }
+    
+    void SetMovementFalse(UnitEndMovingEvent e)
+    {
+        e.unit.animator.SetBool("Walking", false);
     }
 
-    // Update is called once per frame
-    void Update()
+    void TriggerAttack(AttackStartEvent e)
     {
-        
-    }
-
-    void SetMovement(Animator actor, bool isMoving)
-    {
-        actor.SetBool("Walking", isMoving);
-    }
-
-    void TriggerAttack(Animator actor)
-    {
-        actor.SetTrigger("Attack");
+        e.attacker.animator.SetTrigger("Attack");
     }
 
     void TriggerDeath(Animator actor)
@@ -48,9 +51,9 @@ public class CombatAnimationManager : MonoBehaviour
         actor.SetTrigger("Dead");
     }
 
-    void TriggerDamaged(Animator actor)
+    void TriggerDamaged(DamageReceivedEvent e)
     {
-        actor.SetTrigger("Damaged");
+        e.target.animator.SetTrigger("Damaged");
     }
 
     void TriggerFlex(Animator actor)
@@ -62,6 +65,12 @@ public class CombatAnimationManager : MonoBehaviour
     {
         actor.SetTrigger("Defend");
     }
-    
-    
+
+    private void OnDisable()
+    {
+        CombatEventBus<UnitStartMovingEvent>.OnEvent -= SetMovementTrue;
+        CombatEventBus<UnitEndMovingEvent>.OnEvent -= SetMovementFalse;
+        CombatEventBus<AttackStartEvent>.OnEvent -= TriggerAttack;
+        CombatEventBus<DamageReceivedEvent>.OnEvent -= TriggerDamaged;
+    }
 }

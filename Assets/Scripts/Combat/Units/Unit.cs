@@ -12,6 +12,7 @@ public class Unit : MonoBehaviour
     public int currentMovementPoints;
     public bool hasRetaliated;  // Tracks if the unit has retaliated this round.
     public Node currentNodePosition;
+    public bool isMoving;
     public bool IsAI;
     public Action QueuedAction;
     
@@ -34,6 +35,7 @@ public class Unit : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHP = Mathf.Max(0, currentHP - damage);
+        CombatEventBus<DamageReceivedEvent>.Publish(new DamageReceivedEvent(this));
         if (currentHP == 0)
         {
             Die();
@@ -44,7 +46,9 @@ public class Unit : MonoBehaviour
     {
         // Handle unit death (remove from grid, remove from turn order, etc.)
         CombatTurnManager.Instance.unitsInCombat.Remove(this);
-        Destroy(gameObject);
+        CombatEventBus<UnitKilledEvent>.Publish(new UnitKilledEvent(this));
+        Debug.Log(name + " has been killed");
+        //Destroy(gameObject);
     }
 
     public bool CanMove(int movementCost)
