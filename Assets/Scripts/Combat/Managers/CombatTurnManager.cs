@@ -34,6 +34,7 @@ public class CombatTurnManager : MonoBehaviour
         CombatEventBus<UnitTurnEndEvent>.OnEvent += EndTurn;
         CombatEventBus<UnitEndMovingEvent>.OnEvent += OnUnitArrival;
         CombatEventBus<AttackStartEvent>.OnEvent += ApplyDamage;
+        CombatEventBus<MouseLeftClickEvent>.OnEvent += HandleInput;
         StartCoroutine(MyUtils.LateStart(0.1f, () =>
         {
             stateMachine.ChangeState(new CombatStartState(stateMachine));
@@ -180,6 +181,7 @@ public class CombatTurnManager : MonoBehaviour
         CombatEventBus<UnitTurnEndEvent>.OnEvent -= EndTurn;
         CombatEventBus<UnitEndMovingEvent>.OnEvent -= OnUnitArrival;
         CombatEventBus<AttackStartEvent>.OnEvent -= ApplyDamage;
+        CombatEventBus<MouseLeftClickEvent>.OnEvent -= HandleInput;
     }
 }
 
