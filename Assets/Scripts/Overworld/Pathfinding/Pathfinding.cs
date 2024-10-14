@@ -5,9 +5,9 @@ using System.Linq;
 using UnityEngine;
 
 
-public class A_Star_PF : MonoBehaviour
+public class Pathfinding : MonoBehaviour
 {
-    public static A_Star_PF Instance;
+    public static Pathfinding Instance;
     
     [Range(0, 1)]
     [SerializeField] private float distanceWeight = 0.5f;
@@ -75,7 +75,9 @@ public class A_Star_PF : MonoBehaviour
                 }
             }
         }
-        return null; // No path found
+
+        Debug.Log("Pathfinder found no path");
+        return new List<Node>(); 
     }
 
     List<Node> RetracePath(Node startNode, Node endNode)

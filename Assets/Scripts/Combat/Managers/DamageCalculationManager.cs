@@ -12,22 +12,6 @@ public class DamageCalculationManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    public int CalculateDamage(Unit attacker, Unit defender)
-    {
-        int baseDamage = attacker.CalculateDamage();
-        int finalDamage = Mathf.Max(1, baseDamage + (attacker.unitStats.attack - defender.unitStats.defense));  // Basic formula.
-        return finalDamage;
-    }
-
-    public void ApplyDamage(Unit attacker, Unit defender)
-    {
-        int damage = CalculateDamage(attacker, defender);
-        defender.TakeDamage(damage);
-
-        if (!defender.hasRetaliated && defender.currentHP > 0)
-        {
-            attacker.TakeDamage(CalculateDamage(defender, attacker));
-        }
-    }
+    
 }
 

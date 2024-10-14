@@ -19,11 +19,11 @@ public static class CombatEventBus<T> where T : Event
         public Unit defender;
         public int damage;
 
-        public AttackStartEvent(Unit pAttacker, Unit pDefender, int pDamage)
+        public AttackStartEvent(Unit pAttacker, Unit pDefender)
         {
             attacker = pAttacker;
             defender = pDefender;
-            damage = pDamage;
+            
         }
     }
 
@@ -177,7 +177,8 @@ public static class CombatEventBus<T> where T : Event
     }
 
     // Combat start/end
-    public class CombatStartEvent : Event { }
+    //TODO: Implement Hero dependency on these events
+    public class CombatStartEvent : Event { } 
 
     public class CombatEndEvent : Event { }
 

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.Tilemaps;
 
 public class GridManager : MonoBehaviour
@@ -14,8 +15,8 @@ public class GridManager : MonoBehaviour
     public float lineWidth = 0.05f; 
     public GameObject temp;
     
-    [SerializeReference]
-    public INodePlotting nodePlotting;
+    [FormerlySerializedAs("nodePlotting")] [SerializeReference]
+    public GridPlottingStrategy gridPlottingStrategy;
     private Grid gridType;
     
     
@@ -46,7 +47,7 @@ public class GridManager : MonoBehaviour
             
             if (tile != null)
             {
-                Vector2 gridPosition = nodePlotting.GetNodePosition(position, tileSize);;
+                Vector2 gridPosition = gridPlottingStrategy.GetNodePosition(position, tileSize);;
                 
                 bool isWalkable = tile != null;
                 int movementCost = GetMovementCost(tile);

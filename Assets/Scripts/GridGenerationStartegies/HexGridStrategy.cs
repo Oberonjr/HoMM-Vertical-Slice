@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "HexGridStrategy", menuName = "Grid Node Generation/HexGridStrategy", order = 1)]
-public class HexGridStrategy: INodePlotting
+public class HexGridStrategy: GridPlottingStrategy
 {
 
     public override Vector2 GetNodePosition(Vector3 tilePosition, Vector3 tileSize)

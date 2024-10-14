@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 
 public class HeroMovement : MonoBehaviour
 {
-    public A_Star_PF pathfinding;
+    public Pathfinding pathfinding;
     //public GridManager gridManager;
     public Transform playerTransform;
     public float animationSpeed = 3f;

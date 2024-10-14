@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 
 public class Unit : MonoBehaviour
@@ -11,6 +13,7 @@ public class Unit : MonoBehaviour
     public bool hasRetaliated;  // Tracks if the unit has retaliated this round.
     public Node currentNodePosition;
     public bool IsAI;
+    public Action QueuedAction;
     
     [HideInInspector]public bool isUnitTurn;
     [HideInInspector]public Animator animator;
@@ -51,7 +54,7 @@ public class Unit : MonoBehaviour
 
     public bool CanReachNode(Node targetNode)
     {
-        return  currentMovementPoints >= A_Star_PF.Instance.FindPath(transform.position, targetNode.GridPosition, GridManager.Instance.grid).Count ;
+        return  currentMovementPoints >= Pathfinding.Instance.FindPath(transform.position, targetNode.GridPosition, GridManager.Instance.grid).Count ;
     }
 
     public void UseMovement(int movementCost)

@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class CombatInputManager : MonoBehaviour
 {
-
     public GameObject temp;
     private GameObject guy;
     
     void Start()
     {
         guy = Instantiate(temp);
-        CombatEventBus<MouseLeftClickEvent>.OnEvent += CheckInput;
     }
     
     void Update()
@@ -26,16 +24,5 @@ public class CombatInputManager : MonoBehaviour
         }
     }
 
-    void CheckInput(MouseLeftClickEvent mEvent)
-    {
-        
-        if (mEvent.position.stationedUnit != null)
-        {
-            Debug.Log(mEvent.position.stationedUnit.name + " is stationed on clicked node");
-        }
-        else
-        {
-            Debug.Log("No stationed on clicked node");
-        }
-    }
+    
 }

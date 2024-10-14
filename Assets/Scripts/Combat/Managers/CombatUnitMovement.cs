@@ -28,36 +28,30 @@ public class CombatUnitMovement : MonoBehaviour
         }
         currentGrid = GridManager.Instance.grid;
     }
-    void Start()
-    {
-        
-        
-            
-    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !isMoving)
-        {
-            // Allow destination setting if player has no movement points left.
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Node clickedNode = ClosestNode(mousePosition);
-            //Debug.Log("Click");
-            if (clickedNode != null && clickedNode.IsWalkable)
-            {
-                currentPath = A_Star_PF.Instance.FindPath(currentUnit.currentNodePosition.GridPosition, clickedNode.GridPosition, GridManager.Instance.grid);
-                StartCoroutine(MoveAlongPath(currentPath));
-            }
-        }
+        // if (Input.GetMouseButtonDown(0) && !isMoving)
+        // {
+        //     // Allow destination setting if player has no movement points left.
+        //     Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //     Node clickedNode = ClosestNode(mousePosition);
+        //     //Debug.Log("Click");
+        //     if (clickedNode != null && clickedNode.IsWalkable)
+        //     {
+        //         currentPath = Pathfinding.Instance.FindPath(currentUnit.currentNodePosition.GridPosition, clickedNode.GridPosition, GridManager.Instance.grid);
+        //         StartCoroutine(MoveAlongPath(currentPath));
+        //     }
+        // }
     }
 
-    IEnumerator MoveAlongPath(List<Node> path)
+    public IEnumerator MoveAlongPath(List<Node> path)
     {
         Transform currentUnitTransform = currentUnit.transform;
         isMoving = true;
         int tilesMoved = 0;
-
+        CombatEventBus<UnitStartMovingEvent>.Publish(new UnitStartMovingEvent(currentUnit));
         foreach (Node node in path)
         {
             if (!currentUnit.CanMove(1))
@@ -76,12 +70,14 @@ public class CombatUnitMovement : MonoBehaviour
             currentUnit.currentNodePosition = node;
             currentUnit.currentNodePosition.stationedUnit = currentUnit;
             currentUnit.UseMovement(1);
+            CombatEventBus<UnitMovedEvent>.Publish(new UnitMovedEvent(currentUnit, node));
             tilesMoved++;
             //turnManager.movementSlider.value = player.movementPoints;
         }
         currentPath = new List<Node>();
         isMoving = false;
-        CombatTurnManager.Instance.EndTurn();
+        CombatEventBus<UnitEndMovingEvent>.Publish(new UnitEndMovingEvent(currentUnit));
+        //CombatTurnManager.Instance.EndTurn();
     }
     
     public void SnapToGridCenter(Unit unit)

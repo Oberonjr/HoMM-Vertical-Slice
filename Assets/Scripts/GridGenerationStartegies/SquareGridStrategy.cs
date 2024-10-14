@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "SquareGridStrategy", menuName = "Grid Node Generation/SquareGridStrategy", order = 1)]
-    public class SquareGridStrategy: INodePlotting
+    public class SquareGridStrategy: GridPlottingStrategy
     {
 
         public override Vector2 GetNodePosition(Vector3 tilePosition, Vector3 tileSize)
