@@ -32,7 +32,7 @@ public static class MyUtils
         }
         else
         {
-            Debug.Log("Clicked position is too far from closest eligible node.");
+            //Debug.Log("Clicked position is too far from closest eligible node.");
             return null;
         }
         
