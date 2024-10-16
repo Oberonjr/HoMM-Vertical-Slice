@@ -25,7 +25,7 @@ public class CombatStartState : ICombatState
 
     public void ExitState()
     {
-        
+        //CombatEventBus<UnitTurnStartEvent>.Publish(new UnitTurnStartEvent(CombatTurnManager.Instance.unitsInCombat[0]));
     }
     
     

@@ -11,6 +11,7 @@ public class UnitTurnStartState : ICombatState
     {
         this.stateMachine = stateMachine;
         currentUnit = CombatTurnManager.Instance.currentUnit;
+        //Debug.Log("Unit " + currentUnit.name + " is starting turn at current node position: " + currentUnit.currentNodePosition.GridPosition.ToString());
     }
 
     public void EnterState()

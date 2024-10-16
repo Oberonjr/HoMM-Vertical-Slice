@@ -28,7 +28,7 @@ public class Pathfinding : MonoBehaviour
 
     public List<Node> FindPath(Vector2 start, Vector2 target, Dictionary<Vector2, Node> grid)
     {
-        
+        GeneralEventBus<StartPathGenEvent>.Publish(new StartPathGenEvent());
         List<Node> openList = new List<Node>();
         HashSet<Node> closedList = new HashSet<Node>();
 
@@ -43,6 +43,7 @@ public class Pathfinding : MonoBehaviour
 
             if (currentNode == targetNode)
             {
+                GeneralEventBus<GeneratePathEvent>.Publish(new GeneratePathEvent(RetracePath(startNode, targetNode)));
                 return RetracePath(startNode, targetNode);
             }
 

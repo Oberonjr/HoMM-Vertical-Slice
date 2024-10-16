@@ -8,7 +8,7 @@ public class UnitWalkingState : ICombatState
     private Unit currentUnit;
     private Node destinationNode;
     
-    private List<Node> path = new List<Node>();
+    private List<Node> path;
 
     public UnitWalkingState(CombatStateMachine stateMachine, Unit currentUnit, Node destinationNode)
     {
@@ -19,14 +19,17 @@ public class UnitWalkingState : ICombatState
 
     public void EnterState()
     {
-        path = Pathfinding.Instance.FindPath(currentUnit.currentNodePosition.GridPosition, destinationNode.GridPosition,
-            GridManager.Instance.grid);
+        CombatEventBus<UnitStartMovingEvent>.Publish(new UnitStartMovingEvent(currentUnit, destinationNode.GridPosition));
+        
+        // path = Pathfinding.Instance.FindPath(currentUnit.currentNodePosition.GridPosition, destinationNode.GridPosition,
+        //     GridManager.Instance.grid);
+        // Debug.Log("The found path length is: " + path.Count);
 
     }
 
     public void UpdateState()
     {
-        CombatUnitMovement.Instance.StartCoroutine(CombatUnitMovement.Instance.MoveAlongPath(path));
+        //CombatUnitMovement.Instance.StartCoroutine(CombatUnitMovement.Instance.MoveAlongPath(path));
     }
 
     public void ExitState()

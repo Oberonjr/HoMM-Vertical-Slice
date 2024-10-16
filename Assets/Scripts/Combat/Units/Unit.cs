@@ -25,11 +25,8 @@ public class Unit : MonoBehaviour
         currentMovementPoints = unitStats.movementSpeed;
         CombatUnitMovement.Instance.SnapToGridCenter(this);
         currentNodePosition.stationedUnit = this;
-        if (!isUnitTurn)
-        {
-            currentNodePosition.IsWalkable = false;
-        }
         animator = GetComponentInChildren<Animator>() ?? throw new System.Exception($"No animator component found on {name}'s VFX child");
+        GeneralEventBus<StartPathGenEvent>.OnEvent += SetNodeAccess;
     }
 
     public void TakeDamage(int damage)
@@ -76,6 +73,20 @@ public class Unit : MonoBehaviour
     {
         int damage = Random.Range(unitStats.damageRange.x, unitStats.damageRange.y);
         return damage;  // This can later be adjusted based on attack/defense and other factors.
+    }
+
+    //When a path is generated, set units' nodes unwalkable so the pathfinding goes around them
+    void SetNodeAccess(StartPathGenEvent e)
+    {
+        if (!isUnitTurn)
+        {
+            currentNodePosition.IsWalkable = false;
+        }
+    }
+
+    private void OnDisable()
+    {
+        GeneralEventBus<StartPathGenEvent>.OnEvent -= SetNodeAccess;
     }
 }
 

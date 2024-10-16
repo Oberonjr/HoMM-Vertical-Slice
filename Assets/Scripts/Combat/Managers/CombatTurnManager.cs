@@ -50,11 +50,11 @@ public class CombatTurnManager : MonoBehaviour
 
     void HandleInput(MouseLeftClickEvent mEvent)
     {
-        if(!currentUnit.CanReachNode(mEvent.position)) return;
+        if(!currentUnit.CanReachNode(mEvent.position)||mEvent.position == currentUnit.currentNodePosition) return;
         Node clickedNode = mEvent.position;
 
         Unit targetUnit;
-        if (clickedNode.stationedUnit != null) //Clicked node has a unit
+        if (clickedNode.stationedUnit != null && clickedNode.stationedUnit != currentUnit) //Clicked node has a unit
         {
             targetUnit = clickedNode.stationedUnit;
             //Check if the unit is adjacent to determine course of action
@@ -64,14 +64,17 @@ public class CombatTurnManager : MonoBehaviour
             }
             else 
             {
+                targetUnit.currentNodePosition.IsWalkable = true;
                 //Get the path to the target
                 List<Node> pathToTarget = Pathfinding.Instance.FindPath(currentUnit.currentNodePosition.GridPosition, targetUnit.currentNodePosition.GridPosition, GridManager.Instance.grid);
+                targetUnit.currentNodePosition.IsWalkable = false;
                 //As the tile that the target is not walkable, we need the node that comes before it
                 pathToTarget.Remove(pathToTarget.Last());
                 //Set our correct target node for movement
                 Node arrivalNode = pathToTarget.Last();
                 //Start moving towards target, then queue an attack
                 QueueMoveAction(arrivalNode, () => QueueAttackAction(targetUnit));
+                
             }
         }
         else
@@ -86,12 +89,23 @@ public class CombatTurnManager : MonoBehaviour
         // Sort units by initiative.
         unitsInCombat = unitsInCombat.OrderByDescending(u => u.unitStats.initiative).ToList();
         currentTurnIndex = 0;
-
+        currentUnit = unitsInCombat[0];
     }
     public void StartUnitTurn(UnitTurnStartEvent e = null)
     {
+        if (currentTurnIndex >= unitsInCombat.Count)
+        {
+            currentTurnIndex = 0;
+        }
+
+        foreach (Unit unit in unitsInCombat)
+        {
+            unit.currentNodePosition.IsWalkable = true;
+        }
+        
+        
         currentUnit = unitsInCombat[currentTurnIndex];
-        Debug.Log("Starting the turn of: " + currentUnit.name);
+        //Debug.Log("Starting the turn of: " + currentUnit.name);
         currentUnit.currentNodePosition.IsWalkable = true;
         currentUnit.isUnitTurn = true;
         if (currentUnit.IsAI)
@@ -109,21 +123,18 @@ public class CombatTurnManager : MonoBehaviour
 
     public void EndTurn(UnitTurnEndEvent e = null)
     {
-        Debug.Log("Ending the turn of: " + currentUnit.name);
+        //Debug.Log("Ending the turn of: " + currentUnit.name);
         currentUnit.currentNodePosition.IsWalkable = false;
         currentUnit.isUnitTurn = false;
         currentTurnIndex++;
         
-        if (currentTurnIndex >= unitsInCombat.Count)
-        {
-            currentTurnIndex = 0;
-        }
         
+        //Debug.Log(currentTurnIndex);
     }
 
     public void SkipTurn()
     {
-        Debug.Log("Skipping the turn of: " + currentUnit.name);
+        //Debug.Log("Skipping the turn of: " + currentUnit.name);
         EndTurn();
     }
 

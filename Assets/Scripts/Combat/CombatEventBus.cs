@@ -54,11 +54,13 @@ public static class CombatEventBus<T> where T : Event
     public class UnitStartMovingEvent : Event
     {
         public Unit unit;
+        public Vector2 destination;
         public bool isMoving;
 
-        public UnitStartMovingEvent(Unit pUnit)
+        public UnitStartMovingEvent(Unit pUnit, Vector2 pDestination)
         {
             unit = pUnit;
+            destination = pDestination;
             isMoving = true;
         }
     }
@@ -73,6 +75,7 @@ public static class CombatEventBus<T> where T : Event
         {
             unit = pUnit;
             isMoving = false;
+            Debug.Log("Unit has ended movement");
         }
     }
 

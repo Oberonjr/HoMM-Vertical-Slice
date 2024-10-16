@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
@@ -29,6 +30,11 @@ public class CombatUnitMovement : MonoBehaviour
         currentGrid = GridManager.Instance.grid;
     }
 
+    private void Start()
+    {
+        CombatEventBus<UnitStartMovingEvent>.OnEvent += StartMovement;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -46,12 +52,18 @@ public class CombatUnitMovement : MonoBehaviour
         // }
     }
 
+    void StartMovement(UnitStartMovingEvent e)
+    {
+        List<Node> path = Pathfinding.Instance.FindPath(e.unit.currentNodePosition.GridPosition, e.destination, GridManager.Instance.grid);
+        StartCoroutine(MoveAlongPath(path));
+    }
+    
     public IEnumerator MoveAlongPath(List<Node> path)
     {
         Transform currentUnitTransform = currentUnit.transform;
         currentUnit.isMoving = true;
         int tilesMoved = 0;
-        CombatEventBus<UnitStartMovingEvent>.Publish(new UnitStartMovingEvent(currentUnit));
+        
         foreach (Node node in path)
         {
             if (!currentUnit.CanMove(1))
@@ -65,17 +77,18 @@ public class CombatUnitMovement : MonoBehaviour
                 currentUnitTransform.position = Vector3.MoveTowards(currentUnitTransform.position, targetPosition, animationSpeed * Time.deltaTime);
                 yield return null;
             }
-
+            currentUnitTransform.position = targetPosition;
             currentUnit.currentNodePosition.stationedUnit = null;
             currentUnit.currentNodePosition = node;
             currentUnit.currentNodePosition.stationedUnit = currentUnit;
             currentUnit.UseMovement(1);
             CombatEventBus<UnitMovedEvent>.Publish(new UnitMovedEvent(currentUnit, node));
+            //yield return null;
             tilesMoved++;
-            //turnManager.movementSlider.value = player.movementPoints;
         }
-        currentPath = new List<Node>();
+        path = new List<Node>();
         currentUnit.isMoving = false;
+        //Debug.Log("The node the unit ended is at: " + currentUnit.currentNodePosition.GridPosition);
         CombatEventBus<UnitEndMovingEvent>.Publish(new UnitEndMovingEvent(currentUnit));
         //CombatTurnManager.Instance.EndTurn();
     }

@@ -8,8 +8,10 @@ public class CombatStateMachine
 
     public void ChangeState(ICombatState newState)
     {
+        //Debug.Log("Exiting state: " + currentState);
         currentState?.ExitState();
         currentState = newState;
+        //Debug.Log("Entering state: " + currentState);
         currentState.EnterState();
     }
     
