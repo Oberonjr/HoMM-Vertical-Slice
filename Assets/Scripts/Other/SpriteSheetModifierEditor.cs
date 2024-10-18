@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpriteSheetModifierEditor : EditorWindow
 {
+    
     public Texture2D spriteSheet;
     public Vector2 pivotInPixels = new Vector2(32, 32);
     public bool setCustomPivot = true;

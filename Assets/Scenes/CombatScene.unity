@@ -3688,6 +3688,7 @@ MonoBehaviour:
   - {fileID: 815848949}
   currentTurnIndex: 0
   currentUnit: {fileID: 0}
+  nextUnit: {fileID: 0}
 --- !u!114 &1114292652
 MonoBehaviour:
   m_ObjectHideFlags: 0

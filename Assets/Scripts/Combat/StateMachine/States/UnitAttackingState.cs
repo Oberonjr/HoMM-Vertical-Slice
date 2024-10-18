@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class UnitAttackingState : ICombatState
 {
-    private CombatStateMachine stateMachine;
+    private CombatStateMachine _stateMachine;
     private Unit attackerUnit;
     private Unit targetUnit;
 
     public UnitAttackingState(CombatStateMachine stateMachine, Unit attackerUnit, Unit targetUnit)
     {
-        this.stateMachine = stateMachine;
+        this._stateMachine = stateMachine;
         this.attackerUnit = attackerUnit;
         this.targetUnit = targetUnit;
     }
@@ -22,7 +22,7 @@ public class UnitAttackingState : ICombatState
         if (attackerUnit == CombatTurnManager.Instance.currentUnit)
         {
             Debug.Log("Ending attacker's turn");
-            stateMachine.ChangeState(new UnitTurnEndState(stateMachine, attackerUnit));
+            _stateMachine.ChangeState(new UnitTurnEndState(_stateMachine, attackerUnit));
         }
     }
 

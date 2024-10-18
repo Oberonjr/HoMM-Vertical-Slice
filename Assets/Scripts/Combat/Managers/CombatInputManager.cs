@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CombatInputManager : MonoBehaviour
 {
-    public GameObject temp;
+    public GameObject temp; //couldve been tempHoverPrefab
     private GameObject guy;
     
     void Start()

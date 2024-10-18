@@ -12,7 +12,7 @@ public class CombatStateMachine
         currentState?.ExitState();
         currentState = newState;
         //Debug.Log("Entering state: " + currentState);
-        currentState.EnterState();
+        currentState?.EnterState();
     }
     
     public void Update()
