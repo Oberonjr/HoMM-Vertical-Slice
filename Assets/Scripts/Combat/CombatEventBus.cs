@@ -75,7 +75,7 @@ public static class CombatEventBus<T> where T : Event
         {
             unit = pUnit;
             isMoving = false;
-            Debug.Log("Unit has ended movement");
+            //Debug.Log("Unit has ended movement");
         }
     }
 

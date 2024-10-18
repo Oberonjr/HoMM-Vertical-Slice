@@ -21,7 +21,7 @@ public class CombatInputManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             CombatEventBus<MouseLeftClickEvent>.Publish(new MouseLeftClickEvent(clickedNode));
-            //Debug.Log("Clicked node position is: " + clickedNode.GridPosition);
+            //Debug.Log("Clicked node position is: " + clickedNode.IsWalkable);
         }
     }
 

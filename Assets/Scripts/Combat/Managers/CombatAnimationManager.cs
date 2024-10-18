@@ -38,7 +38,7 @@ public class CombatAnimationManager : MonoBehaviour
     
     void SetMovementFalse(UnitEndMovingEvent e)
     {
-        Debug.Log("Animator setting movement to false");
+        //Debug.Log("Animator setting movement to false");
         e.unit.animator.SetBool("Walking", false);
     }
 

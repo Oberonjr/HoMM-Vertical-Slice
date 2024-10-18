@@ -20,21 +20,16 @@ public class UnitWalkingState : ICombatState
     public void EnterState()
     {
         CombatEventBus<UnitStartMovingEvent>.Publish(new UnitStartMovingEvent(currentUnit, destinationNode.GridPosition));
-        
-        // path = Pathfinding.Instance.FindPath(currentUnit.currentNodePosition.GridPosition, destinationNode.GridPosition,
-        //     GridManager.Instance.grid);
-        // Debug.Log("The found path length is: " + path.Count);
-
     }
 
     public void UpdateState()
     {
-        //CombatUnitMovement.Instance.StartCoroutine(CombatUnitMovement.Instance.MoveAlongPath(path));
+        
     }
 
     public void ExitState()
     {
-        
+        //Debug.Log("Exiting Unit Walking State");
     }
     
     

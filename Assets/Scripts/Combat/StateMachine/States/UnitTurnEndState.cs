@@ -15,6 +15,7 @@ public class UnitTurnEndState : ICombatState
 
     public void EnterState()
     {
+        //Debug.Log("Ending turn of: " + currentUnit.name);
         CombatEventBus<UnitTurnEndEvent>.Publish(new UnitTurnEndEvent(currentUnit));
         stateMachine.ChangeState(new UnitTurnStartState(stateMachine));
     }

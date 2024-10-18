@@ -11,6 +11,7 @@ public class CombatTurnManager : MonoBehaviour
     public List<Unit> unitsInCombat = new List<Unit>();
     public int currentTurnIndex = 0;
     public Unit currentUnit;
+    public Unit nextUnit;
     
     private CombatStateMachine stateMachine;
     
@@ -64,10 +65,10 @@ public class CombatTurnManager : MonoBehaviour
             }
             else 
             {
-                targetUnit.currentNodePosition.IsWalkable = true;
+                //targetUnit.currentNodePosition.IsWalkable = true;
                 //Get the path to the target
                 List<Node> pathToTarget = Pathfinding.Instance.FindPath(currentUnit.currentNodePosition.GridPosition, targetUnit.currentNodePosition.GridPosition, GridManager.Instance.grid);
-                targetUnit.currentNodePosition.IsWalkable = false;
+                //targetUnit.currentNodePosition.IsWalkable = false;
                 //As the tile that the target is not walkable, we need the node that comes before it
                 pathToTarget.Remove(pathToTarget.Last());
                 //Set our correct target node for movement
@@ -90,21 +91,17 @@ public class CombatTurnManager : MonoBehaviour
         unitsInCombat = unitsInCombat.OrderByDescending(u => u.unitStats.initiative).ToList();
         currentTurnIndex = 0;
         currentUnit = unitsInCombat[0];
+        
     }
     public void StartUnitTurn(UnitTurnStartEvent e = null)
     {
-        if (currentTurnIndex >= unitsInCombat.Count)
-        {
-            currentTurnIndex = 0;
-        }
-
         foreach (Unit unit in unitsInCombat)
         {
             unit.currentNodePosition.IsWalkable = true;
+            //Debug.Log(unit.name + "'s node is walkable? " + unit.currentNodePosition.IsWalkable);
         }
+
         
-        
-        currentUnit = unitsInCombat[currentTurnIndex];
         //Debug.Log("Starting the turn of: " + currentUnit.name);
         currentUnit.currentNodePosition.IsWalkable = true;
         currentUnit.isUnitTurn = true;
@@ -123,12 +120,21 @@ public class CombatTurnManager : MonoBehaviour
 
     public void EndTurn(UnitTurnEndEvent e = null)
     {
+        
         //Debug.Log("Ending the turn of: " + currentUnit.name);
         currentUnit.currentNodePosition.IsWalkable = false;
         currentUnit.isUnitTurn = false;
         currentTurnIndex++;
-        
-        
+        if (currentTurnIndex >= unitsInCombat.Count)
+        {
+            Debug.Log("Starting new round");
+            currentTurnIndex = 0;
+        }
+        nextUnit = GetNextUnit();
+        if (nextUnit != null)
+        {
+            currentUnit = nextUnit;
+        }
         //Debug.Log(currentTurnIndex);
     }
 
@@ -138,6 +144,14 @@ public class CombatTurnManager : MonoBehaviour
         EndTurn();
     }
 
+    public Unit GetNextUnit()
+    {
+        Unit pNextUnit = unitsInCombat[currentTurnIndex];
+        
+        
+        return pNextUnit;
+    }
+    
     void QueueAttackAction(Unit targetUnit)
     {
         currentUnit.QueuedAction = () =>
@@ -160,7 +174,7 @@ public class CombatTurnManager : MonoBehaviour
         
         currentUnit.QueuedAction = null;
         
-        stateMachine.ChangeState(new UnitTurnEndState(stateMachine, currentUnit));
+        //stateMachine.ChangeState(new UnitTurnEndState(stateMachine, currentUnit));
     }
     
     public int CalculateDamage(Unit attacker, Unit defender)

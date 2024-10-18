@@ -15,8 +15,9 @@ public class UnitTurnStartState : ICombatState
     }
 
     public void EnterState()
-    {
+    { 
         CombatEventBus<UnitTurnStartEvent>.Publish(new UnitTurnStartEvent(currentUnit));
+        //Debug.Log("Starting turn of: " + currentUnit.name);
         stateMachine.ChangeState(new UnitIdleState(stateMachine, currentUnit));
     }
 

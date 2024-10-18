@@ -26,7 +26,7 @@ public class Unit : MonoBehaviour
         CombatUnitMovement.Instance.SnapToGridCenter(this);
         currentNodePosition.stationedUnit = this;
         animator = GetComponentInChildren<Animator>() ?? throw new System.Exception($"No animator component found on {name}'s VFX child");
-        GeneralEventBus<StartPathGenEvent>.OnEvent += SetNodeAccess;
+        //GeneralEventBus<StartPathGenEvent>.OnEvent += SetNodeAccess;
     }
 
     public void TakeDamage(int damage)
@@ -86,7 +86,7 @@ public class Unit : MonoBehaviour
 
     private void OnDisable()
     {
-        GeneralEventBus<StartPathGenEvent>.OnEvent -= SetNodeAccess;
+        //GeneralEventBus<StartPathGenEvent>.OnEvent -= SetNodeAccess;
     }
 }
 

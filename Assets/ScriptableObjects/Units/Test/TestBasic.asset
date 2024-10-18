@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TestBasic
   m_EditorClassIdentifier: 
   unitName: Basic Bitch
-  maxHP: 10
+  maxHP: 25
   attack: 3
   defense: 2
   damageRange: {x: 2, y: 5}
