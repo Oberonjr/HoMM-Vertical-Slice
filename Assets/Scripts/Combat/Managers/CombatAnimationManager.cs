@@ -30,6 +30,7 @@ public class CombatAnimationManager : MonoBehaviour
         CombatEventBus<AttackStartEvent>.OnEvent += TriggerAttack;
         CombatEventBus<DamageReceivedEvent>.OnEvent += TriggerDamaged;
         CombatEventBus<UnitKilledEvent>.OnEvent += TriggerDeath;
+        CombatEventBus<UnitRetaliateEvent>.OnEvent += TriggerAttack;
     }
     
     void SetMovementTrue(UnitStartMovingEvent e)
@@ -44,6 +45,11 @@ public class CombatAnimationManager : MonoBehaviour
     }
 
     void TriggerAttack(AttackStartEvent e)
+    {
+        e.attacker.animator.SetTrigger("Attack");
+    }
+    
+    void TriggerAttack(UnitRetaliateEvent e)
     {
         e.attacker.animator.SetTrigger("Attack");
     }

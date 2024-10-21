@@ -13,6 +13,7 @@ public class Unit : MonoBehaviour
     public bool hasRetaliated;  // Tracks if the unit has retaliated this round.
     public Node currentNodePosition;
     public bool isMoving;
+    //public bool isAlive = true;
     public bool IsAI;
     public Action QueuedAction;
     
@@ -26,7 +27,8 @@ public class Unit : MonoBehaviour
         CombatUnitMovement.Instance.SnapToGridCenter(this);
         currentNodePosition.stationedUnit = this;
         animator = GetComponentInChildren<Animator>() ?? throw new System.Exception($"No animator component found on {name}'s VFX child");
-        //GeneralEventBus<StartPathGenEvent>.OnEvent += SetNodeAccess;
+        
+        
     }
 
     public void TakeDamage(int damage)
@@ -45,7 +47,10 @@ public class Unit : MonoBehaviour
         CombatTurnManager.Instance.unitsInCombat.Remove(this);
         CombatEventBus<UnitKilledEvent>.Publish(new UnitKilledEvent(this));
         Debug.Log(name + " has been killed");
-        //Destroy(gameObject);
+        //isAlive = false;
+        currentNodePosition.IsWalkable = true;
+        currentNodePosition.stationedUnit = null;
+        Destroy(this, 0.2f);
     }
 
     public bool CanMove(int movementCost)
@@ -74,19 +79,11 @@ public class Unit : MonoBehaviour
         int damage = Random.Range(unitStats.damageRange.x, unitStats.damageRange.y);
         return damage;  // This can later be adjusted based on attack/defense and other factors.
     }
-
-    //When a path is generated, set units' nodes unwalkable so the pathfinding goes around them
-    void SetNodeAccess(StartPathGenEvent e)
-    {
-        if (!isUnitTurn)
-        {
-            currentNodePosition.IsWalkable = false;
-        }
-    }
+    
 
     private void OnDisable()
     {
-        //GeneralEventBus<StartPathGenEvent>.OnEvent -= SetNodeAccess;
+        
     }
 }
 

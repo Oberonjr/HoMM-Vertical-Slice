@@ -38,18 +38,7 @@ public class CombatUnitMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (Input.GetMouseButtonDown(0) && !isMoving)
-        // {
-        //     // Allow destination setting if player has no movement points left.
-        //     Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //     Node clickedNode = ClosestNode(mousePosition);
-        //     //Debug.Log("Click");
-        //     if (clickedNode != null && clickedNode.IsWalkable)
-        //     {
-        //         currentPath = Pathfinding.Instance.FindPath(currentUnit.currentNodePosition.GridPosition, clickedNode.GridPosition, GridManager.Instance.grid);
-        //         StartCoroutine(MoveAlongPath(currentPath));
-        //     }
-        // }
+        
     }
 
     void StartMovement(UnitStartMovingEvent e)

@@ -275,6 +275,7 @@ MonoBehaviour:
   currentMovementPoints: 0
   hasRetaliated: 0
   isMoving: 0
+  isAlive: 1
   IsAI: 0
   isUnitTurn: 0
   animator: {fileID: 0}
@@ -3633,6 +3634,7 @@ MonoBehaviour:
   currentMovementPoints: 0
   hasRetaliated: 0
   isMoving: 0
+  isAlive: 1
   IsAI: 0
   isUnitTurn: 0
   animator: {fileID: 0}

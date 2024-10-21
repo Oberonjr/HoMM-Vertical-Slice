@@ -51,30 +51,34 @@ public class CombatTurnManager : MonoBehaviour
 
     void HandleInput(MouseLeftClickEvent mEvent)
     {
-        if(!currentUnit.CanReachNode(mEvent.position)||mEvent.position == currentUnit.currentNodePosition) return;
+        if (stateMachine.currentState == new UnitIdleState(stateMachine, currentUnit)||
+            !currentUnit.CanReachNode(mEvent.position) ||
+            mEvent.position == currentUnit.currentNodePosition)
+        {
+            return;
+        }
         Node clickedNode = mEvent.position;
 
         Unit targetUnit;
         if (clickedNode.stationedUnit != null && clickedNode.stationedUnit != currentUnit) //Clicked node has a unit
         {
             targetUnit = clickedNode.stationedUnit;
+            targetUnit.currentNodePosition.IsWalkable = true;
             //Check if the unit is adjacent to determine course of action
             if (currentUnit.currentNodePosition.neighbours.ContainsKey(targetUnit.currentNodePosition))//Target unit is adjacent
             {
-                QueueAttackAction(targetUnit);
+                QueueAttackAction(targetUnit, false);
             }
             else 
             {
-                //targetUnit.currentNodePosition.IsWalkable = true;
                 //Get the path to the target
                 List<Node> pathToTarget = Pathfinding.Instance.FindPath(currentUnit.currentNodePosition.GridPosition, targetUnit.currentNodePosition.GridPosition, GridManager.Instance.grid);
-                //targetUnit.currentNodePosition.IsWalkable = false;
                 //As the tile that the target is not walkable, we need the node that comes before it
                 pathToTarget.Remove(pathToTarget.Last());
                 //Set our correct target node for movement
                 Node arrivalNode = pathToTarget.Last();
                 //Start moving towards target, then queue an attack
-                QueueMoveAction(arrivalNode, () => QueueAttackAction(targetUnit));
+                QueueMoveAction(arrivalNode, () => QueueAttackAction(targetUnit, true));
                 
             }
         }
@@ -97,7 +101,7 @@ public class CombatTurnManager : MonoBehaviour
     {
         foreach (Unit unit in unitsInCombat)
         {
-            unit.currentNodePosition.IsWalkable = true;
+            unit.currentNodePosition.IsWalkable = false;
             //Debug.Log(unit.name + "'s node is walkable? " + unit.currentNodePosition.IsWalkable);
         }
 
@@ -152,13 +156,13 @@ public class CombatTurnManager : MonoBehaviour
         return pNextUnit;
     }
     
-    void QueueAttackAction(Unit targetUnit)
+    void QueueAttackAction(Unit targetUnit, bool queued)
     {
         currentUnit.QueuedAction = () =>
         {
             CombatEventBus<AttackStartEvent>.Publish(new AttackStartEvent(currentUnit, targetUnit));
         };
-        stateMachine.ChangeState(new UnitAttackingState(stateMachine, currentUnit, targetUnit));
+        stateMachine.ChangeState(new UnitAttackingState(stateMachine, currentUnit, targetUnit, queued));
     }
 
     void QueueMoveAction(Node targetNode, System.Action onArrival)
@@ -174,7 +178,7 @@ public class CombatTurnManager : MonoBehaviour
         
         currentUnit.QueuedAction = null;
         
-        //stateMachine.ChangeState(new UnitTurnEndState(stateMachine, currentUnit));
+        stateMachine.ChangeState(new UnitTurnEndState(stateMachine, currentUnit));
     }
     
     public int CalculateDamage(Unit attacker, Unit defender)
@@ -184,19 +188,26 @@ public class CombatTurnManager : MonoBehaviour
         return finalDamage;
     }
 
-    public void ApplyDamage(AttackStartEvent e)
+    public IEnumerator AttackLogic(AttackStartEvent e)
     {
         Unit attacker = e.attacker;
         Unit defender = e.defender;
         int damage = CalculateDamage(attacker, defender);
         defender.TakeDamage(damage);
-        
+
+        yield return new WaitForSeconds(0.7f);
         //TODO: Maybe handle retaliation logic someplace else...
         if (!defender.hasRetaliated && defender.currentHP > 0)
         {
+            CombatEventBus<UnitRetaliateEvent>.Publish(new UnitRetaliateEvent(defender, attacker));
             attacker.TakeDamage(CalculateDamage(defender, attacker));
             defender.hasRetaliated = true;
         }
+    }
+
+    public void ApplyDamage(AttackStartEvent e)
+    {
+        StartCoroutine(AttackLogic(e));
     }
 
     private void OnDisable()
