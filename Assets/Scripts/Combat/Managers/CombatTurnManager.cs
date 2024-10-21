@@ -10,8 +10,13 @@ public class CombatTurnManager : MonoBehaviour
     
     public List<Unit> unitsInCombat = new List<Unit>();
     public int currentTurnIndex = 0;
-    public Unit currentUnit;
-    public Unit nextUnit;
+    
+    [HideInInspector]public Unit currentUnit;
+    [HideInInspector]public Unit nextUnit;
+    [HideInInspector]public GameObject indicator;
+
+    [SerializeField] private GameObject indicatorPrefab;
+    [SerializeField] private GameObject TileHighlightSprite;
     
     private CombatStateMachine stateMachine;
     
@@ -41,7 +46,7 @@ public class CombatTurnManager : MonoBehaviour
             stateMachine.ChangeState(new CombatStartState(stateMachine));
             
         }));
-
+        indicator = Instantiate(indicatorPrefab);
     }
 
     private void Update()
@@ -104,7 +109,6 @@ public class CombatTurnManager : MonoBehaviour
             unit.currentNodePosition.IsWalkable = false;
             //Debug.Log(unit.name + "'s node is walkable? " + unit.currentNodePosition.IsWalkable);
         }
-
         
         //Debug.Log("Starting the turn of: " + currentUnit.name);
         currentUnit.currentNodePosition.IsWalkable = true;
@@ -115,16 +119,16 @@ public class CombatTurnManager : MonoBehaviour
         }
         else
         {
-            
             CombatUnitMovement.Instance.currentUnit = currentUnit;
         }
         
         currentUnit.ReplenishMovementPoints();
+        indicator.transform.position = new Vector3(currentUnit.currentNodePosition.GridPosition.x, currentUnit.currentNodePosition.GridPosition.y + 1.25f, -1);
+        HighlightWalkableArea();
     }
 
     public void EndTurn(UnitTurnEndEvent e = null)
     {
-        
         //Debug.Log("Ending the turn of: " + currentUnit.name);
         currentUnit.currentNodePosition.IsWalkable = false;
         currentUnit.isUnitTurn = false;
@@ -139,12 +143,11 @@ public class CombatTurnManager : MonoBehaviour
         {
             currentUnit = nextUnit;
         }
-        //Debug.Log(currentTurnIndex);
     }
 
     public void SkipTurn()
     {
-        //Debug.Log("Skipping the turn of: " + currentUnit.name);
+        Debug.Log("Skipping the turn of: " + currentUnit.name);
         EndTurn();
     }
 
@@ -179,6 +182,26 @@ public class CombatTurnManager : MonoBehaviour
         currentUnit.QueuedAction = null;
         
         stateMachine.ChangeState(new UnitTurnEndState(stateMachine, currentUnit));
+    }
+
+    [HideInInspector] public List<GameObject> highlightedSprites = new List<GameObject>();
+    void HighlightWalkableArea()
+    {
+        foreach (Node node in currentUnit.ReachableNodes())
+        {
+            GameObject nodeHighlight = Instantiate(TileHighlightSprite, new Vector3(node.GridPosition.x, node.GridPosition.y, 0), Quaternion.identity);
+            highlightedSprites.Add(nodeHighlight);
+            nodeHighlight.transform.SetParent(currentUnit.transform);
+        }
+    }
+
+    public void ClearHighlightedSprites()
+    {
+        foreach (GameObject highlight in highlightedSprites)
+        {
+            Destroy(highlight);
+        }
+        highlightedSprites.Clear();
     }
     
     public int CalculateDamage(Unit attacker, Unit defender)

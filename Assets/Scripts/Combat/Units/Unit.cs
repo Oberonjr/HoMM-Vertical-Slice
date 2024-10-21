@@ -79,7 +79,19 @@ public class Unit : MonoBehaviour
         int damage = Random.Range(unitStats.damageRange.x, unitStats.damageRange.y);
         return damage;  // This can later be adjusted based on attack/defense and other factors.
     }
-    
+
+    public List<Node> ReachableNodes()
+    {
+        List<Node> reachableNodes = new List<Node>();
+        foreach (Node node in GridManager.Instance.grid.Values)
+        {
+            if (CanReachNode(node))
+            {
+                reachableNodes.Add(node);
+            }
+        }
+        return reachableNodes;
+    }
 
     private void OnDisable()
     {

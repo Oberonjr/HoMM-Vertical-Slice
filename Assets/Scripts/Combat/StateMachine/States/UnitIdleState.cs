@@ -15,7 +15,7 @@ public class UnitIdleState : ICombatState
 
     public void EnterState()
     {
-        
+        CombatTurnManager.Instance.indicator.SetActive(true);
     }
 
     public void UpdateState()
@@ -25,6 +25,7 @@ public class UnitIdleState : ICombatState
 
     public void ExitState()
     {
-        
+        CombatTurnManager.Instance.ClearHighlightedSprites();
+        CombatTurnManager.Instance.indicator.SetActive(false);
     }
 }
