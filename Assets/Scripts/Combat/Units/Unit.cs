@@ -60,6 +60,7 @@ public class Unit : MonoBehaviour
 
     public bool CanReachNode(Node targetNode)
     {
+        //TODO: Add a check if FindPath returns null
         return  currentMovementPoints >= Pathfinding.Instance.FindPath(transform.position, targetNode.GridPosition, GridManager.Instance.grid).Count ;
     }
 

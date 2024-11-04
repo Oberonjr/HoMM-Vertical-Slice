@@ -84,6 +84,7 @@ public class CombatUnitMovement : MonoBehaviour
     
     public void SnapToGridCenter(Unit unit)
     {
+        //TODO: Find an alternative node if the one selected is not valid
         Vector3Int playerGridPosition = GridManager.Instance.tilemap.WorldToCell(unit.transform.position);
         Vector3 snappedPosition = GridManager.Instance.tilemap.GetCellCenterWorld(playerGridPosition);
         unit.currentNodePosition = ClosestNode(snappedPosition);
