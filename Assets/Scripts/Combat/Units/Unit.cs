@@ -10,7 +10,8 @@ public class Unit : MonoBehaviour
     public UnitStats unitStats;
     public int currentHP;
     public int currentMovementPoints;
-    public bool hasRetaliated;  // Tracks if the unit has retaliated this round.
+    public int stackSize;
+    public bool hasRetaliated;  
     public Node currentNodePosition;
     public bool isMoving;
     //public bool isAlive = true;

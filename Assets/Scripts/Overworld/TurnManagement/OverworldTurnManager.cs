@@ -6,14 +6,29 @@ using UnityEngine.UI;
 
 public class TurnManager : MonoBehaviour
 {
-    public List<Hero> players;  // List of players, configurable from Inspector.
-    public Button endTurnButton;  // End Turn Button in UI.
-    public Slider movementSlider; // UI Slider to show movement points.
+    public static TurnManager Instance;
+    
+    public List<Hero> activeHeroes;  // TODO: Go away from using this for implementation, start relying on Player management
+    public Slider movementSlider; // TODO: Remove this from here to a dedicated UIManager
+    
     private int currentPlayerIndex = 0;
     private Hero _currentHero;
 
     public event Action OnPlayerTurnStart;
     public event Action OnPlayerTurnEnd;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(this);
+            Debug.Log("Destroying extra OverworldTurnManager script");
+        }
+    }
 
     private void Start()
     {
@@ -26,7 +41,7 @@ public class TurnManager : MonoBehaviour
         // }
 
         // Add end turn button functionality
-        endTurnButton.onClick.AddListener(EndTurn);
+        //endTurnButton.onClick.AddListener(EndTurn);
 
         // Subscribe to key input for ending the turn
         //OnPlayerTurnStart += UpdateTurnUI;
@@ -46,7 +61,7 @@ public class TurnManager : MonoBehaviour
 
     private void StartPlayerTurn()
     {
-        _currentHero = players[currentPlayerIndex];
+        _currentHero = activeHeroes[currentPlayerIndex];
         OnPlayerTurnStart?.Invoke();
 
         // If it's an AI player, simulate their turn.
@@ -65,7 +80,7 @@ public class TurnManager : MonoBehaviour
     private void EndTurn()
     {
         OnPlayerTurnEnd?.Invoke();
-        currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;
+        currentPlayerIndex = (currentPlayerIndex + 1) % activeHeroes.Count;
         StartPlayerTurn();
     }
 
@@ -84,17 +99,5 @@ public class TurnManager : MonoBehaviour
             movementSlider.value = _currentHero.movementPoints;
         }
     }
-
-    private void UpdateTurnUI()
-    {
-        if (!_currentHero.isAI)
-        {
-            // Enable the end turn button for human players.
-            endTurnButton.interactable = true;
-        }
-        else
-        {
-            endTurnButton.interactable = false;
-        }
-    }
+    
 }
