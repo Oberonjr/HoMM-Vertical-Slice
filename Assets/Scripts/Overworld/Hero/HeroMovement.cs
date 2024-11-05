@@ -14,7 +14,7 @@ public class HeroMovement : MonoBehaviour
     public GameObject destinationSpritePrefab; // Sprite for the destination
     public GameObject temp;
     public TurnManager turnManager;
-    [FormerlySerializedAs("player")] public Hero hero;
+    [FormerlySerializedAs("player")] public HeroManager hero;
     private List<Node> currentPath;
     private List<Node> remainingPath;
     private bool isMoving = false;

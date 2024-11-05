@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering;
 
-public class Hero : MonoBehaviour
+public class HeroManager : MonoBehaviour
 {
     public bool isAI; 
     public int movementPoints;
     public int maxMovementPoints;
 
-    public Unit[] Army = new Unit[7];
+
     
     public void ReplenishMovementPoints()
     {
