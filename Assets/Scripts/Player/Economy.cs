@@ -11,6 +11,7 @@ public class Economy
     public Economy()
     {
         //TODO: Make economy initialization scale off of external factor
+        ResourceAmount = new Dictionary<ResourceData.ResourceType, int>();
         ResourceAmount[ResourceData.ResourceType.Gold] = 10000;
         ResourceAmount[ResourceData.ResourceType.Ore] = 30;
         ResourceAmount[ResourceData.ResourceType.Wood] = 30;

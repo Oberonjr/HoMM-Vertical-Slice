@@ -1,0 +1,1724 @@
+fileFormatVersion: 2
+guid: 1ea03b6715e409c4ab3a3dc8292edfce
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ResourcesCut_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 448
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d9ae96cc922a040872a13ae6fff087
+      internalID: -1557616699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 448
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a6755f1c828894fa5f22e8f37de4e5
+      internalID: 1918510220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 448
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aff72396a0c7c424e9a7a600c8a969d9
+      internalID: 1175768706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_3
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 448
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b09ac1fb29867e345b7c5b42aba5ad53
+      internalID: -652097306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_4
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 448
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44fab1475eb17a84ba1016b322ae1a32
+      internalID: -28536100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_5
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 448
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9730abc57cb910f4988c7a70eb27646b
+      internalID: -2090212119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_6
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 448
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38238a12792592444b3c392a622d53c8
+      internalID: -1175280814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_7
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 448
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2b24c780501d994ea9eea3253f821f6
+      internalID: -1584468065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 411
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd9ee08e414d8943a7838c5536c23eb
+      internalID: 2057730804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 411
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ffbae3e300b2784e9f528f44d80fa63
+      internalID: -2037359719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 411
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a09d3e57f26ff4abf90ea1fd207a76
+      internalID: 1294134650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_11
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 411
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be904fe80a4c1e043997366e4111f926
+      internalID: -1620381884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_12
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 411
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac001ecd778a69a41ab28bb823ccbc89
+      internalID: -283123870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_13
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 411
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 051d3dd73e538d34a8be34a629f2c0f7
+      internalID: 648432811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_15
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 411
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6331385587711ce498c99a5dffc18364
+      internalID: 1318296996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 376
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e4465afe0216d042b92c49fc259fd49
+      internalID: -203677236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_17
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 375
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4f7b9b3b27eca4dbc86a783a451089
+      internalID: -667736346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_18
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 376
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e9a7198c7943b43b7c0f6ece6d38c9
+      internalID: 964148522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_19
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 376
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da429082cc65ba04aab393ebe47a6e9e
+      internalID: 2063601697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_20
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 375
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3081f75a119fc4f4790060ac649e609c
+      internalID: 1369934931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_21
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 375
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5377ed386f40c64baa4e6c19b935f41
+      internalID: 1466953479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_22
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 376
+        width: 29
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93d8e20edec8cfb44bf148f5871901eb
+      internalID: 197866452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_23
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 344
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c93a00a3eca7646a2054c762fd7c97
+      internalID: -46856420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_24
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 343
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c5118e3c310ca49990d4ead5c084b0
+      internalID: -1869226594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_25
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 344
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25449d71cb0396441b28fda456abd19e
+      internalID: -518878330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_26
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 344
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df46ac0de2e33904e8e9ad71aec81d76
+      internalID: -1097068757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_27
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 343
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b97332fc1ddd0f84b91e45e740c50a7d
+      internalID: 1211672397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_28
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 343
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26fecc30e902d794b941b49002b5ee31
+      internalID: 314989027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_29
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 344
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c301f45aa2f227b4a9218141c4db76f9
+      internalID: 1302199464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_30
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 342
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 627657ea69c9c36479c6a4e2c455bb9a
+      internalID: -641027697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_31
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 301
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c064fafb8d6f684887f96aac8e6ffe2
+      internalID: -1784830706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_32
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 301
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da492b801b84a544b1fd2a4fb58c7df
+      internalID: -331289317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_33
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 300
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be427eaf32b80604687a40965d375c22
+      internalID: 991617351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_34
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 269
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76073c15b4da4594487dcb2eb0107bb8
+      internalID: 1797160239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_35
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 267
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f581b275b712f44a9d62a200f60934
+      internalID: 862026046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_36
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 234
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 042f80bafb195a447b349d32d1e8cb7e
+      internalID: 398622185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_37
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 235
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63d090d70955ac14b8bbfa474565df03
+      internalID: -429176851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_38
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 234
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04cd76b7389a18e4bb0549786be62501
+      internalID: -613261414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_40
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 233
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7526b091c69b4b42b3ccc1df4a491c9
+      internalID: -2025221555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_41
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 233
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2da5a594cb74df94abe784f6f8b63422
+      internalID: -1431637541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_42
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 233
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f187f70fe02638468402e1a9c25ba3d
+      internalID: -1332628957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_43
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 233
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf28295c60ba784a99cec47dc47239f
+      internalID: 1477364306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_44
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 233
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b8af70db4abe9498f079f84d7a7093
+      internalID: -1530056993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_45
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 234
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ddb4e01e826cf4cb11fe008ff95c24
+      internalID: 13517699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_46
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 234
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 983183e08f3ccec45aaa9f218325e81c
+      internalID: -717027164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_47
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 234
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a0bed6956fe19046be8f22953f7e59a
+      internalID: 817929424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_48
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 235
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f482f4c104c801e45b6629a4dac77471
+      internalID: -550460665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_50
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 199
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a018fc770472a40b65ed12bc9fe087
+      internalID: 1922310857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_51
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 198
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f9e3a61e7cedf14ebcf2d013e7bc4dd
+      internalID: -383159375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_52
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 199
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d259bceb6d5ec0744ba48f9b396600ef
+      internalID: 2110705000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_53
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 199
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d347647c689827489cbd65010b5484a
+      internalID: -472119462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_54
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 198
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553df422fb9f062438f89f1a7d53bb1f
+      internalID: -222391482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_55
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 198
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1125a4567f939e04e93a7a775a18c6bd
+      internalID: 1318962601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_56
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 198
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b881d2fd8e696145a706398c00bb36b
+      internalID: 61324451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_57
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 199
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d860429450b3b4dbb02fe337351481
+      internalID: 1355128599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_58
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 199
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe1a2ec73907b344bdc7cc991c43738
+      internalID: 172519065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_59
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 199
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a04ff66f61a86cb49b8b02080df21eab
+      internalID: 1515145033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_60
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 199
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c3dd5669746c946b1aab15cfec2b82
+      internalID: -186871354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_62
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 97
+        width: 83
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 1, y: 0, z: 0, w: 1}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e99b6bf07eebe9a43a5dee896d9876c8
+      internalID: 334417952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_63
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 99
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d30dfe94eee5c9d4bb7f409aa800a3ad
+      internalID: 581410298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_64
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 99
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 575614b0964491e4d9dee68aa660f0e1
+      internalID: -732463221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_65
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 99
+        width: 82
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033486afee00e884a9d74127ba9ed11d
+      internalID: -653173433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_66
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 99
+        width: 82
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 066cc3a90d7822a40b263933a785a44c
+      internalID: -1297119558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_67
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 100
+        width: 82
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 031ff352c00e5334c9718b83ff543140
+      internalID: -591234193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_68
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 4
+        width: 81
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46b81647b5c92f74e8c10838a66abda8
+      internalID: 1178914371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_69
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 61
+        width: 49
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce971dae5c37bb4e9d2587e56ab68c8
+      internalID: 412501662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_70
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 18
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22d7c101c1e98a544998a20772a52e02
+      internalID: 1300929173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_71
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 21
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b442701bb4741c247aa784556d4423ca
+      internalID: -755581407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_72
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 20
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ece1bbab329ad458575f6718c7a9ba
+      internalID: -2008516592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_73
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 23
+        width: 35
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3960f8d8b5f3ae4e8a5000ffaa7a5cc
+      internalID: -731143832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_74
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 19
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f43dfc3368b476a4db207527a5bd65f9
+      internalID: 408380438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_75
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 18
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50d1377882f0bb2419a93d5d3092a615
+      internalID: 1944503543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ResourcesCut_76
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 20
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de522f47e2bcba44ae37bfc9740c456
+      internalID: -1933298800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ResourcesCut_0: -1557616699
+      ResourcesCut_1: 1918510220
+      ResourcesCut_10: 1294134650
+      ResourcesCut_11: -1620381884
+      ResourcesCut_12: -283123870
+      ResourcesCut_13: 648432811
+      ResourcesCut_14: 1133674880
+      ResourcesCut_15: 1318296996
+      ResourcesCut_16: -203677236
+      ResourcesCut_17: -667736346
+      ResourcesCut_18: 964148522
+      ResourcesCut_19: 2063601697
+      ResourcesCut_2: 1175768706
+      ResourcesCut_20: 1369934931
+      ResourcesCut_21: 1466953479
+      ResourcesCut_22: 197866452
+      ResourcesCut_23: -46856420
+      ResourcesCut_24: -1869226594
+      ResourcesCut_25: -518878330
+      ResourcesCut_26: -1097068757
+      ResourcesCut_27: 1211672397
+      ResourcesCut_28: 314989027
+      ResourcesCut_29: 1302199464
+      ResourcesCut_3: -652097306
+      ResourcesCut_30: -641027697
+      ResourcesCut_31: -1784830706
+      ResourcesCut_32: -331289317
+      ResourcesCut_33: 991617351
+      ResourcesCut_34: 1797160239
+      ResourcesCut_35: 862026046
+      ResourcesCut_36: 398622185
+      ResourcesCut_37: -429176851
+      ResourcesCut_38: -613261414
+      ResourcesCut_39: 1450068170
+      ResourcesCut_4: -28536100
+      ResourcesCut_40: -2025221555
+      ResourcesCut_41: -1431637541
+      ResourcesCut_42: -1332628957
+      ResourcesCut_43: 1477364306
+      ResourcesCut_44: -1530056993
+      ResourcesCut_45: 13517699
+      ResourcesCut_46: -717027164
+      ResourcesCut_47: 817929424
+      ResourcesCut_48: -550460665
+      ResourcesCut_49: 798804994
+      ResourcesCut_5: -2090212119
+      ResourcesCut_50: 1922310857
+      ResourcesCut_51: -383159375
+      ResourcesCut_52: 2110705000
+      ResourcesCut_53: -472119462
+      ResourcesCut_54: -222391482
+      ResourcesCut_55: 1318962601
+      ResourcesCut_56: 61324451
+      ResourcesCut_57: 1355128599
+      ResourcesCut_58: 172519065
+      ResourcesCut_59: 1515145033
+      ResourcesCut_6: -1175280814
+      ResourcesCut_60: -186871354
+      ResourcesCut_61: -27466684
+      ResourcesCut_62: 334417952
+      ResourcesCut_63: 581410298
+      ResourcesCut_64: -732463221
+      ResourcesCut_65: -653173433
+      ResourcesCut_66: -1297119558
+      ResourcesCut_67: -591234193
+      ResourcesCut_68: 1178914371
+      ResourcesCut_69: 412501662
+      ResourcesCut_7: -1584468065
+      ResourcesCut_70: 1300929173
+      ResourcesCut_71: -755581407
+      ResourcesCut_72: -2008516592
+      ResourcesCut_73: -731143832
+      ResourcesCut_74: 408380438
+      ResourcesCut_75: 1944503543
+      ResourcesCut_76: -1933298800
+      ResourcesCut_8: 2057730804
+      ResourcesCut_9: -2037359719
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

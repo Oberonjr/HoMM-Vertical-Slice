@@ -13,7 +13,7 @@ public class HeroMovement : MonoBehaviour
     public GameObject pathSpritePrefab; // Sprite for visualizing the path
     public GameObject destinationSpritePrefab; // Sprite for the destination
     public GameObject temp;
-    public TurnManager turnManager;
+    public OverworldTurnManager turnManager;
     [FormerlySerializedAs("player")] public HeroManager hero;
     private List<Node> currentPath;
     private List<Node> remainingPath;
@@ -79,7 +79,10 @@ public class HeroMovement : MonoBehaviour
                 if (clickedNode == selectedDestination && pathShown)
                 {
                     StartCoroutine(MoveAlongPath(currentPath));
-                    
+                    if (selectedDestination.placedInteractable != null)
+                    {
+                        OverworldEventBus<OnHeroInteract>.Publish(new OnHeroInteract(hero, selectedDestination.placedInteractable));
+                    }
                 }
                 else
                 {
@@ -94,6 +97,10 @@ public class HeroMovement : MonoBehaviour
                     
                     }
                     pathShown = true;
+                    if (selectedDestination.placedInteractable != null)
+                    {
+                        currentPath.Remove(currentPath.Last());
+                    }
                 }
                 
             }
@@ -208,7 +215,7 @@ public class HeroMovement : MonoBehaviour
             currentPath.Clear();
             foreach (Node node in remainingPath)
             {
-                Debug.Log(node.GridPosition);
+                //Debug.Log(node.GridPosition);
             }
         }
         else

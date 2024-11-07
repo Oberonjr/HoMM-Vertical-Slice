@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TurnManager : MonoBehaviour
+public class OverworldTurnManager : MonoBehaviour
 {
-    public static TurnManager Instance;
+    public static OverworldTurnManager Instance;
 
-    public List<Player> CurrentPlayers;
+    public List<Player> CurrentPlayers = new List<Player>();
     public List<HeroManager> activeHeroes;  // TODO: Go away from using this for implementation, start relying on Player management
     public Slider movementSlider; // TODO: Remove this from here to a dedicated UIManager
+    public Player ActivePlayer;
     
     private int currentPlayerIndex = 0;
     private HeroManager _currentHero;
@@ -28,6 +29,14 @@ public class TurnManager : MonoBehaviour
         {
             Destroy(this);
             Debug.Log("Destroying extra OverworldTurnManager script");
+        }
+
+        Player player1 = new Player("Player1");
+        CurrentPlayers.Add(player1);
+        ActivePlayer = player1;
+        foreach (HeroManager hero in activeHeroes)
+        {
+            player1.Heroes.Add(hero);
         }
     }
 

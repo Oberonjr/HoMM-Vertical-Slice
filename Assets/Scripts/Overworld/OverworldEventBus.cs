@@ -33,12 +33,52 @@ public class OnPlayerTurnEnd : Event
 }
 
 //Hero related events
+//Movement
 public class OnHeroMoveStart : Event
 {
     public HeroManager hero;
+    public Node startingLocation;
 
-    public OnHeroMoveStart(Player pPlayer)
+    public OnHeroMoveStart(HeroManager pHero, Node pNode)
     {
-        player = pPlayer;
+        hero = pHero;
+        startingLocation = pNode;
+    }
+}
+
+public class OnHeroMoveEnd : Event
+{
+    public HeroManager hero;
+    public Node endingLocation;
+
+    public OnHeroMoveEnd(HeroManager pHero, Node pNode)
+    {
+        hero = pHero;
+        endingLocation = pNode;
+    }
+}
+
+public class OnHeroMoving : Event
+{
+    public HeroManager hero;
+    public Node currentLocation;
+
+    public OnHeroMoving(HeroManager pHero, Node pNode)
+    {
+        hero = pHero;
+        currentLocation = pNode;
+    }
+}
+
+//Interaction
+public class OnHeroInteract : Event
+{
+    public HeroManager hero;
+    public Interactable interactable;
+
+    public OnHeroInteract(HeroManager pHero, Interactable pInteractable)
+    {
+        hero = pHero;
+        interactable = pInteractable;
     }
 }
