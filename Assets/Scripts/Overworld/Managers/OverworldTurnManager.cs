@@ -16,6 +16,7 @@ public class OverworldTurnManager : MonoBehaviour
     private int currentPlayerIndex = 0;
     private HeroManager _currentHero;
 
+    //TODO: Remove these and switch to EventBus's events
     public event Action OnPlayerTurnStart;
     public event Action OnPlayerTurnEnd;
 
@@ -31,12 +32,18 @@ public class OverworldTurnManager : MonoBehaviour
             Debug.Log("Destroying extra OverworldTurnManager script");
         }
 
+        //TODO: Reformat this testing mess into a system that actually makes sense
         Player player1 = new Player("Player1");
         CurrentPlayers.Add(player1);
         ActivePlayer = player1;
         foreach (HeroManager hero in activeHeroes)
         {
             player1.Heroes.Add(hero);
+        }
+
+        foreach (HeroManager ownedHero in player1.Heroes)
+        {
+            ownedHero.owner = player1;
         }
     }
 
@@ -59,8 +66,9 @@ public class OverworldTurnManager : MonoBehaviour
     private void StartPlayerTurn()
     {
         _currentHero = activeHeroes[currentPlayerIndex];
+        OverworldEventBus<OnPlayerTurnStart>.Publish(new OnPlayerTurnStart(ActivePlayer));
         OnPlayerTurnStart?.Invoke();
-
+        
         // If it's an AI player, simulate their turn.
         if (_currentHero.isAI)
         {
@@ -77,6 +85,7 @@ public class OverworldTurnManager : MonoBehaviour
     private void EndTurn()
     {
         OnPlayerTurnEnd?.Invoke();
+        OverworldEventBus<OnPlayerTurnEnd>.Publish(new OnPlayerTurnEnd(ActivePlayer));
         currentPlayerIndex = (currentPlayerIndex + 1) % activeHeroes.Count;
         StartPlayerTurn();
     }

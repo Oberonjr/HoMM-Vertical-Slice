@@ -5,16 +5,10 @@ using UnityEngine;
 public class FlaggableBuilding : Building
 {
     public Player owner;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public override void Interact(OnHeroInteract e)
     {
-        
+        owner = e.hero.owner;
+        owner.Kingdom.UpdateDailyIncome();
     }
 }

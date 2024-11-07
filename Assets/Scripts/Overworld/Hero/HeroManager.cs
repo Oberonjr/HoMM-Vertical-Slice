@@ -12,6 +12,8 @@ public class HeroManager : MonoBehaviour
 
     public HeroInfo cHeroInfo;
 
+    [HideInInspector] public Player owner;
+    
     [SerializeField] private HeroStartingStats startingStats;
 
     private void Awake()

@@ -38,6 +38,7 @@ public class HeroMovement : MonoBehaviour
         currentNodePosition = ClosestNode(snappedPosition);
     }
 
+    //TODO: Move away from here
     void StartPlayerTurn()
     {
         // If it's this player's turn, allow movement.
@@ -59,6 +60,7 @@ public class HeroMovement : MonoBehaviour
         }
     }
 
+    //TODO: Move away from here
     void EndPlayerTurn()
     {
         // Prevent movement at the end of the player's turn
