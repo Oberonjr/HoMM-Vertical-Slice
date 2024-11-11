@@ -21,8 +21,6 @@ public class OnPlayerTurnStart : Event
         player = pPlayer;
         player.Kingdom.Economy.UpdateCurrentResources();
     }
-    
-    
 }
 
 public class OnPlayerTurnEnd : Event

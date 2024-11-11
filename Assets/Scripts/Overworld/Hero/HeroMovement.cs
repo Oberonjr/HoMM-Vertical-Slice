@@ -83,7 +83,9 @@ public class HeroMovement : MonoBehaviour
                     StartCoroutine(MoveAlongPath(currentPath));
                     if (selectedDestination.placedInteractable != null)
                     {
-                        OverworldEventBus<OnHeroInteract>.Publish(new OnHeroInteract(hero, selectedDestination.placedInteractable));
+                        //OverworldEventBus<OnHeroInteract>.Publish(new OnHeroInteract(hero, selectedDestination.placedInteractable));
+                        selectedDestination.placedInteractable.Interact();
+                        Debug.Log(selectedDestination.placedInteractable.name);
                     }
                 }
                 else

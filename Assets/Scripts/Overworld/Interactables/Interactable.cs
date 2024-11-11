@@ -15,7 +15,7 @@ public class Interactable : MonoBehaviour
         nodePosition.placedInteractable = this;
     }
 
-    public virtual void Interact(OnHeroInteract e)
+    public virtual void Interact(OnHeroInteract e = null)
     {
         
     }
