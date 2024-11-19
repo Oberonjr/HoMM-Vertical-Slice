@@ -34,12 +34,7 @@ public class CombatUnitMovement : MonoBehaviour
     {
         CombatEventBus<UnitStartMovingEvent>.OnEvent += StartMovement;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     void StartMovement(UnitStartMovingEvent e)
     {

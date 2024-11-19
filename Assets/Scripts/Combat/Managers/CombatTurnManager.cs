@@ -8,7 +8,7 @@ public class CombatTurnManager : MonoBehaviour
 {
     public static CombatTurnManager Instance;
     
-    public List<Unit> unitsInCombat = new List<Unit>();
+    public List<Unit> unitsInCombat = new List<Unit>(); //TODO: Make this initialize based on the armies going into combat
     public int currentTurnIndex = 0;
     
     [HideInInspector]public Unit currentUnit;
@@ -154,8 +154,6 @@ public class CombatTurnManager : MonoBehaviour
     public Unit GetNextUnit()
     {
         Unit pNextUnit = unitsInCombat[currentTurnIndex];
-        
-        
         return pNextUnit;
     }
     

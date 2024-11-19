@@ -7,14 +7,14 @@ using UnityEngine.Serialization;
 public class HeroMovement : MonoBehaviour
 {
     public Pathfinding pathfinding;
-    //public GridManager gridManager;
     public Transform playerTransform;
     public float animationSpeed = 3f;
     public GameObject pathSpritePrefab; // Sprite for visualizing the path
     public GameObject destinationSpritePrefab; // Sprite for the destination
-    public GameObject temp;
     public OverworldTurnManager turnManager;
     [FormerlySerializedAs("player")] public HeroManager hero;
+    
+    
     private List<Node> currentPath;
     private List<Node> remainingPath;
     private bool isMoving = false;
@@ -191,7 +191,7 @@ public class HeroMovement : MonoBehaviour
     {
         isMoving = true;
         int tilesMoved = 0;
-
+        OverworldEventBus<OnHeroMoveStart>.Publish(new OnHeroMoveStart(hero, currentNodePosition));
         foreach (Node node in path)
         {
             if (!hero.CanMove(1))
@@ -206,9 +206,11 @@ public class HeroMovement : MonoBehaviour
                 yield return null;
             }
             currentNodePosition = node;
+            hero.cHeroInfo.currentPosition = currentNodePosition;
             Destroy(node.spriteHighlight);
             hero.ConsumeMovementPoints(1);
             tilesMoved++;
+            OverworldEventBus<OnHeroMoving>.Publish(new OnHeroMoving(hero, node));
             turnManager.movementSlider.value = hero.movementPoints;
         }
 
@@ -227,7 +229,7 @@ public class HeroMovement : MonoBehaviour
             currentPath = new List<Node>(); // Clear path if the destination is reached.
             pathShown = false;
         }
-
+        OverworldEventBus<OnHeroMoveEnd>.Publish(new OnHeroMoveEnd(hero, currentNodePosition));
         isMoving = false;
     }
 
