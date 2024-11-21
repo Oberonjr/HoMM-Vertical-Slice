@@ -15,6 +15,7 @@ public class OverworldTurnManager : MonoBehaviour
     
     private int currentPlayerIndex = 0;
     private HeroManager _currentHero;
+    private EconomyManager _economyManager;
 
     //TODO: Remove these and switch to EventBus's events
     public event Action OnPlayerTurnStart;
@@ -49,15 +50,14 @@ public class OverworldTurnManager : MonoBehaviour
 
     private void Start()
     {
-       
-
+        _economyManager = new EconomyManager();
         StartPlayerTurn();
     }
 
     private void Update()
     {
         // Also end turn when 'E' is pressed
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && !HeroMovementManager.Instance.isMoving)
         {
             EndTurn();
         }

@@ -13,6 +13,8 @@ public class Player
         PlayerName = playerName;
         Kingdom = new Kingdom();
         Heroes = new List<HeroManager>();
+        
+        
     }
 
     public void AddHeroManager(HeroManager hero)

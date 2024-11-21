@@ -4,24 +4,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class HeroMovement : MonoBehaviour
+public class HeroMovementManager : MonoBehaviour
 {
+    public static HeroMovementManager Instance;
+    
     public Pathfinding pathfinding;
     public Transform playerTransform;
     public float animationSpeed = 3f;
     public GameObject pathSpritePrefab; // Sprite for visualizing the path
     public GameObject destinationSpritePrefab; // Sprite for the destination
-    public OverworldTurnManager turnManager;
-    [FormerlySerializedAs("player")] public HeroManager hero;
+    public OverworldTurnManager turnManager; //TODO: remove refference as it's Singleton
+    public HeroManager hero;
+    [HideInInspector]public bool isMoving;
     
     
     private List<Node> currentPath;
     private List<Node> remainingPath;
-    private bool isMoving = false;
     private Node selectedDestination;
-    private bool pathShown = false;
+    private bool pathShown;
     private Node currentNodePosition;
 
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Debug.Log("Hero Movement Instance already exists! Destroying game object.");
+            Destroy(gameObject);
+        }
+    }
     
     void Start()
     {
@@ -35,7 +49,7 @@ public class HeroMovement : MonoBehaviour
         Vector3Int playerGridPosition = GridManager.Instance.tilemap.WorldToCell(playerTransform.position);
         Vector3 snappedPosition = GridManager.Instance.tilemap.GetCellCenterWorld(playerGridPosition);
         playerTransform.position = snappedPosition;
-        currentNodePosition = ClosestNode(snappedPosition);
+        currentNodePosition = MyUtils.ClosestNode(snappedPosition);
     }
 
     //TODO: Move away from here
@@ -73,7 +87,7 @@ public class HeroMovement : MonoBehaviour
         {
             // Allow destination setting if player has no movement points left.
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Node clickedNode = ClosestNode(mousePosition);
+            Node clickedNode = MyUtils.ClosestNode(mousePosition);
             //Debug.Log("Click");
             if (clickedNode != null && clickedNode.IsWalkable)
             {
@@ -142,8 +156,7 @@ public class HeroMovement : MonoBehaviour
             
         }
     }
-
-
+    
     void ClearPreviousPath()
     {
         //Debug.Log("Clearing previous path");
@@ -160,32 +173,7 @@ public class HeroMovement : MonoBehaviour
             Destroy(pathSprite);
         }
     }
-
-    Node ClosestNode(Vector2 clickedPosition)
-    {
-        float shortestDistance = Mathf.Infinity;
-        Node closestNode = null;
-        foreach (Node node in GridManager.Instance.grid.Values)
-        {
-            float specificDistance = Vector2.Distance(node.GridPosition, clickedPosition);
-            if (specificDistance < shortestDistance)
-            {
-                shortestDistance = specificDistance;
-                closestNode = node;
-            }
-        }
-        //Debug.Log("Mouse click position is: " + clickedPosition);
-        //Debug.Log("Closest node attributed to that is: " + closestNode.GridPosition);
-        if (Vector2.Distance(clickedPosition, closestNode.GridPosition) <= GridManager.Instance.tileSize.x / 2)
-        {
-            return closestNode;
-        }
-        else
-        {
-            Debug.Log("Clicked position is too far from closest eligible node.");
-            return null;
-        }
-    }
+    
     
     IEnumerator MoveAlongPath(List<Node> path)
     {
