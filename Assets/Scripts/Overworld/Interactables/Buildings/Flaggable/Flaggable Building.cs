@@ -6,9 +6,10 @@ public class FlaggableBuilding : Building
 {
     public Player owner;
 
-    public override void Interact(OnHeroInteract e)
+    public override void Interact(HeroManager interactor)
     {
-        owner = e.hero.owner;
+        base.Interact(interactor);
+        owner = interactor.owner;
         owner.Kingdom.UpdateDailyIncome();
     }
 }

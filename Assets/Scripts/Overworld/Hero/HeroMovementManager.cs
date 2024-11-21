@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Linq;
 using System.Collections.Generic;
@@ -15,15 +16,16 @@ public class HeroMovementManager : MonoBehaviour
     public GameObject destinationSpritePrefab; // Sprite for the destination
     public OverworldTurnManager turnManager; //TODO: remove refference as it's Singleton
     public HeroManager hero;
+    
     [HideInInspector]public bool isMoving;
     
-    
     private List<Node> currentPath;
-    private List<Node> remainingPath;
+    private List<Node> remainingPath; //TODO: Tie to UIManager
     private Node selectedDestination;
-    private bool pathShown;
+    private bool pathShown;           //TODO: Tie to UIManager
     private Node currentNodePosition;
-
+    private Queue<Action> actionQueue = new Queue<Action>();
+    
     void Awake()
     {
         if (Instance == null)
@@ -40,10 +42,19 @@ public class HeroMovementManager : MonoBehaviour
     void Start()
     {
         SnapToGridCenter();
-        turnManager.OnPlayerTurnStart += StartPlayerTurn;
-        turnManager.OnPlayerTurnEnd += EndPlayerTurn;
+        OverworldEventBus<OnPlayerTurnStart>.OnEvent += StartPlayerTurn; //TODO: MOVE THIS!!!
+        OverworldEventBus<OnPlayerTurnEnd>.OnEvent += EndPlayerTurn; //TODO: MOVE THIS TOO!!!
+        OverworldEventBus<OnHeroMoveEnd>.OnEvent += ProcessActionQueue;
+
     }
 
+    void OnDestroy()
+    {
+        OverworldEventBus<OnPlayerTurnStart>.OnEvent -= StartPlayerTurn; //TODO: need I say more...
+        OverworldEventBus<OnPlayerTurnEnd>.OnEvent -= EndPlayerTurn;
+        OverworldEventBus<OnHeroMoveEnd>.OnEvent -= ProcessActionQueue;
+    }
+    
     void SnapToGridCenter()
     {
         Vector3Int playerGridPosition = GridManager.Instance.tilemap.WorldToCell(playerTransform.position);
@@ -53,7 +64,7 @@ public class HeroMovementManager : MonoBehaviour
     }
 
     //TODO: Move away from here
-    void StartPlayerTurn()
+    void StartPlayerTurn(OnPlayerTurnStart e)
     {
         // If it's this player's turn, allow movement.
         if (!hero.isAI)
@@ -75,7 +86,7 @@ public class HeroMovementManager : MonoBehaviour
     }
 
     //TODO: Move away from here
-    void EndPlayerTurn()
+    void EndPlayerTurn(OnPlayerTurnEnd e)
     {
         // Prevent movement at the end of the player's turn
         isMoving = false;
@@ -83,6 +94,7 @@ public class HeroMovementManager : MonoBehaviour
     
     void Update()
     {
+        //TODO: Move this to OverworldInputManager
         if (Input.GetMouseButtonDown(0) && !isMoving)
         {
             // Allow destination setting if player has no movement points left.
@@ -97,9 +109,7 @@ public class HeroMovementManager : MonoBehaviour
                     StartCoroutine(MoveAlongPath(currentPath));
                     if (selectedDestination.placedInteractable != null)
                     {
-                        //OverworldEventBus<OnHeroInteract>.Publish(new OnHeroInteract(hero, selectedDestination.placedInteractable));
-                        selectedDestination.placedInteractable.Interact();
-                        Debug.Log(selectedDestination.placedInteractable.name);
+                        EnqueueInteraction(clickedNode.placedInteractable);
                     }
                 }
                 else
@@ -124,7 +134,7 @@ public class HeroMovementManager : MonoBehaviour
             }
         }
     }
-
+    //TODO: Move to UI Manager
     void VisualizePath(List<Node> path)
     {
         //Debug.Log("Visualizing path");
@@ -156,7 +166,7 @@ public class HeroMovementManager : MonoBehaviour
             
         }
     }
-    
+    //TODO: Move to UI Manager
     void ClearPreviousPath()
     {
         //Debug.Log("Clearing previous path");
@@ -194,14 +204,16 @@ public class HeroMovementManager : MonoBehaviour
                 yield return null;
             }
             currentNodePosition = node;
+            //TODO: Move everything below to a function on Hero/UIM
             hero.cHeroInfo.currentPosition = currentNodePosition;
             Destroy(node.spriteHighlight);
             hero.ConsumeMovementPoints(1);
             tilesMoved++;
-            OverworldEventBus<OnHeroMoving>.Publish(new OnHeroMoving(hero, node));
             turnManager.movementSlider.value = hero.movementPoints;
+            OverworldEventBus<OnHeroMoving>.Publish(new OnHeroMoving(hero, node));
         }
 
+        //TODO: Make UIM listen to an event for this to handle this logic
         if (path.Count > tilesMoved)
         {
             Debug.Log("Remaining path initialized");
@@ -221,4 +233,13 @@ public class HeroMovementManager : MonoBehaviour
         isMoving = false;
     }
 
+    void EnqueueInteraction(Interactable interactable){
+        actionQueue.Enqueue(() => interactable.Interact(hero));    
+    }
+    
+    void ProcessActionQueue(OnHeroMoveEnd e)
+    {
+        Action interaction = actionQueue.Dequeue();
+        interaction?.Invoke();
+    }
 }

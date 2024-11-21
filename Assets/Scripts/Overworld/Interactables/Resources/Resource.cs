@@ -7,10 +7,10 @@ public class Resource : Interactable
     public ResourceData resource;
     public int ResourceAmount;
 
-    public override void Interact(OnHeroInteract e)
+    public override void Interact(HeroManager interactor)
     {
-        base.Interact(e);
-        OverworldTurnManager.Instance.ActivePlayer.Kingdom.Economy.ResourceAmount[resource.Resource] += ResourceAmount;
-        Destroy(gameObject, 0.7f);
+        base.Interact(interactor);
+        interactor.owner.Kingdom.Economy.ResourceAmount[resource.Resource] += ResourceAmount;
+        Destroy(gameObject);
     }
 }
