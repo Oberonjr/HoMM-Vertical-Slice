@@ -23,6 +23,7 @@ public class HeroMovementManager : MonoBehaviour
     private List<Node> remainingPath; //TODO: Tie to UIManager
     private Node selectedDestination;
     private bool pathShown;           //TODO: Tie to UIManager
+    private bool canArrive;
     private Node currentNodePosition;
     private Queue<Action> actionQueue = new Queue<Action>();
     
@@ -107,10 +108,7 @@ public class HeroMovementManager : MonoBehaviour
                 if (clickedNode == selectedDestination && pathShown)
                 {
                     StartCoroutine(MoveAlongPath(currentPath));
-                    if (selectedDestination.placedInteractable != null)
-                    {
-                        EnqueueInteraction(clickedNode.placedInteractable);
-                    }
+                    
                 }
                 else
                 {
@@ -223,23 +221,35 @@ public class HeroMovementManager : MonoBehaviour
             {
                 //Debug.Log(node.GridPosition);
             }
+
+            canArrive = false;
         }
         else
         {
             currentPath = new List<Node>(); // Clear path if the destination is reached.
             pathShown = false;
+            canArrive = true;
+        }
+        if (selectedDestination.placedInteractable != null && canArrive)
+        {
+            EnqueueInteraction(selectedDestination.placedInteractable);
         }
         OverworldEventBus<OnHeroMoveEnd>.Publish(new OnHeroMoveEnd(hero, currentNodePosition));
         isMoving = false;
     }
 
     void EnqueueInteraction(Interactable interactable){
-        actionQueue.Enqueue(() => interactable.Interact(hero));    
+        //Debug.Log(currentNodePosition.neighbours.ContainsKey(selectedDestination)); 
+        actionQueue.Enqueue(() => interactable.Interact(hero));
     }
     
     void ProcessActionQueue(OnHeroMoveEnd e)
     {
-        Action interaction = actionQueue.Dequeue();
-        interaction?.Invoke();
+        if (actionQueue.Count > 0)
+        {
+            Action interaction = actionQueue.Dequeue();
+            interaction?.Invoke();
+        }
+        
     }
 }
