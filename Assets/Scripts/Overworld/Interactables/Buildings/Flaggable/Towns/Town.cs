@@ -6,8 +6,10 @@ public class Town : FlaggableBuilding
 {
     public Dictionary<ResourceData.ResourceType, int> ResourceAmountGenerated;
 
-    void Start()
+    public override void InitializeInteractable(InitializeWorld e = null)
     {
+        base.InitializeInteractable(e);
+        buildingType = BuildingType.TOWN;
         //TODO: Set income based on buildings present in Town
         ResourceAmountGenerated = new Dictionary<ResourceData.ResourceType, int>()
         {

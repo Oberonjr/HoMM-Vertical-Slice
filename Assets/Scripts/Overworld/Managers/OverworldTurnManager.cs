@@ -50,8 +50,13 @@ public class OverworldTurnManager : MonoBehaviour
 
     private void Start()
     {
-        _economyManager = new EconomyManager();
-        StartPlayerTurn();
+        StartCoroutine(MyUtils.LateStart(0.01f, () =>
+        {
+            OverworldEventBus<InitializeWorld>.Publish(new InitializeWorld());
+            _economyManager = new EconomyManager();
+            StartPlayerTurn();
+        }));
+        
     }
 
     private void Update()

@@ -9,9 +9,7 @@ public class Interactable : MonoBehaviour
     
     private void Start()
     {
-        nodePosition = MyUtils.ClosestNode(transform.position);
-        transform.position = nodePosition.GridPosition;
-        nodePosition.placedInteractable = this;
+        OverworldEventBus<InitializeWorld>.OnEvent += InitializeInteractable;
     }
 
     public virtual void Interact(HeroManager interactor)
@@ -19,8 +17,15 @@ public class Interactable : MonoBehaviour
         OverworldEventBus<OnHeroInteract>.Publish(new OnHeroInteract(interactor, this));
     }
 
+    public virtual void InitializeInteractable(InitializeWorld e = null)
+    {
+        nodePosition = MyUtils.ClosestNode(transform.position);
+        transform.position = nodePosition.GridPosition;
+        nodePosition.placedInteractable = this;
+    }
+    
     private void OnDestroy()
     {
-        
+        OverworldEventBus<InitializeWorld>.OnEvent -= InitializeInteractable;
     }
 }

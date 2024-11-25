@@ -11,6 +11,12 @@ public static class OverworldEventBus<T> where T : Event
     }
 }
 
+//General events
+public class InitializeWorld : Event
+{
+    public InitializeWorld(){}
+}
+
 //Player related events
 public class OnPlayerTurnStart : Event
 {
@@ -19,7 +25,6 @@ public class OnPlayerTurnStart : Event
     public OnPlayerTurnStart(Player pPlayer)
     {
         player = pPlayer;
-        player.Kingdom.Economy.UpdateCurrentResources();
     }
 }
 

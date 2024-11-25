@@ -7,6 +7,12 @@ public class Dwelling : FlaggableBuilding
     public Unit ProducedUnit;
     public int StationedAmont;
     
+    public override void InitializeInteractable(InitializeWorld e = null)
+    {
+        base.InitializeInteractable(e);
+        buildingType = BuildingType.DWELLING;
+    }
+    
     public void AddUnit()
     {
         ProducedUnit.stackSize = 5; //TODO: Change this temp value to scale off of a preset system
