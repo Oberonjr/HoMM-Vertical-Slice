@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -28,7 +29,6 @@ public class Unit : MonoBehaviour
         CombatUnitMovement.Instance.SnapToGridCenter(this);
         currentNodePosition.stationedUnit = this;
         animator = GetComponentInChildren<Animator>() ?? throw new System.Exception($"No animator component found on {name}'s VFX child");
-        
         
     }
 
@@ -78,7 +78,25 @@ public class Unit : MonoBehaviour
 
     public int CalculateDamage()
     {
-        int damage = Random.Range(unitStats.damageRange.x, unitStats.damageRange.y);
+        int damage = 0;
+        if (stackSize <= 10)
+        {
+            for (int i = 0; i < stackSize; i++)
+            {
+                int individualDamage = Random.Range(unitStats.damageRange.x, unitStats.damageRange.y);
+                damage += individualDamage;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                int individualDamage = Random.Range(unitStats.damageRange.x, unitStats.damageRange.y);
+                damage += individualDamage;
+            }
+
+            damage = (int)(damage * stackSize / 10);
+        }
         return damage;  // This can later be adjusted based on attack/defense and other factors.
     }
 

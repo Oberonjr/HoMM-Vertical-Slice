@@ -20,6 +20,11 @@ public class Town : FlaggableBuilding
         };
     }
 
+    public override void Interact(HeroManager interactor)
+    {
+        base.Interact(interactor);
+    }
+
     void ChangeIncome(ResourceData.ResourceType resourceType, int newAmount)
     {
         ResourceAmountGenerated[resourceType] = newAmount;

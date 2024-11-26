@@ -25,14 +25,14 @@ public static class MyUtils
             }
         }
         //Debug.Log("Mouse click position is: " + clickedPosition);
-        Debug.Log("Closest node attributed to that is: " + closestNode.GridPosition);
+        //Debug.Log("Closest node attributed to that is: " + closestNode.GridPosition);
         if (Vector2.Distance(clickedPosition, closestNode.GridPosition) <= GridManager.Instance.tileSize.x / 2)
         {
             return closestNode;
         }
         else
         {
-            Debug.Log("Clicked position is too far from closest eligible node.");
+            //Debug.Log("Clicked position is too far from closest eligible node.");
             return null;
         }
         

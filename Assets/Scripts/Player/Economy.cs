@@ -19,10 +19,10 @@ public class Economy
         DailyIncome = new Dictionary<ResourceData.ResourceType, int>
         {
             //TODO: Make this scale off of owned buildings from initialization, not having an actual ghost income based on nothing
-            { ResourceData.ResourceType.Gold, 500 },
-            { ResourceData.ResourceType.Ore, 2 },
-            { ResourceData.ResourceType.Wood, 2 },
-            { ResourceData.ResourceType.Crystal, 1 }
+            { ResourceData.ResourceType.Gold, 0 },
+            { ResourceData.ResourceType.Ore, 0 },
+            { ResourceData.ResourceType.Wood, 0 },
+            { ResourceData.ResourceType.Crystal, 0 }
         };
     }
 

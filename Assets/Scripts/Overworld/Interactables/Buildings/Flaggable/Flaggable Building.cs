@@ -24,9 +24,23 @@ public class FlaggableBuilding : Building
     public override void Interact(HeroManager interactor)
     {
         base.Interact(interactor);
-        owner = interactor.owner;
-        AddBuilding();
-        owner.Kingdom.UpdateDailyIncome();
+        if (owner == null)
+        {
+            Debug.Log(interactor.owner.PlayerName + " is capturing neutral building " + gameObject.name);
+            owner = interactor.owner;
+            AddBuilding();
+            OverworldEventBus<UpdateKindgomIncome>.Publish(new UpdateKindgomIncome(owner));
+        }
+        else if (owner != interactor.owner)
+        {
+            Debug.Log(interactor.owner.PlayerName + " is capturing " + gameObject.name + " from player " + owner.PlayerName);
+           RemoveBuilding();
+           OverworldEventBus<UpdateKindgomIncome>.Publish(new UpdateKindgomIncome(owner));
+           owner = interactor.owner;
+           AddBuilding();
+           OverworldEventBus<UpdateKindgomIncome>.Publish(new UpdateKindgomIncome(owner));
+        }
+        
     }
 
     void AddBuilding()
@@ -41,6 +55,25 @@ public class FlaggableBuilding : Building
                 break;
             case BuildingType.MINE:
                 owner.Kingdom.AddMine (this as Mine);
+                break;
+            default:
+                Debug.LogError ("Unknown building type");
+                break;
+        }
+    }
+    
+    void RemoveBuilding()
+    {
+        switch (buildingType)
+        {
+            case BuildingType.TOWN:
+                owner.Kingdom.RemoveTown(this as Town);
+                break;
+            case BuildingType.DWELLING:
+                owner.Kingdom.RemoveDwelling(this as Dwelling);
+                break;
+            case BuildingType.MINE:
+                owner.Kingdom.RemoveMine (this as Mine);
                 break;
             default:
                 Debug.LogError ("Unknown building type");

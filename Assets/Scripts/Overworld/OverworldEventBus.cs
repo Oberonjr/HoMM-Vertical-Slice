@@ -11,13 +11,14 @@ public static class OverworldEventBus<T> where T : Event
     }
 }
 
-//General events
+//////////////////////////////////////General events
 public class InitializeWorld : Event
 {
     public InitializeWorld(){}
 }
 
-//Player related events
+//////////////////////////////////////Player related events
+//Turn management
 public class OnPlayerTurnStart : Event
 {
     public Player player;
@@ -38,7 +39,19 @@ public class OnPlayerTurnEnd : Event
     }
 }
 
-//Hero related events
+//Economy
+public class UpdateKindgomIncome : Event
+{
+    public Player player;
+
+    public UpdateKindgomIncome(Player pPlayer)
+    {
+        player = pPlayer;
+    }
+}
+
+
+//////////////////////////////////////Hero related events
 //Movement
 public class OnHeroMoveStart : Event
 {
