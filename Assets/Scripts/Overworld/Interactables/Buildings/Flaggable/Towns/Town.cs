@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Town : FlaggableBuilding
 {
     public Dictionary<ResourceData.ResourceType, int> ResourceAmountGenerated;
-
+    public GameObject TownUIScreen; 
+    
     public override void InitializeInteractable(InitializeWorld e = null)
     {
         base.InitializeInteractable(e);
@@ -23,6 +25,7 @@ public class Town : FlaggableBuilding
     public override void Interact(HeroManager interactor)
     {
         base.Interact(interactor);
+        TownUIScreen.SetActive(true);
     }
 
     void ChangeIncome(ResourceData.ResourceType resourceType, int newAmount)
