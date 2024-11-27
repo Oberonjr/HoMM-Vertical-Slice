@@ -36,6 +36,58 @@ public class Economy
             }
         }
     }
-    
-    
+
+    public void AddResource(ResourceData.ResourceType resource, int amount)
+    {
+        ResourceAmount[resource] += amount;
+    }
+
+    public void AddResource(Dictionary<ResourceData.ResourceType, int> resourceAmount)
+    {
+        foreach (KeyValuePair<ResourceData.ResourceType, int> kvp in resourceAmount)
+        {
+            if (ResourceAmount.ContainsKey(kvp.Key))
+            {
+                ResourceAmount[kvp.Key] += kvp.Value;
+            }
+        }
+    }
+
+    public void SpendResource(ResourceData.ResourceType resource, int amount)
+    {
+        if (CanSpendResource(resource, amount))
+        {
+            ResourceAmount[resource] -= amount;
+        }
+    }
+
+    public void SpendResource(Dictionary<ResourceData.ResourceType, int> resourceAmount)
+    {
+        if (CanSpendResource(resourceAmount))
+        {
+            foreach (KeyValuePair<ResourceData.ResourceType, int> kvp in resourceAmount)
+            {
+                ResourceAmount[kvp.Key] -= kvp.Value;
+            }
+        }
+    }
+
+    public bool CanSpendResource(ResourceData.ResourceType resource, int amount)
+    {
+        return ResourceAmount.ContainsKey(resource) && ResourceAmount[resource] >= amount;
+    }
+
+    public bool CanSpendResource(Dictionary<ResourceData.ResourceType, int> resourceAmount)
+    {
+        List<bool> enoughResources = new List<bool>();
+        foreach (KeyValuePair<ResourceData.ResourceType, int> kvp in resourceAmount)
+        {
+            if (ResourceAmount.ContainsKey(kvp.Key))
+            {
+                enoughResources.Add(ResourceAmount[kvp.Key] >= kvp.Value);
+            }
+        }
+
+        return !enoughResources.Contains(false);
+    }
 }

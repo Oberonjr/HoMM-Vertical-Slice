@@ -246,6 +246,7 @@ MonoBehaviour:
   unitStats: {fileID: 11400000, guid: 15fea2f3a678cae4a89dcdf70f9abef7, type: 2}
   currentHP: 0
   currentMovementPoints: 0
+  stackSize: 0
   hasRetaliated: 0
   isMoving: 0
   IsAI: 0
@@ -299,6 +300,7 @@ MonoBehaviour:
   unitStats: {fileID: 11400000, guid: 15fea2f3a678cae4a89dcdf70f9abef7, type: 2}
   currentHP: 0
   currentMovementPoints: 0
+  stackSize: 0
   hasRetaliated: 0
   isMoving: 0
   IsAI: 0
@@ -354,7 +356,6 @@ MonoBehaviour:
   unitsInCombat:
   - {fileID: 276974480}
   - {fileID: 815848949}
-  - {fileID: 0}
   currentTurnIndex: 0
   currentUnit: {fileID: 0}
   nextUnit: {fileID: 0}

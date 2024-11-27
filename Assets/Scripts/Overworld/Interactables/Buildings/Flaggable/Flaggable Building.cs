@@ -7,6 +7,9 @@ public class FlaggableBuilding : Building
 {
     public Player owner;
 
+    private Kingdom _kingdom;
+    private Economy _economy;
+    
     public enum BuildingType
     {
         TOWN,
@@ -19,30 +22,42 @@ public class FlaggableBuilding : Building
     public override void InitializeInteractable(InitializeWorld e = null)
     {
         base.InitializeInteractable(e);
+        if (owner != null)
+        {
+            _kingdom = owner.Kingdom;
+            _economy = owner.Kingdom.Economy;
+        }
     }
     
     public override void Interact(HeroManager interactor)
     {
         base.Interact(interactor);
-        if (owner == null)
-        {
-            Debug.Log(interactor.owner.PlayerName + " is capturing neutral building " + gameObject.name);
-            owner = interactor.owner;
-            AddBuilding();
-            OverworldEventBus<UpdateKindgomIncome>.Publish(new UpdateKindgomIncome(owner));
-        }
-        else if (owner != interactor.owner)
-        {
-            Debug.Log(interactor.owner.PlayerName + " is capturing " + gameObject.name + " from player " + owner.PlayerName);
-           RemoveBuilding();
-           OverworldEventBus<UpdateKindgomIncome>.Publish(new UpdateKindgomIncome(owner));
-           owner = interactor.owner;
-           AddBuilding();
-           OverworldEventBus<UpdateKindgomIncome>.Publish(new UpdateKindgomIncome(owner));
-        }
+        ChangeOwnership(interactor.owner);
         
     }
 
+    void ChangeOwnership(Player newOwner)
+    {
+        if (owner == null)
+        {
+            Debug.Log(newOwner.PlayerName + " is capturing neutral building " + gameObject.name);
+            owner = newOwner;
+            AddBuilding();
+            OverworldEventBus<UpdateKindgomIncome>.Publish(new UpdateKindgomIncome(owner));
+        }
+        else if (owner != newOwner)
+        {
+            Debug.Log(newOwner.PlayerName + " is capturing " + gameObject.name + " from player " + owner.PlayerName);
+            RemoveBuilding();
+            OverworldEventBus<UpdateKindgomIncome>.Publish(new UpdateKindgomIncome(owner));
+            owner = newOwner;
+            AddBuilding();
+            OverworldEventBus<UpdateKindgomIncome>.Publish(new UpdateKindgomIncome(owner));
+        }
+        _kingdom = newOwner.Kingdom;
+        _economy = newOwner.Kingdom.Economy;
+    }
+    
     void AddBuilding()
     {
         switch (buildingType)

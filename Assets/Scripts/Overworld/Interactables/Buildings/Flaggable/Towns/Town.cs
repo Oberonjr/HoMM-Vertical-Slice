@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using AYellowpaper.SerializedCollections;
 
 public class Town : FlaggableBuilding
 {
-    public Dictionary<ResourceData.ResourceType, int> ResourceAmountGenerated;
+    [SerializedDictionary("Resouce", "Amount")]
+    public SerializedDictionary<ResourceData.ResourceType, int> ResourceAmountGenerated;
     public GameObject TownUIScreen; 
     
     public override void InitializeInteractable(InitializeWorld e = null)
@@ -13,7 +15,7 @@ public class Town : FlaggableBuilding
         base.InitializeInteractable(e);
         buildingType = BuildingType.TOWN;
         //TODO: Set income based on buildings present in Town
-        ResourceAmountGenerated = new Dictionary<ResourceData.ResourceType, int>()
+        ResourceAmountGenerated = new SerializedDictionary<ResourceData.ResourceType, int>()
         {
             {ResourceData.ResourceType.Gold, 500},
             { ResourceData.ResourceType.Crystal , 0},
@@ -67,5 +69,6 @@ public class Town : FlaggableBuilding
     public void BuildTownHall()
     {
         ChangeIncome(ResourceData.ResourceType.Gold, 1000);
+        OverworldEventBus<UpdateKindgomIncome>.Publish(new UpdateKindgomIncome(owner));
     }
 }

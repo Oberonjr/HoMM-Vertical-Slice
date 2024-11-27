@@ -20,6 +20,8 @@ public class EconomyManager
         e.player.Kingdom.UpdateDailyIncome();
     }
     
+    
+    
     ~EconomyManager()
     {
         OverworldEventBus<OnPlayerTurnStart>.OnEvent -= OnTurnStart;
