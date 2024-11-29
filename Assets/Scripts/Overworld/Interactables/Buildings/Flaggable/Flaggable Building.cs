@@ -6,7 +6,9 @@ using UnityEngine;
 public class FlaggableBuilding : Building
 {
     public Player owner;
-
+    public Dictionary<ResourceData.ResourceType, int> dailyIncome = new Dictionary<ResourceData.ResourceType, int>();
+    public Dictionary<Unit, int> weeklyProduction = new Dictionary<Unit, int>();
+    
     private Kingdom _kingdom;
     private Economy _economy;
     
@@ -56,6 +58,12 @@ public class FlaggableBuilding : Building
         }
         _kingdom = newOwner.Kingdom;
         _economy = newOwner.Kingdom.Economy;
+    }
+
+
+    void AddDailyIncome()
+    {
+        
     }
     
     void AddBuilding()

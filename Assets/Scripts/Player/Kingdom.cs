@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class Kingdom
 {
@@ -48,6 +49,10 @@ public class Kingdom
 
     public void UpdateDailyIncome()
     {
+        foreach (KeyValuePair<ResourceData.ResourceType, int> kvp in Economy.DailyIncome.ToList())
+        {
+            Economy.DailyIncome[kvp.Key] = 0;
+        }
         Dictionary<ResourceData.ResourceType, int> dailyIncome = Economy.DailyIncome;
         foreach (Town town in Towns)
         {
