@@ -19,11 +19,14 @@ public class Unit : MonoBehaviour
     public bool IsAI;
     public Action QueuedAction;
     
+    [HideInInspector]public string UnitName;
     [HideInInspector]public bool isUnitTurn;
     [HideInInspector]public Animator animator;
+    [HideInInspector] public HeroManager OwnerHero;
     
     private void Start()
     {
+        UnitName = unitStats.unitName;
         currentHP = unitStats.maxHP;
         currentMovementPoints = unitStats.movementSpeed;
         CombatUnitMovement.Instance.SnapToGridCenter(this);
