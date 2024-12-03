@@ -15,7 +15,11 @@ MonoBehaviour:
   Name: Bagus, the Mad Magus
   Icon: {fileID: 0}
   StartingArmy:
-  - {fileID: 0}
+    _serializedList:
+    - Key: {fileID: 1972521907495737636, guid: 322f49bc07893f249869336fb9bf6c79, type: 3}
+      Value: 3
+    - Key: {fileID: 2837997102712700910, guid: 1cc01562c10b8c74e82848c4cb037a04, type: 3}
+      Value: 2
   AttackStat: 2
   DefenseStat: 2
   PowerStat: 2

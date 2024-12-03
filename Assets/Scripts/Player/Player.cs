@@ -8,6 +8,7 @@ public class Player
     public Kingdom Kingdom { get; private set; }
     public List<HeroManager> Heroes { get; private set; }
 
+    public bool hasPlayedTurn;
     public Player(string playerName)
     {
         PlayerName = playerName;

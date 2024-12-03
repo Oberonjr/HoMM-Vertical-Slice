@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using AYellowpaper.SerializedCollections;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering;
 
@@ -20,11 +21,16 @@ public class HeroManager : MonoBehaviour
 
     private void Awake()
     {
+        
         cHeroInfo = new HeroInfo(startingStats.MovementPoints, new Unit[7], startingStats.Name, startingStats.Icon, startingStats.AttackStat, startingStats.DefenseStat, startingStats.PowerStat, startingStats.KnowledgeStat);
-        for (int i = 0; i < startingStats.StartingArmy.Length; i++)
+        for (int i = 0; i < startingStats.StartingArmy.Count; i++)
         {
-            cHeroInfo.Army[i] = startingStats.StartingArmy[i];
+            cHeroInfo.Army[i] = startingStats.StartingArmy.ElementAt(i).Key;
+            cHeroInfo.Army[i].stackSize = startingStats.StartingArmy.ElementAt(i).Value;
+            cHeroInfo.Army[i].OwnerHero = this;
         }
+
+        
     }
 
     public void ReplenishMovementPoints()
@@ -55,6 +61,7 @@ public class HeroManager : MonoBehaviour
             {
                 cHeroInfo.Army[i] = unit;
                 cHeroInfo.Army[i].stackSize = amount;
+                cHeroInfo.Army[i].OwnerHero = this;
                 return;
             }
             else
@@ -63,6 +70,11 @@ public class HeroManager : MonoBehaviour
             }
         }
         
+    }
+
+    public void AddUnit(KeyValuePair<Unit, int> kvp)
+    {
+        AddUnit(kvp.Key, kvp.Value);
     }
 
     public void RemoveUnit(Unit unit, int amount)
@@ -84,6 +96,10 @@ public class HeroManager : MonoBehaviour
             }
         }
     }
-    
+
+    public void RemoveUnit(KeyValuePair<Unit, int> kvp)
+    {
+        RemoveUnit(kvp.Key, kvp.Value);
+    }
 }
 

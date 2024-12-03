@@ -16,6 +16,7 @@ public class OverworldTurnManager : MonoBehaviour
     private int currentPlayerIndex = 0;
     private HeroManager _currentHero;
     private EconomyManager _economyManager;
+    private Calendar _calendar;
 
     //TODO: Remove these and switch to EventBus's events
     public event Action OnPlayerTurnStart;
@@ -53,8 +54,9 @@ public class OverworldTurnManager : MonoBehaviour
         StartCoroutine(MyUtils.LateStart(0.01f, () =>
         {
             OverworldEventBus<InitializeWorld>.Publish(new InitializeWorld());
-            _economyManager = new EconomyManager();
-            StartPlayerTurn();
+            if(_economyManager == null)_economyManager = new EconomyManager();
+            if(_calendar == null) _calendar = Calendar.Instance;
+            StartPlayerTurn(); 
         }));
         
     }
@@ -70,6 +72,11 @@ public class OverworldTurnManager : MonoBehaviour
 
     private void StartPlayerTurn()
     {
+        foreach (Player player in CurrentPlayers)
+        {
+            if(!player.hasPlayedTurn) return;
+            _calendar.AdvanceTime();
+        }
         _currentHero = activeHeroes[currentPlayerIndex];
         OverworldEventBus<OnPlayerTurnStart>.Publish(new OnPlayerTurnStart(ActivePlayer));
         OnPlayerTurnStart?.Invoke();
@@ -89,6 +96,7 @@ public class OverworldTurnManager : MonoBehaviour
 
     private void EndTurn()
     {
+        ActivePlayer.hasPlayedTurn = true;
         OnPlayerTurnEnd?.Invoke();
         OverworldEventBus<OnPlayerTurnEnd>.Publish(new OnPlayerTurnEnd(ActivePlayer));
         currentPlayerIndex = (currentPlayerIndex + 1) % activeHeroes.Count;

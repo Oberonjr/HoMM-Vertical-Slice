@@ -17,6 +17,13 @@ public class InitializeWorld : Event
     public InitializeWorld(){}
 }
 
+public class NewDay: Event{}
+
+public class NewWeek: Event{}
+
+public class NewMonth : Event{}
+
+
 //////////////////////////////////////Player related events
 //Turn management
 public class OnPlayerTurnStart : Event
