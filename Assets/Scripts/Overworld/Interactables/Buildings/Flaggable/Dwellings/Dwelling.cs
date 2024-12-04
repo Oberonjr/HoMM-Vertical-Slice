@@ -13,11 +13,13 @@ public class Dwelling : FlaggableBuilding
         buildingType = BuildingType.DWELLING;
         StationedAmont = ProducedUnit.unitStats.Growth;
         OverworldEventBus<NewWeek>.OnEvent += AddUnitGrowth;
+        OverworldEventBus<RecruitUnit>.OnEvent += RemoveRecruitedUnit;
     }
 
     void OnDestroy()
     {
         OverworldEventBus<NewWeek>.OnEvent -= AddUnitGrowth;
+        OverworldEventBus<RecruitUnit>.OnEvent -= RemoveRecruitedUnit;
     }
 
     public override void Interact(HeroManager interactor)
@@ -31,8 +33,13 @@ public class Dwelling : FlaggableBuilding
         StationedAmont += ProducedUnit.unitStats.Growth;
     }
 
-    public KeyValuePair<Unit, int> RecruitUnit()
+    public void RemoveRecruitedUnit(RecruitUnit e)
     {
-        return new KeyValuePair<Unit, int>(ProducedUnit, StationedAmont);
+        StationedAmont -= e.amount;
     }
+    
+    // public KeyValuePair<Unit, int> RecruitUnit()
+    // {
+    //     return new KeyValuePair<Unit, int>(ProducedUnit, StationedAmont);
+    // }
 }

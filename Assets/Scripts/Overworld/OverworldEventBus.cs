@@ -72,6 +72,17 @@ public class UpdateKindgomIncome : Event
     }
 }
 
+public class RecruitUnit : Event
+{
+    public Unit unit;
+    public int amount;
+
+    public RecruitUnit(Unit pUnit, int pAmount)
+    {
+        unit = pUnit;
+        amount = pAmount;
+    }
+}
 
 //////////////////////////////////////Hero related events
 //Movement

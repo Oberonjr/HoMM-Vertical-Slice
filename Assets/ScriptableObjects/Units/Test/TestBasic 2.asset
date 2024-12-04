@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: TestBasic 2
   m_EditorClassIdentifier: 
   unitName: Basic-er Bitch
+  icon: {fileID: 85712922, guid: ea4c9b72f6aed844ca210797956e604a, type: 3}
   maxHP: 7
   attack: 5
   defense: 0
   damageRange: {x: 1, y: 6}
   initiative: 6
   movementSpeed: 4
-  Tier: 0
-  Growth: 0
+  Tier: 2
+  Growth: 10
+  Cost: 40

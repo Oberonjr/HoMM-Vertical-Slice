@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BagusMagus
   m_EditorClassIdentifier: 
   Name: Bagus, the Mad Magus
-  Icon: {fileID: 0}
+  Icon: {fileID: 634184886, guid: aab0522f49cc8f646a8ad147f230e688, type: 3}
   StartingArmy:
     _serializedList:
     - Key: {fileID: 1972521907495737636, guid: 322f49bc07893f249869336fb9bf6c79, type: 3}

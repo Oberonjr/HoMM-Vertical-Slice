@@ -61,6 +61,8 @@ public class RecruitPanelLogic : MonoBehaviour
         {
             currentPlayer.Heroes[0].AddUnit(currentUnit, Mathf.RoundToInt(slider.value));
             currentPlayer.Kingdom.Economy.SpendResource(ResourceData.ResourceType.Gold, Mathf.RoundToInt(slider.value) * currentUnit.unitStats.Cost);
+            slider.maxValue -= slider.value;
+            OverworldEventBus<RecruitUnit>.Publish(new RecruitUnit(currentUnit, Mathf.RoundToInt(slider.value)));
         }
         else
         {

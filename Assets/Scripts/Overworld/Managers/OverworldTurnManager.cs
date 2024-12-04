@@ -19,8 +19,7 @@ public class OverworldTurnManager : MonoBehaviour
     private Calendar _calendar;
 
     //TODO: Remove these and switch to EventBus's events
-    public event Action OnPlayerTurnStart;
-    public event Action OnPlayerTurnEnd;
+    
 
     private void Awake()
     {
@@ -41,6 +40,7 @@ public class OverworldTurnManager : MonoBehaviour
         foreach (HeroManager hero in activeHeroes)
         {
             player1.Heroes.Add(hero);
+            Debug.Log("Added hero to player1");
         }
 
         foreach (HeroManager ownedHero in player1.Heroes)
@@ -79,7 +79,7 @@ public class OverworldTurnManager : MonoBehaviour
         }
         _currentHero = activeHeroes[currentPlayerIndex];
         OverworldEventBus<OnPlayerTurnStart>.Publish(new OnPlayerTurnStart(ActivePlayer));
-        OnPlayerTurnStart?.Invoke();
+        
         
         // If it's an AI player, simulate their turn.
         if (_currentHero.isAI)
@@ -97,7 +97,7 @@ public class OverworldTurnManager : MonoBehaviour
     private void EndTurn()
     {
         ActivePlayer.hasPlayedTurn = true;
-        OnPlayerTurnEnd?.Invoke();
+        
         OverworldEventBus<OnPlayerTurnEnd>.Publish(new OnPlayerTurnEnd(ActivePlayer));
         currentPlayerIndex = (currentPlayerIndex + 1) % activeHeroes.Count;
         StartPlayerTurn();

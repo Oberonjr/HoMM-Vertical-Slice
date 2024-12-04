@@ -20,11 +20,12 @@ public class HeroPanelLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GetCurrentHero();
         OverworldEventBus<OnPlayerTurnStart>.OnEvent += GetCurrentHero;
     }
 
     //Some semblance of non-horrendous code, get the first (and currently only) hero to set all the visuals and see if army logic actually works
-    void GetCurrentHero(OnPlayerTurnStart e)
+    void GetCurrentHero(OnPlayerTurnStart e = null)
     {
         _currentHero = OverworldTurnManager.Instance.ActivePlayer.Heroes[0];
     }

@@ -1,0 +1,5724 @@
+fileFormatVersion: 2
+guid: aab0522f49cc8f646a8ad147f230e688
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hero Portraits_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1023
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ac57e109ca1c64aaaaee3cad165f5e
+      internalID: 1824761398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1023
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b9f316d177359c43810b30f51145109
+      internalID: 1292688907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_2
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1023
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e343a8688608e674eac37ed6eccbae2f
+      internalID: 634184886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_3
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 1023
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c428855da007a94ab551eed056c68c8
+      internalID: -1354688098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_4
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1023
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 183824ab8c58b7c4aad6e18490f324bb
+      internalID: -1632036954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1023
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b86fd55879cd7104ca954c14b8ea1edc
+      internalID: 1602150927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_6
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 1023
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecc7ea99871de7e418222e77c49fb23e
+      internalID: 2009296647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_7
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 1023
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 009cdcd361e83f243aa3a7e80113f09e
+      internalID: 2058794249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_8
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 1023
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9503ba0777545c541906112e27473fcb
+      internalID: 1449115757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_9
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 1023
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ad6f8db438d0441a736743fb54ba56
+      internalID: -381785603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_10
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 1023
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9c108066e93f8a41b937aa03d99a8e8
+      internalID: -1301236631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_11
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 1023
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55c7d1878ed0964dbc51a392e41cf3b
+      internalID: 110941704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_12
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 1023
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b77c901ba0b134a8042da1f69ad6cd
+      internalID: 698624319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_13
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 1023
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e0b92d51d5c0047a10b8f3a74e34fd
+      internalID: 261459746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_14
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 1023
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82396781d79349c43bb0d38a697d6ec9
+      internalID: -1104254644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_15
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 1023
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b4826fa945cef4d973c4f1ddfb44a3
+      internalID: 1857100598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_16
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 1023
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb9f8287990f35b4db667dda71c58b7a
+      internalID: 848945668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_17
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 952
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eaa3334ed7bc43419c6c5b0d57b3b4f
+      internalID: -1073799021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_18
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 952
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29fcb7d64627975438a8fa1681660fe0
+      internalID: 422179369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_19
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 952
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23608f501f315ba4aafa8c0f00d86585
+      internalID: 779589777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_20
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 952
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 792fe57fb7d3cc74581ba0228c130648
+      internalID: 1110742745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_21
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 952
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c6de535adffd34eb397f7513dbe086
+      internalID: -989471560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_22
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 952
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73848c870f795594598e45a6772e6e4d
+      internalID: -374116075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_23
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 952
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092d29fa36b6c9649ab2acb2e3c79b0f
+      internalID: -472458088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_24
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 952
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711f5c5cdcae0d745b64a74a792a26a4
+      internalID: -181289784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_25
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 952
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c9c2fe1cc2e0cd48984155b383d3eda
+      internalID: 1843924813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_26
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 952
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d5b58f6fb8d984cbfe45a21b26deee
+      internalID: -2123516179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_27
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 952
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef9de5f3c3ad92d4d9757a8cd54a5d0f
+      internalID: 789581470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_28
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 952
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae48882aef1b9a4e88d4d64ad3b5264
+      internalID: -210183963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_29
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 952
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061f92c47c7b3134cb28de3412b44110
+      internalID: 332085178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_30
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 952
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 858b83c3de3c8b14fb06eb6310020c81
+      internalID: 314581975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_31
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 952
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973f91c383539374a8a7f5f363327e5e
+      internalID: -468394015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_32
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 952
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d75bd7c6a91bbc4c99245d794016a8e
+      internalID: 2114349811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_33
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 952
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 135e914c0587c864e9ba6cf85b7c2595
+      internalID: 1904184286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_34
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 881
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d37da0ca820b1e44ae11e8225a68e95
+      internalID: -1298309273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_35
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 881
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af4bcabfa23a134397ddc2dc722dfae
+      internalID: 1102317577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_36
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 881
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f70a045776797346b3e26f1233ada45
+      internalID: 507497814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_37
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 881
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb86b7a8f95d72c47a57e6c62df10790
+      internalID: -1900011319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_38
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 881
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38060b86116b16e4da54b5038bfebb07
+      internalID: -1973682737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_39
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 881
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7793afba17df66644af78ebe11163c62
+      internalID: -1386713329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_40
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 881
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b588dccf1d3f74ba7ef1e08c96d8c6
+      internalID: -1349310278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_41
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 881
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02fc0ce3d15beef40b58052652af4b02
+      internalID: -1650709712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_42
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 881
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a489c4b62a325054ab85be33e1fd35f7
+      internalID: 1038317452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_43
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 881
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83adfe0368eb95c498ed55b4061a0c3c
+      internalID: -1500817693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_44
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 881
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f73116e5843531478aa5b7869d239cc
+      internalID: 1907914731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_45
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 881
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3083d7630d4c9444b36c6c2912a5fda
+      internalID: -95126036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_46
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 881
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7c4f5584a1c194599033c8df393320
+      internalID: -630285580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_47
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 881
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b50ea6ad9aef4d748908e9429a32b232
+      internalID: 68124103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_48
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 881
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b83688afbd900d4cb67df4923732e9f
+      internalID: 668466793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_49
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 881
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d628c1a0ac046d94b950c725a8fba068
+      internalID: -1711036090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_50
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 881
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69d3cfda9f67fef488889ee14db4d856
+      internalID: 1686782659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_51
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 810
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 179fa1cd40ecb644ea657efd0d318929
+      internalID: 629937439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_52
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 810
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc1beaffc200a0843b8ac13ded909408
+      internalID: 1526923129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_53
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 810
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc332f5ad8731cd4095795265dfd3011
+      internalID: -1144816516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_54
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 810
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c72e4115094cade4a9616034308708b1
+      internalID: -1060857027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_55
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 810
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38da66823174ce2468fd90bf1261ae80
+      internalID: 2107259547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_56
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 810
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4908e1c8c0c312d4d8646cba9050d9b5
+      internalID: 943488168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_57
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 810
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbcb3b3c52d54874d87af78baa5de76d
+      internalID: -172710307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_58
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 810
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60fcead62da1bab4e88ab675623eba10
+      internalID: -665030180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_59
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 810
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153c69e2a4af72145be0a75f8d58da55
+      internalID: -2008968034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_60
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 810
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6889ba36178e6e44af44fe57cdfaee7
+      internalID: -1344368109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_61
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 810
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 754beb7b2c5978346b3be595f9bb3b2a
+      internalID: -398608168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_62
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 810
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d4a756264fcc084fb1aadeabb33a9d7
+      internalID: -239184422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_63
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 810
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95ad9179d20f9d540b8db189cc040b63
+      internalID: 559372180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_64
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 810
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61741899bcdb3ab4aa72f6718a09c64d
+      internalID: 1382915735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_65
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 810
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18821bdd4d65d7640a917a16f09bac4a
+      internalID: 2011802990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_66
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 810
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e53db18a1d2ba48975297cbf2fbcb1
+      internalID: 1349114673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_67
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 810
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fba53fb3129b5242a7a0bf5342baf37
+      internalID: -1557637790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_68
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 739
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d19d6b9febc08458d1fc2815d80515
+      internalID: 1291016935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_69
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 739
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0aa94c3e3ebca746a68ae96abf1cfd3
+      internalID: -1375093096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_70
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 739
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f33711e86d1f445b8fb96d29f24cee
+      internalID: -1760524638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_71
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 739
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf3f7553be0dc34d8ad81f48008f48a
+      internalID: 1013035148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_72
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 739
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f809eacf889e99c42a3a93a116abbb13
+      internalID: -1109031704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_73
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 739
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8197e544af25cae4f98aae575002c0a4
+      internalID: -1195022588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_74
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 739
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4920b3e05fcb2344bae79daaaec1420
+      internalID: 766024333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_75
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 739
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b0f8c2f06f0abb48b711ddd3d039a11
+      internalID: 958518977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_76
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 739
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74eb0b18525d4d418efd15fa9fcbe00
+      internalID: 2040990427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_77
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 739
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50946bbf59c34e249a1ba62f94fc6cae
+      internalID: 209144256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_78
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 739
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e87b2b6cd5ef04a849218c5e229f5f
+      internalID: 440676848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_79
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 739
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9da045fb81fd2bc419054623cd38b7e5
+      internalID: 1544142868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_80
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 739
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b2696fbe2ad5442b64db939c1d2c5a
+      internalID: 1137857554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_81
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 739
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 680106933b6faef4ba0936a8c479550b
+      internalID: 704342406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_82
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 739
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2323218c26ced438d548722d658674
+      internalID: -2023853363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_83
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 739
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cc9c157f4c41e547828e5b7ada99bba
+      internalID: 1765108418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_84
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 739
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b3d7873fc47aa4fa60375ac43ab8ac
+      internalID: -2721700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_85
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 668
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117875c1f6f46304b8c2c41866ac0d54
+      internalID: 1362997995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_86
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 668
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a9b514251a744d4a9c594bd48aed88b
+      internalID: 1044406114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_87
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 668
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4464793ca25c964797554bb96654e84
+      internalID: 967989623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_88
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 668
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d942637ec76eff846ad061ed8aa4e71c
+      internalID: -83800557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_89
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 668
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a401273f444d3734baa4a9fd320073e1
+      internalID: 305338242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_90
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 668
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde36d47852aa9447b3c414b92d48af6
+      internalID: -1074898667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_91
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 668
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 110220fb5d31eb046ba25280ad37d6fb
+      internalID: -1350235876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_92
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 668
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b90d0b2ac0430a48af37c86c8def9c2
+      internalID: -1667376701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_93
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 668
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f60b0e12241454aa061befe9147105
+      internalID: 1602843302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_94
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 668
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01e5b0f259232448b330c9c82130974
+      internalID: 680507924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_95
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 668
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b96b5f59be6774ab08bd6ca6c8a8f7
+      internalID: -260421981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_96
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 668
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856750c9e4a086346922c7aa395b87b7
+      internalID: 1001394843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_97
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 668
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a09f91bd2d08a48a8a5882d3b3ce1a
+      internalID: 1744985586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_98
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 668
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d65d4e7166ca37a4d8f2e2597c3f0910
+      internalID: 1723309329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_99
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 668
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b826470f13f530148b6ad2dac4cb2cc0
+      internalID: -1809949494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_100
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 668
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325497fa05f736b439bbbaaf1a75578d
+      internalID: -1648209543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_101
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 668
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c844f82025c4f44d8797c16aaa64034
+      internalID: -1860764381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_102
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 597
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8713369f92cd70443b280cd80137ee04
+      internalID: 1179755494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_103
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 597
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ad76d5a19fe2141bb96dc27a19902d
+      internalID: -661431078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_104
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 597
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f98f6feebf62d684fb1ca47ed84cc3ad
+      internalID: -654933114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_105
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 597
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9784ddb37dfb34f48ae54910b8ad41fb
+      internalID: 419818353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_106
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 597
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f57e33cfc3c71694cb218c13c4ec29c7
+      internalID: -1338669857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_107
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 597
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5155bcaa3b849db4ba43f2ac1cbf5780
+      internalID: 1546066076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_108
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 597
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e51e7fa90f44634dad074c9fbaf4f64
+      internalID: 678835367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_109
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 597
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7a08e4fd8f617048b7483f6047fc036
+      internalID: 870985674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_110
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 597
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 621923ccbf286cc4f984bd3b6e5f94ba
+      internalID: 2120437584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_111
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 597
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14e6589c7eefd7408bea3ea4305f7ba
+      internalID: -1892543964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_112
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 597
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96435fb28d6297479d4e1d7b5ab73ad
+      internalID: 1494711565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_113
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 597
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a5787b9437f0ec4082b01e6752b98f6
+      internalID: 1681770679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_114
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 597
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d94e19c7390999b45bd406eb3817d147
+      internalID: -1857908888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_115
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 597
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5bc5b80a836f3f4d9deea6feeab5037
+      internalID: -658583188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_116
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 597
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b65bb630775fc146859f218e92f293a
+      internalID: 1166463278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_117
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 597
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c64d1a11753e9b147b452d15a8eb03ee
+      internalID: 457651634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_118
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 597
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f4b15105bc81f74ba02e9881625b823
+      internalID: -869603709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_119
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 526
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 323403419db9373498f2f2d293991a14
+      internalID: 392118522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_120
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 526
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec1c004dad91b048b8b1256ad0b98ca
+      internalID: -959699832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_121
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 526
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45652f3402764314ca49ced685ef9830
+      internalID: -387127040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_122
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 526
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1fe41ba9e2c82c4c98f0948d3d8c14a
+      internalID: -450606578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_123
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 526
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7211dba190b14b149bd43e62a74871dc
+      internalID: -1139930835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_124
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 526
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429e8db0b2fef5449ae416b42b16c1ee
+      internalID: 850632608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_125
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 526
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8564b44a4e5cd4683c011d94400282
+      internalID: -924094770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_126
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 526
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b46099d563ec8b4881648a4f0b41fb5
+      internalID: 1130290387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_127
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 526
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8824dc7f5475fc24f92c45a0f057e5ba
+      internalID: 235091409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_128
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 526
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58772b314b139524d8926b570763f2ae
+      internalID: -1586850756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_129
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 526
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f7f35c253b24644a8f1cb5ed1e4805
+      internalID: -1551592123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_130
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 526
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04aa6292a38b9a4286be09f162375c6
+      internalID: 67511362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_131
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 526
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d35442d9609eb429c277fc85eac927
+      internalID: -1396326398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_132
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 526
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6a14bce86db6044e96b877390f7d82f
+      internalID: -1110406043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_133
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 526
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f93dc0406d2a04bba3a63dcf7fd3ad
+      internalID: -600027537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_134
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 526
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a10efcd4032f04bb863f72d9c2b5f4
+      internalID: 1222699242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_135
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 526
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3430a253f1b6d9e41bdb54f2a6b92028
+      internalID: 482455807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_136
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 455
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777a9919a2fa4d840b7474074a28012b
+      internalID: -627612579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_137
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 455
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 868f7ddc89f9e174f8e824f938451d29
+      internalID: 1942422160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_138
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 455
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 420537c864834de46bf725adb8a1f72c
+      internalID: -684855897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_139
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 455
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9731f51e9d776545aece42bd67105ff
+      internalID: 1755403342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_140
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 455
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af3bf8528d095046999161dded3673a
+      internalID: 1766925723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_141
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 455
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebf5b487532f17545a4ec09243cfe783
+      internalID: -828251874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_142
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 455
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd6457fd592fe1b47be6ea018bd6a8a2
+      internalID: 422934409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_143
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 455
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd97173c4014d7b47abf9207c7204703
+      internalID: -1258250022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_144
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 455
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86fe2e84aca246f4ba972b06de754f56
+      internalID: -1101959664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_145
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 455
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18011db41baa61a4fa38defddbd1b191
+      internalID: -1057648134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_146
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 455
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf062f6e38dafe469552faad9436d6e
+      internalID: 1484579073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_147
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 455
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d79156783da2e3408a57e03f2fd5a07
+      internalID: -1491353272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_148
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 455
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac40bd40c107674e99da55e31337b69
+      internalID: -493687149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_149
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 455
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a8e6b988de398b48bf293753fe3b3ff
+      internalID: -764979117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_150
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 455
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f36017df0a02d694dabc707e1f321d65
+      internalID: -1274928413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_151
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 455
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e67f71b5655696e45a7eda5a802d080a
+      internalID: 1735241897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_152
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 455
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eaba30c8db9d1041932eaa754615832
+      internalID: 1258417765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_153
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 384
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16087e267ba669d418818416e528b816
+      internalID: -1703791703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_154
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 384
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 455e546b8e8aaef488e54515429b22b1
+      internalID: -50802048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_155
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 384
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c420dd433f068a14392417834e66efec
+      internalID: 1210033236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_156
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 384
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f23cdbb4bdb7e4d958b351dfbf8319
+      internalID: 1310818953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_157
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 384
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d3307acd088234f9e34bf0f12e84f2
+      internalID: -599446425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_158
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc24ade1fe53a246a5ef50312d144b1
+      internalID: -484048854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_159
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 384
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048d2d2967c435d4f978a66a9270e4e0
+      internalID: 273735428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_160
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 384
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc7e6e739d1d374fb543e5e408d6d7b
+      internalID: -2140583690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_161
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 384
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 783528a8a052b7544b3c7e3f305728b3
+      internalID: 227898774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_162
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 384
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eee8e41bf38718428e1939f7f0b8014
+      internalID: 267128384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_163
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 384
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f3a986151b7ed40b4196f8219d5a5e
+      internalID: 1522094645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_164
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 384
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341b1b90afd57ed48b7c42a06b3c51c2
+      internalID: 1378255227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_165
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 384
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c501d6b72aa3aab4db1e7cb27bb7ccaa
+      internalID: -848936264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_166
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 384
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bf8c5a049a3d4c46a129785d8eb98f3
+      internalID: -1164252672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_167
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 384
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51cacd9d783079e44a3f1a5f3bd86563
+      internalID: 508814273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_168
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 384
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9cae60d46de599488fe4fed77e3d576
+      internalID: 1842488444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_169
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 384
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 959fc6555f0615042b49b4e1a2e23d6c
+      internalID: -1482293584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_170
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 313
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a89bc4172a345a4b8dcf133638f21ef
+      internalID: -561659187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_171
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 313
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bdcde8ee466b224ab76411c8a30df15
+      internalID: -1084907042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_172
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 313
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d3f433e30e03164f9bfff6863ab764c
+      internalID: 165961524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_173
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 313
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b151a30a49040c34d8dced02e61b41c3
+      internalID: -1383519564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_174
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 313
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e31d20d979912141ba3ba420ffca551
+      internalID: 743376065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_175
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 313
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 351f452d3e9f08f4b98665cad64698c3
+      internalID: -442844226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_176
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 313
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8eb256259517f8478b9c452cbf068ff
+      internalID: -1926045444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_177
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 313
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 280f0e821809b4043a5dadcc46072912
+      internalID: 1819549480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_178
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 313
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97339bf867109c44eba6fef809531487
+      internalID: -380310043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_179
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 313
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98dda46ac0abbc344a648c6b72bf4f56
+      internalID: 1384102570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_180
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 313
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523c572b56df78947aad7eb6dc9f5d57
+      internalID: 1922235706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_181
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 313
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ba84bac7754ed4283b987848e16178
+      internalID: -1926395577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_182
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 313
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b5a1519eda9cea459995f223a2fb7de
+      internalID: 2007103809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_183
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 313
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 082c86bf1c038a644bb1946088da5bb5
+      internalID: -761744595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_184
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 313
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03682e5a5e96bae4ca9a3c89cf3b2c08
+      internalID: -1587315227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_185
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 313
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e878447b78a6041bc92b24621a1362
+      internalID: -554568894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_186
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 313
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 189fd4eaf66252f4a9320ddca1f70b94
+      internalID: -546772230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_187
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 242
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c54e91460555b46b48b08d6ba42c4c
+      internalID: -876056547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_188
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 242
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26dee0c3aee7d54da245c08dea2393f
+      internalID: -447014197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_189
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 242
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1b5a144b7c59144adec5ee5b3a0d27
+      internalID: -217638969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_190
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 242
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f70eddf11a932348bd9074ce2ebf059
+      internalID: -1075202859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_191
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 242
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff059dfb16e64744b50915b0eb4e87a
+      internalID: 1423883252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_192
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 242
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86a6014b0c42b4849a76af0d0f2a0840
+      internalID: 2114331709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_193
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 242
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebfc69581cd3a2445a8b55f258620462
+      internalID: -1769067773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_194
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 242
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b631ba4a7e7e147a3c60237313094f
+      internalID: -203804612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_195
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 242
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7232de00bd80f64095fd860b148fa42
+      internalID: -188753171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_196
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 242
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a94835894c195fa4691f210f2b17643d
+      internalID: -1485141158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_197
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 242
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c588bcf19546294d8530c69511d9e39
+      internalID: 2115104147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_198
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 242
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c347c9a61ea252646acefa20dcadcfe9
+      internalID: 2144569390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_199
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 242
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c00f066540090d84fa6e890be2d4589b
+      internalID: 1411987333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_200
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 242
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f05ffd344a51841b2338ff19b5b040
+      internalID: -2108537600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_201
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 242
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6fbfad4288fecd43b3c104d8a2ca003
+      internalID: 834943790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_202
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 242
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 652ac9592dccbfa4d965e0509e851d47
+      internalID: 1512746724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_203
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 242
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ade38d49f37ee94a88ee03b8380d204
+      internalID: -179356056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_204
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 171
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1d000fcc8bffab41b233974514f820a
+      internalID: -1567403234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_205
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 171
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469f4c660d223d849ac656a005ec9848
+      internalID: 739958633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_206
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 171
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538c11175cdd84a4b90f37206b963e38
+      internalID: -860052027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_207
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 171
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab34d2aced2a324281a577e243213e5
+      internalID: 990572939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_208
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 171
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bbc254381059144b966db9cbe03c0fc
+      internalID: 1536584346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_209
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 171
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eba0ebed73eadf49ae243e2a5173eb1
+      internalID: 1234063714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_210
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 171
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a594c8e3ba29f104c9836e102cebe90b
+      internalID: -1392882969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_211
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 171
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1fbe38c15c7ae64dac4afc052464104
+      internalID: -1738772412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_212
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 171
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bccaf2118ef8ecf4b9e6dcc3c34bb499
+      internalID: 1899407964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_213
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 171
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716f5672892f0234aa5723a6f05e5e7a
+      internalID: 941725974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_214
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 171
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ff2c177320c6049a37250309c1c54c
+      internalID: -293337128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_215
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 171
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bdaa0d2dd58df746ab77ae6917f4ae5
+      internalID: -1557329395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_216
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 171
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b707e5a12692aa42bd59a73beeb1da0
+      internalID: 1942071697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_217
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 171
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b94ac965dab5874cab76e47e4d9dcd0
+      internalID: 1675905814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_218
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 171
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d48f34cc8f6218439867a612c29abce
+      internalID: -1287195936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_219
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 171
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a3dcb2b6f5fe0246958f15cc4ecf0b7
+      internalID: 1962454329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_220
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 171
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe29a50a5dad62c4cb94f496a511a8f5
+      internalID: 237493760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_221
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 100
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 741aad3581a3a0d4ba0b31e055cd765b
+      internalID: -1336556599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_222
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 100
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4bd0018f10d4344887573f9e86afdd7
+      internalID: -1284461769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_223
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 100
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0adfef27349b20840a500f675b18c333
+      internalID: 714396110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_224
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 100
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e61049ece1fd3f4b95c373b687590cc
+      internalID: 194028696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_225
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 100
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23569c0a230a4414cb8bc05e1576edd3
+      internalID: -1891895355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_226
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 100
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04a40eab08756d46887d46fd4753786
+      internalID: -158925247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_227
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 100
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1cda680a822eaa449720862e0013f43
+      internalID: -1475574158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_228
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 100
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b2086ddbed6abe45b0a92d16728b34e
+      internalID: 245374989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_229
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 100
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1dab194e8e6db4b90a8705e30ff88e
+      internalID: -1753088302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_230
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 100
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3296996e3769abe4a8b14ca5d8889bdc
+      internalID: 762542555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_231
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 100
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36d8c1ec5edae843bd1aa7dc46220bd
+      internalID: -810233816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_232
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 100
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccfbf305c2a74d74b8142c8f24d24de8
+      internalID: 2025874237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_233
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 100
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1df29aba26bd954489e097c05535d89c
+      internalID: -1824720710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_234
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 100
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57dfe232cd48a0648a37d55b61023111
+      internalID: 1982273019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_235
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 100
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ca00f74f9bafe4787068ee13b24a2b
+      internalID: 116343603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_236
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 100
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e42068c60a039394d873283b1c060d73
+      internalID: 1433489398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_237
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 100
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 941b56cd83c8ec246a9f390889e38569
+      internalID: -358492581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_238
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 29
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87bb5dcbaa8d3ed4f8bd786dbc77bfbd
+      internalID: -1953032310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_239
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 29
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3383220c05d80724587a38eb7b8781be
+      internalID: 1099086001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_240
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 29
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f58c2c31c54f24999c8ef43303cefe
+      internalID: 1824112099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_241
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 29
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bc9bb8f9663a1b4fa3908dc02883f2d
+      internalID: 2094620209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_242
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 29
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618db9caffff4624cad4aad386beb43f
+      internalID: -2119352411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_243
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 29
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 201bb77a71a1ef94389ff4bfbdd0e619
+      internalID: 89724793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_244
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 29
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 114c7cda04c60ab4fb797b767da46376
+      internalID: 1555342169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_245
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 29
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9052d7f2547480848a3798c580b1f14b
+      internalID: 3439984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_246
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 29
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c78dd55e377b88b4e8d62c32317b11cf
+      internalID: 1704502410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_247
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 29
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb82c5f4aa62c114997878a79af679aa
+      internalID: 1568153221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_248
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 29
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6999379dfdcfd34ba50c73d8893b451
+      internalID: 1951796363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_249
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 29
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c2659e093e0fb543810ed0d7759e8a8
+      internalID: -1260964669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_250
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 29
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3746cea28f2f7d547abeaddc5ac8d8a9
+      internalID: -2091570351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_251
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 29
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc3b4d1073141e4398e161b7c2ac387
+      internalID: -1561230282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_252
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 29
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a8b979f448ed84393dfdc82bab148d
+      internalID: -959459839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_253
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 29
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed3241d9d175510449b02fa78b79a840
+      internalID: -1308104137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Portraits_254
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 29
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30d994c3892ab334a9e0d8079bd40cde
+      internalID: -943293396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Hero Portraits_0: 1824761398
+      Hero Portraits_1: 1292688907
+      Hero Portraits_10: -1301236631
+      Hero Portraits_100: -1648209543
+      Hero Portraits_101: -1860764381
+      Hero Portraits_102: 1179755494
+      Hero Portraits_103: -661431078
+      Hero Portraits_104: -654933114
+      Hero Portraits_105: 419818353
+      Hero Portraits_106: -1338669857
+      Hero Portraits_107: 1546066076
+      Hero Portraits_108: 678835367
+      Hero Portraits_109: 870985674
+      Hero Portraits_11: 110941704
+      Hero Portraits_110: 2120437584
+      Hero Portraits_111: -1892543964
+      Hero Portraits_112: 1494711565
+      Hero Portraits_113: 1681770679
+      Hero Portraits_114: -1857908888
+      Hero Portraits_115: -658583188
+      Hero Portraits_116: 1166463278
+      Hero Portraits_117: 457651634
+      Hero Portraits_118: -869603709
+      Hero Portraits_119: 392118522
+      Hero Portraits_12: 698624319
+      Hero Portraits_120: -959699832
+      Hero Portraits_121: -387127040
+      Hero Portraits_122: -450606578
+      Hero Portraits_123: -1139930835
+      Hero Portraits_124: 850632608
+      Hero Portraits_125: -924094770
+      Hero Portraits_126: 1130290387
+      Hero Portraits_127: 235091409
+      Hero Portraits_128: -1586850756
+      Hero Portraits_129: -1551592123
+      Hero Portraits_13: 261459746
+      Hero Portraits_130: 67511362
+      Hero Portraits_131: -1396326398
+      Hero Portraits_132: -1110406043
+      Hero Portraits_133: -600027537
+      Hero Portraits_134: 1222699242
+      Hero Portraits_135: 482455807
+      Hero Portraits_136: -627612579
+      Hero Portraits_137: 1942422160
+      Hero Portraits_138: -684855897
+      Hero Portraits_139: 1755403342
+      Hero Portraits_14: -1104254644
+      Hero Portraits_140: 1766925723
+      Hero Portraits_141: -828251874
+      Hero Portraits_142: 422934409
+      Hero Portraits_143: -1258250022
+      Hero Portraits_144: -1101959664
+      Hero Portraits_145: -1057648134
+      Hero Portraits_146: 1484579073
+      Hero Portraits_147: -1491353272
+      Hero Portraits_148: -493687149
+      Hero Portraits_149: -764979117
+      Hero Portraits_15: 1857100598
+      Hero Portraits_150: -1274928413
+      Hero Portraits_151: 1735241897
+      Hero Portraits_152: 1258417765
+      Hero Portraits_153: -1703791703
+      Hero Portraits_154: -50802048
+      Hero Portraits_155: 1210033236
+      Hero Portraits_156: 1310818953
+      Hero Portraits_157: -599446425
+      Hero Portraits_158: -484048854
+      Hero Portraits_159: 273735428
+      Hero Portraits_16: 848945668
+      Hero Portraits_160: -2140583690
+      Hero Portraits_161: 227898774
+      Hero Portraits_162: 267128384
+      Hero Portraits_163: 1522094645
+      Hero Portraits_164: 1378255227
+      Hero Portraits_165: -848936264
+      Hero Portraits_166: -1164252672
+      Hero Portraits_167: 508814273
+      Hero Portraits_168: 1842488444
+      Hero Portraits_169: -1482293584
+      Hero Portraits_17: -1073799021
+      Hero Portraits_170: -561659187
+      Hero Portraits_171: -1084907042
+      Hero Portraits_172: 165961524
+      Hero Portraits_173: -1383519564
+      Hero Portraits_174: 743376065
+      Hero Portraits_175: -442844226
+      Hero Portraits_176: -1926045444
+      Hero Portraits_177: 1819549480
+      Hero Portraits_178: -380310043
+      Hero Portraits_179: 1384102570
+      Hero Portraits_18: 422179369
+      Hero Portraits_180: 1922235706
+      Hero Portraits_181: -1926395577
+      Hero Portraits_182: 2007103809
+      Hero Portraits_183: -761744595
+      Hero Portraits_184: -1587315227
+      Hero Portraits_185: -554568894
+      Hero Portraits_186: -546772230
+      Hero Portraits_187: -876056547
+      Hero Portraits_188: -447014197
+      Hero Portraits_189: -217638969
+      Hero Portraits_19: 779589777
+      Hero Portraits_190: -1075202859
+      Hero Portraits_191: 1423883252
+      Hero Portraits_192: 2114331709
+      Hero Portraits_193: -1769067773
+      Hero Portraits_194: -203804612
+      Hero Portraits_195: -188753171
+      Hero Portraits_196: -1485141158
+      Hero Portraits_197: 2115104147
+      Hero Portraits_198: 2144569390
+      Hero Portraits_199: 1411987333
+      Hero Portraits_2: 634184886
+      Hero Portraits_20: 1110742745
+      Hero Portraits_200: -2108537600
+      Hero Portraits_201: 834943790
+      Hero Portraits_202: 1512746724
+      Hero Portraits_203: -179356056
+      Hero Portraits_204: -1567403234
+      Hero Portraits_205: 739958633
+      Hero Portraits_206: -860052027
+      Hero Portraits_207: 990572939
+      Hero Portraits_208: 1536584346
+      Hero Portraits_209: 1234063714
+      Hero Portraits_21: -989471560
+      Hero Portraits_210: -1392882969
+      Hero Portraits_211: -1738772412
+      Hero Portraits_212: 1899407964
+      Hero Portraits_213: 941725974
+      Hero Portraits_214: -293337128
+      Hero Portraits_215: -1557329395
+      Hero Portraits_216: 1942071697
+      Hero Portraits_217: 1675905814
+      Hero Portraits_218: -1287195936
+      Hero Portraits_219: 1962454329
+      Hero Portraits_22: -374116075
+      Hero Portraits_220: 237493760
+      Hero Portraits_221: -1336556599
+      Hero Portraits_222: -1284461769
+      Hero Portraits_223: 714396110
+      Hero Portraits_224: 194028696
+      Hero Portraits_225: -1891895355
+      Hero Portraits_226: -158925247
+      Hero Portraits_227: -1475574158
+      Hero Portraits_228: 245374989
+      Hero Portraits_229: -1753088302
+      Hero Portraits_23: -472458088
+      Hero Portraits_230: 762542555
+      Hero Portraits_231: -810233816
+      Hero Portraits_232: 2025874237
+      Hero Portraits_233: -1824720710
+      Hero Portraits_234: 1982273019
+      Hero Portraits_235: 116343603
+      Hero Portraits_236: 1433489398
+      Hero Portraits_237: -358492581
+      Hero Portraits_238: -1953032310
+      Hero Portraits_239: 1099086001
+      Hero Portraits_24: -181289784
+      Hero Portraits_240: 1824112099
+      Hero Portraits_241: 2094620209
+      Hero Portraits_242: -2119352411
+      Hero Portraits_243: 89724793
+      Hero Portraits_244: 1555342169
+      Hero Portraits_245: 3439984
+      Hero Portraits_246: 1704502410
+      Hero Portraits_247: 1568153221
+      Hero Portraits_248: 1951796363
+      Hero Portraits_249: -1260964669
+      Hero Portraits_25: 1843924813
+      Hero Portraits_250: -2091570351
+      Hero Portraits_251: -1561230282
+      Hero Portraits_252: -959459839
+      Hero Portraits_253: -1308104137
+      Hero Portraits_254: -943293396
+      Hero Portraits_26: -2123516179
+      Hero Portraits_27: 789581470
+      Hero Portraits_28: -210183963
+      Hero Portraits_29: 332085178
+      Hero Portraits_3: -1354688098
+      Hero Portraits_30: 314581975
+      Hero Portraits_31: -468394015
+      Hero Portraits_32: 2114349811
+      Hero Portraits_33: 1904184286
+      Hero Portraits_34: -1298309273
+      Hero Portraits_35: 1102317577
+      Hero Portraits_36: 507497814
+      Hero Portraits_37: -1900011319
+      Hero Portraits_38: -1973682737
+      Hero Portraits_39: -1386713329
+      Hero Portraits_4: -1632036954
+      Hero Portraits_40: -1349310278
+      Hero Portraits_41: -1650709712
+      Hero Portraits_42: 1038317452
+      Hero Portraits_43: -1500817693
+      Hero Portraits_44: 1907914731
+      Hero Portraits_45: -95126036
+      Hero Portraits_46: -630285580
+      Hero Portraits_47: 68124103
+      Hero Portraits_48: 668466793
+      Hero Portraits_49: -1711036090
+      Hero Portraits_5: 1602150927
+      Hero Portraits_50: 1686782659
+      Hero Portraits_51: 629937439
+      Hero Portraits_52: 1526923129
+      Hero Portraits_53: -1144816516
+      Hero Portraits_54: -1060857027
+      Hero Portraits_55: 2107259547
+      Hero Portraits_56: 943488168
+      Hero Portraits_57: -172710307
+      Hero Portraits_58: -665030180
+      Hero Portraits_59: -2008968034
+      Hero Portraits_6: 2009296647
+      Hero Portraits_60: -1344368109
+      Hero Portraits_61: -398608168
+      Hero Portraits_62: -239184422
+      Hero Portraits_63: 559372180
+      Hero Portraits_64: 1382915735
+      Hero Portraits_65: 2011802990
+      Hero Portraits_66: 1349114673
+      Hero Portraits_67: -1557637790
+      Hero Portraits_68: 1291016935
+      Hero Portraits_69: -1375093096
+      Hero Portraits_7: 2058794249
+      Hero Portraits_70: -1760524638
+      Hero Portraits_71: 1013035148
+      Hero Portraits_72: -1109031704
+      Hero Portraits_73: -1195022588
+      Hero Portraits_74: 766024333
+      Hero Portraits_75: 958518977
+      Hero Portraits_76: 2040990427
+      Hero Portraits_77: 209144256
+      Hero Portraits_78: 440676848
+      Hero Portraits_79: 1544142868
+      Hero Portraits_8: 1449115757
+      Hero Portraits_80: 1137857554
+      Hero Portraits_81: 704342406
+      Hero Portraits_82: -2023853363
+      Hero Portraits_83: 1765108418
+      Hero Portraits_84: -2721700
+      Hero Portraits_85: 1362997995
+      Hero Portraits_86: 1044406114
+      Hero Portraits_87: 967989623
+      Hero Portraits_88: -83800557
+      Hero Portraits_89: 305338242
+      Hero Portraits_9: -381785603
+      Hero Portraits_90: -1074898667
+      Hero Portraits_91: -1350235876
+      Hero Portraits_92: -1667376701
+      Hero Portraits_93: 1602843302
+      Hero Portraits_94: 680507924
+      Hero Portraits_95: -260421981
+      Hero Portraits_96: 1001394843
+      Hero Portraits_97: 1744985586
+      Hero Portraits_98: 1723309329
+      Hero Portraits_99: -1809949494
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
