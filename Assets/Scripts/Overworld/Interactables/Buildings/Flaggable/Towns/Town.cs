@@ -70,5 +70,6 @@ public class Town : FlaggableBuilding
     {
         ChangeIncome(ResourceData.ResourceType.Gold, 1000);
         OverworldEventBus<UpdateKindgomIncome>.Publish(new UpdateKindgomIncome(owner));
+        owner.Kingdom.Economy.SpendResource(ResourceData.ResourceType.Gold, 1000);
     }
 }

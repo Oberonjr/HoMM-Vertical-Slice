@@ -48,6 +48,11 @@ public class HeroManager : MonoBehaviour
         return movementPoints >= requiredPoints;
     }
 
+    public Unit[] Army()
+    {
+        return cHeroInfo.Army;
+    }
+    
     public void AddUnit(Unit unit, int amount)
     {
         for (int i = 0; i < cHeroInfo.Army.Length; i++)
@@ -71,7 +76,7 @@ public class HeroManager : MonoBehaviour
         }
         
     }
-
+    
     public void AddUnit(KeyValuePair<Unit, int> kvp)
     {
         AddUnit(kvp.Key, kvp.Value);

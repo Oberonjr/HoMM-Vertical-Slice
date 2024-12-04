@@ -5,23 +5,23 @@ using UnityEngine;
 public class Dwelling : FlaggableBuilding
 {
     public Unit ProducedUnit;
-    public int StationedAmont;
+    public int StationedAmont = 0;
     
     public override void InitializeInteractable(InitializeWorld e = null)
     {
         base.InitializeInteractable(e);
         buildingType = BuildingType.DWELLING;
+        StationedAmont = ProducedUnit.unitStats.Growth;
+        OverworldEventBus<NewWeek>.OnEvent += AddUnitGrowth;
     }
     
-    public void AddUnit()
+    public void AddUnitGrowth(NewWeek e)
     {
-        ProducedUnit.stackSize = 5; //TODO: Change this temp value to scale off of a preset system
-        StationedAmont += ProducedUnit.stackSize;
+        StationedAmont += ProducedUnit.unitStats.Growth;
     }
 
-    public Unit RecruitUnit()
+    public KeyValuePair<Unit, int> RecruitUnit()
     {
-        ProducedUnit.stackSize = StationedAmont;
-        return ProducedUnit;
+        return new KeyValuePair<Unit, int>(ProducedUnit, StationedAmont);
     }
 }

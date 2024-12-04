@@ -31,7 +31,6 @@ public class Calendar
     public void AdvanceTime()
     {
         Day++;
-        OverworldEventBus<NewDay>.Publish(new NewDay());
         if (Day >= 8)
         {
             Day = 1;
@@ -44,5 +43,6 @@ public class Calendar
                 OverworldEventBus<NewMonth>.Publish(new NewMonth());
             }
         }
+        OverworldEventBus<NewDay>.Publish(new NewDay());
     }
 }

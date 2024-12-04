@@ -12,17 +12,21 @@ public static class OverworldEventBus<T> where T : Event
 }
 
 //////////////////////////////////////General events
+// Start
 public class InitializeWorld : Event
 {
     public InitializeWorld(){}
 }
 
+//Calendar
 public class NewDay: Event{}
 
 public class NewWeek: Event{}
 
 public class NewMonth : Event{}
 
+//UI
+public class UpdateUI : Event{}
 
 //////////////////////////////////////Player related events
 //Turn management
