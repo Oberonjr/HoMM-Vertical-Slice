@@ -26,7 +26,18 @@ public class NewWeek: Event{}
 public class NewMonth : Event{}
 
 //UI
-public class UpdateUI : Event{}
+public class OpenRecruitScreen : Event
+{
+    public Unit unit;
+    public int amount;
+
+    public OpenRecruitScreen(Unit pUnit, int pAmount)
+    {
+        unit = pUnit;
+        amount = pAmount;
+    }
+
+}
 
 //////////////////////////////////////Player related events
 //Turn management
