@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Building : Interactable
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Interact(HeroManager interactor)
     {
-        
+        base.Interact(interactor);
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void InitializeInteractable(InitializeWorld e = null)
     {
-        
+        base.InitializeInteractable(e);
     }
 }

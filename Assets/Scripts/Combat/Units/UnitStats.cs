@@ -5,8 +5,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "UnitStats", menuName = "Combat/UnitStats")]
 public class UnitStats : ScriptableObject
 {
+    
+    #region GeneralInfo
+    [Header("General Info")]
     public string unitName;
+    public Sprite icon;
+    #endregion
+        
     #region CombatStats
+    [Header("Combat Stats")]
     public int maxHP;
     public int attack;
     public int defense;
@@ -16,9 +23,10 @@ public class UnitStats : ScriptableObject
     #endregion
     
     #region EconomyStats
-
+    [Header("Economy Stats")]
     public int Tier;
     public int Growth;
+    public int Cost;
 
     #endregion
 
