@@ -15,11 +15,11 @@ public class Unit : MonoBehaviour
     public bool hasRetaliated;  
     public Node currentNodePosition;
     public bool isMoving;
-    //public bool isAlive = true;
     public bool IsAI;
     public Action QueuedAction;
     
     [HideInInspector]public string UnitName;
+    [HideInInspector]public bool isPlaceholder;
     [HideInInspector]public bool isUnitTurn;
     [HideInInspector]public Animator animator;
     [HideInInspector] public HeroManager OwnerHero;
