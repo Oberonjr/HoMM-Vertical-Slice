@@ -134,3 +134,16 @@ public class OnHeroInteract : Event
         interactable = pInteractable;
     }
 }
+
+//Initiate Combat
+public class InitiateCombat : Event
+{
+    public Army AggressorArmy { get; }
+    public Army DefenderArmy { get; }
+
+    public InitiateCombat(Army pAggressorArmy, Army pDefenderArmy)
+    {
+        AggressorArmy = pAggressorArmy;
+        DefenderArmy = pDefenderArmy;
+    }
+}

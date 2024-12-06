@@ -22,7 +22,7 @@ public class Unit : MonoBehaviour
     [HideInInspector]public bool isPlaceholder;
     [HideInInspector]public bool isUnitTurn;
     [HideInInspector]public Animator animator;
-    [HideInInspector] public HeroManager OwnerHero;
+    [HideInInspector] public HeroInfo OwnerHero;
     
     private void Start()
     {

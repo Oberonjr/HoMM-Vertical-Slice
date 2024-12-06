@@ -8,7 +8,7 @@ using UnityEngine;
 [Serializable]
 public class Army
 {
-    public HeroManager owner;
+    public HeroInfo owner;
     
     private readonly List<Unit> _units = new List<Unit>(new Unit[7]);
 
@@ -35,7 +35,7 @@ public class Army
     public void SetStackSize(int index, int size)
     {
         var unit = this[index];
-        if(unit == null) throw new InvalidOperationException("Cannot set stack size of an empty unit slot - " + owner.cHeroInfo.Name + " 's army");
+        if(unit == null) throw new InvalidOperationException("Cannot set stack size of an empty unit slot - " + owner.Name + " 's army");
         unit.stackSize = size;
     }
 
@@ -51,7 +51,7 @@ public class Army
     {
         for (int i = 0; i < _units.Count; i++)
         {
-            if (_units[i].UnitName == unit.UnitName)
+            if (_units[i] != null && _units[i].UnitName == unit.UnitName)
             {
                 _units[i].stackSize += amount;
                 return;
@@ -65,7 +65,7 @@ public class Army
             }
             else
             {
-                Debug.LogError($"{unit.UnitName} can't be added to {owner.gameObject.name}'s army, army is full");
+                Debug.LogError($"{unit.UnitName} can't be added to {owner.Name}'s army, army is full");
             }
         }
         
@@ -91,7 +91,7 @@ public class Army
             }
             else
             {
-                Debug.LogError($"{unit.UnitName} does not exist in {owner.gameObject.name}'s army, something went wrong with the unit input");
+                Debug.LogError($"{unit.UnitName} does not exist in {owner.Name}'s army, something went wrong with the unit input");
             }
         }
     }
@@ -104,6 +104,6 @@ public class Army
     void CheckIndex(int index)
     {
         if(index < 0 || index >= _units.Count)
-            throw new IndexOutOfRangeException("Army index out of bounds - " + owner.cHeroInfo.Name + " 's army");
+            throw new IndexOutOfRangeException("Army index out of bounds - " + owner.Name + " 's army");
     }
 }
