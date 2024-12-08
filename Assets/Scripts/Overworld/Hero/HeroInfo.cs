@@ -25,6 +25,7 @@ public class HeroInfo
         Name = pName;
         Icon = pIcon;
         Army = pArmy;
+        Army.owner = this;
         MovementPoints = pMovementPoints;
         AttackStat = pAttack;
         DefenseStat = pDefense;

@@ -15,11 +15,83 @@ MonoBehaviour:
   Name: Bagus, the Mad Magus
   Icon: {fileID: 634184886, guid: aab0522f49cc8f646a8ad147f230e688, type: 3}
   StartingArmy:
-    _serializedList:
-    - Key: {fileID: 1972521907495737636, guid: 322f49bc07893f249869336fb9bf6c79, type: 3}
-      Value: 3
-    - Key: {fileID: 2837997102712700910, guid: 1cc01562c10b8c74e82848c4cb037a04, type: 3}
-      Value: 2
+    owner:
+      Name: 
+      Icon: {fileID: 0}
+      Army:
+        owner:
+          Name: 
+          Icon: {fileID: 0}
+          Army:
+            owner:
+              Name: 
+              Icon: {fileID: 0}
+              Army:
+                owner:
+                  Name: 
+                  Icon: {fileID: 0}
+                  Army:
+                    owner:
+                      Name: 
+                      Icon: {fileID: 0}
+                      AttackStat: 0
+                      DefenseStat: 0
+                      PowerStat: 0
+                      KnowledgeStat: 0
+                      MovementPoints: 0
+                    _units: []
+                  AttackStat: 0
+                  DefenseStat: 0
+                  PowerStat: 0
+                  KnowledgeStat: 0
+                  MovementPoints: 0
+                _units: []
+              AttackStat: 0
+              DefenseStat: 0
+              PowerStat: 0
+              KnowledgeStat: 0
+              MovementPoints: 0
+            _units: []
+          AttackStat: 0
+          DefenseStat: 0
+          PowerStat: 0
+          KnowledgeStat: 0
+          MovementPoints: 0
+        _units: []
+      AttackStat: 0
+      DefenseStat: 0
+      PowerStat: 0
+      KnowledgeStat: 0
+      MovementPoints: 0
+    _units:
+    - stats: {fileID: 11400000, guid: 15fea2f3a678cae4a89dcdf70f9abef7, type: 2}
+      amount: 3
+      unitPrefab: {fileID: 2297909031159763652, guid: 322f49bc07893f249869336fb9bf6c79, type: 3}
+      identifier: 
+    - stats: {fileID: 11400000, guid: 02deef72016d525419c4de43a4eabd36, type: 2}
+      amount: 2
+      unitPrefab: {fileID: 1034086194780901988, guid: 1cc01562c10b8c74e82848c4cb037a04, type: 3}
+      identifier: 
+    - stats: {fileID: 0}
+      amount: 0
+      unitPrefab: {fileID: 0}
+      identifier: 
+    - stats: {fileID: 0}
+      amount: 0
+      unitPrefab: {fileID: 0}
+      identifier: 
+    - stats: {fileID: 0}
+      amount: 0
+      unitPrefab: {fileID: 0}
+      identifier: 
+    - stats: {fileID: 0}
+      amount: 0
+      unitPrefab: {fileID: 0}
+      identifier: 
+    - stats: {fileID: 0}
+      amount: 0
+      unitPrefab: {fileID: 0}
+      identifier: 
   AttackStat: 2
   DefenseStat: 2
   PowerStat: 2

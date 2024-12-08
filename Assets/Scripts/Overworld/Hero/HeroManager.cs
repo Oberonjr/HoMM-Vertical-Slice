@@ -21,17 +21,17 @@ public class HeroManager : MonoBehaviour
 
     private void Awake()
     {
-        
         cHeroInfo = new HeroInfo(startingStats.MovementPoints, new Army(), startingStats.Name, startingStats.Icon, startingStats.AttackStat, startingStats.DefenseStat, startingStats.PowerStat, startingStats.KnowledgeStat);
-        for (int i = 0; i < startingStats.StartingArmy.Count; i++)
+        for (int i = 0; i < startingStats.StartingArmy._units.Length; i++)
         {
-            cHeroInfo.Army[i] = startingStats.StartingArmy.ElementAt(i).Key;
-            cHeroInfo.Army[i].stackSize = startingStats.StartingArmy.ElementAt(i).Value;
-            cHeroInfo.Army[i].OwnerHero = cHeroInfo;
-            cHeroInfo.Army.owner = cHeroInfo;
-        }
+            UnitSlot updateSlot = startingStats.StartingArmy._units[i];
 
-        
+            if (updateSlot != null)
+            {
+                cHeroInfo.Army._units[i] = new UnitSlot(updateSlot.stats, updateSlot.amount, updateSlot.unitPrefab);
+            }
+            
+        }
     }
 
     public void ReplenishMovementPoints()

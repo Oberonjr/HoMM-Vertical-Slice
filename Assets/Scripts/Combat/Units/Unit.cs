@@ -18,11 +18,11 @@ public class Unit : MonoBehaviour
     public bool IsAI;
     public Action QueuedAction;
     
-    [HideInInspector]public string UnitName;
-    [HideInInspector]public bool isPlaceholder;
+    //[HideInInspector]
+    public string UnitName;
     [HideInInspector]public bool isUnitTurn;
     [HideInInspector]public Animator animator;
-    [HideInInspector] public HeroInfo OwnerHero;
+    [HideInInspector] public HeroInfo OwnerHero; //TODO: Remove
     
     private void Start()
     {

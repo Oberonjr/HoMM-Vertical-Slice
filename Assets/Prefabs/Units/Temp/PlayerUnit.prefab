@@ -48,14 +48,71 @@ MonoBehaviour:
   unitStats: {fileID: 11400000, guid: 15fea2f3a678cae4a89dcdf70f9abef7, type: 2}
   currentHP: 0
   currentMovementPoints: 0
-  stackSize: 0
+  stackSize: 16
   hasRetaliated: 0
   isMoving: 0
   IsAI: 0
   UnitName: 
+  isPlaceholder: 0
   isUnitTurn: 0
   animator: {fileID: 0}
-  OwnerHero: {fileID: 0}
+  OwnerHero:
+    Name: 
+    Icon: {fileID: 0}
+    Army:
+      owner:
+        Name: 
+        Icon: {fileID: 0}
+        Army:
+          owner:
+            Name: 
+            Icon: {fileID: 0}
+            Army:
+              owner:
+                Name: 
+                Icon: {fileID: 0}
+                Army:
+                  owner:
+                    Name: 
+                    Icon: {fileID: 0}
+                    Army:
+                      owner:
+                        Name: 
+                        AttackStat: 0
+                        DefenseStat: 0
+                        PowerStat: 0
+                        KnowledgeStat: 0
+                        MovementPoints: 0
+                      _units: []
+                    AttackStat: 0
+                    DefenseStat: 0
+                    PowerStat: 0
+                    KnowledgeStat: 0
+                    MovementPoints: 0
+                  _units: []
+                AttackStat: 0
+                DefenseStat: 0
+                PowerStat: 0
+                KnowledgeStat: 0
+                MovementPoints: 0
+              _units: []
+            AttackStat: 0
+            DefenseStat: 0
+            PowerStat: 0
+            KnowledgeStat: 0
+            MovementPoints: 0
+          _units: []
+        AttackStat: 0
+        DefenseStat: 0
+        PowerStat: 0
+        KnowledgeStat: 0
+        MovementPoints: 0
+      _units: []
+    AttackStat: 0
+    DefenseStat: 0
+    PowerStat: 0
+    KnowledgeStat: 0
+    MovementPoints: 0
 --- !u!1 &4663069053820032777
 GameObject:
   m_ObjectHideFlags: 0
