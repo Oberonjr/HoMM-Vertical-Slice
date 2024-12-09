@@ -30,12 +30,19 @@ public class RecruitPanelLogic : MonoBehaviour
     void InitializeScreen(OpenRecruitScreen e)
     {
         recruitPanel.SetActive(true);
+        HeroMovementManager.Instance.allowInput = false;
         icon.sprite = e.unit.icon;
         slider.maxValue = e.amount;
         availableText.text = "Available: " + e.amount;
         
         currentPlayer = OverworldTurnManager.Instance.ActivePlayer;
         currentUnit = e.unit;
+    }
+
+    public void CloseScreen()
+    {
+        recruitPanel.SetActive(false);
+        HeroMovementManager.Instance.allowInput = true;
     }
 
     public void AddRecruit()
@@ -62,6 +69,7 @@ public class RecruitPanelLogic : MonoBehaviour
             currentPlayer.Heroes[0].cHeroInfo.Army.AddUnit(currentUnit, Mathf.RoundToInt(slider.value));
             currentPlayer.Kingdom.Economy.SpendResource(ResourceData.ResourceType.Gold, Mathf.RoundToInt(slider.value) * currentUnit.Cost);
             slider.maxValue -= slider.value;
+            availableText.text = "Available: " + slider.maxValue;
             OverworldEventBus<RecruitUnit>.Publish(new RecruitUnit(currentUnit, Mathf.RoundToInt(slider.value)));
         }
         else

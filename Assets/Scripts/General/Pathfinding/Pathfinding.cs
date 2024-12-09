@@ -78,7 +78,7 @@ public class Pathfinding : MonoBehaviour
         }
 
         Debug.Log("Pathfinder found no path");
-        return new List<Node>(); 
+        return null; 
     }
 
     List<Node> RetracePath(Node startNode, Node endNode)

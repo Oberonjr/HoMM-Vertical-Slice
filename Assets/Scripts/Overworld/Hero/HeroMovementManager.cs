@@ -18,6 +18,7 @@ public class HeroMovementManager : MonoBehaviour
     public HeroManager hero;
     
     [HideInInspector]public bool isMoving;
+    [HideInInspector]public bool allowInput = true;
     
     private List<Node> currentPath;
     private List<Node> remainingPath; //TODO: Tie to UIManager
@@ -96,7 +97,7 @@ public class HeroMovementManager : MonoBehaviour
     void Update()
     {
         //TODO: Move this to OverworldInputManager
-        if (Input.GetMouseButtonDown(0) && !isMoving)
+        if (allowInput && Input.GetMouseButtonDown(0) && !isMoving)
         {
             // Allow destination setting if player has no movement points left.
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

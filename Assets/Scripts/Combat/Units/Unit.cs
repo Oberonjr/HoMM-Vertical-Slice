@@ -22,7 +22,7 @@ public class Unit : MonoBehaviour
     public string UnitName;
     [HideInInspector]public bool isUnitTurn;
     [HideInInspector]public Animator animator;
-    [HideInInspector]public HeroInfo OwnerHero; //TODO: Remove
+    [HideInInspector]public HeroInfo OwnerHero; 
 
     private TMPro.TMP_Text stackSizeText;
     
@@ -45,21 +45,22 @@ public class Unit : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        int leftoverDamage = damage;
-        while (leftoverDamage > 0 && stackSize > 0)
+        int leftoverDamage = Mathf.Max(0, damage - currentHP);
+        currentHP = Mathf.Max(0, currentHP - damage);
+        if (currentHP == 0)
         {
-            currentHP = Mathf.Max(0, currentHP - leftoverDamage);
-            leftoverDamage = Mathf.Max(0, leftoverDamage - currentHP);
-            if (currentHP == 0)
+            currentHP = unitStats.maxHP;
+            stackSize--;
+            stackSizeText.text = stackSize.ToString();
+            if (stackSize == 0)
             {
-                currentHP = unitStats.maxHP;
-                stackSize--;
-                stackSizeText.text = stackSize.ToString();
-                if (stackSize == 0)
-                {
-                    Die();    
-                }
+                Die();
+                return;
             }
+        }
+        if(leftoverDamage > 0 && stackSize > 0)
+        {
+            TakeDamage(leftoverDamage);
         }
         CombatEventBus<DamageReceivedEvent>.Publish(new DamageReceivedEvent(this));
         
@@ -85,8 +86,9 @@ public class Unit : MonoBehaviour
 
     public bool CanReachNode(Node targetNode)
     {
-        //TODO: Add a check if FindPath returns null
-        return  currentMovementPoints >= Pathfinding.Instance.FindPath(transform.position, targetNode.GridPosition, GridManager.Instance.grid).Count ;
+        List<Node> path = Pathfinding.Instance.FindPath(transform.position, targetNode.GridPosition, GridManager.Instance.grid);
+        
+        return path != null && currentMovementPoints >= path.Count ;
     }
 
     public void UseMovement(int movementCost)

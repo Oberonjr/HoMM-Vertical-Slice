@@ -123,8 +123,13 @@ public class CombatTurnManager : MonoBehaviour
             spawnLocation.transform.position = MyUtils.ClosestNode(spawnLocation.transform.position).GridPosition;
             if (army._units[i].unitPrefab == null) return;
             GameObject spawnUnit = Instantiate(army._units[i].unitPrefab, spawnLocation.position, Quaternion.identity);
-            spawnUnit.GetComponent<Unit>().stackSize = army._units[i].amount;
-            CombatUnitMovement.Instance.SnapToGridCenter(spawnUnit.GetComponent<Unit>());
+            Unit unitComponent = spawnUnit.GetComponent<Unit>();
+            unitComponent.stackSize = army._units[i].amount;
+            if (army.owner != null)
+            {
+                unitComponent.OwnerHero = army.owner;
+            }
+            CombatUnitMovement.Instance.SnapToGridCenter(unitComponent);
             unitsInCombat.Add(spawnUnit.GetComponent<Unit>());
             spawnUnit.GetComponentInChildren<SpriteRenderer>().flipX = isDefender;
             
@@ -135,7 +140,15 @@ public class CombatTurnManager : MonoBehaviour
     {
         foreach (Unit unit in unitsInCombat)
         {
-            unit.currentNodePosition.IsWalkable = false;
+            //Can't walk and target allies, but can walk and to enemies and target them. This might make enemies walkable through, but eh
+            if (unit.OwnerHero.Name == currentUnit.OwnerHero.Name)
+            {
+                unit.currentNodePosition.IsWalkable = false;
+            }
+            else
+            {
+                unit.currentNodePosition.IsWalkable = true;
+            }
             //Debug.Log(unit.name + "'s node is walkable? " + unit.currentNodePosition.IsWalkable);
         }
         
@@ -248,7 +261,7 @@ public class CombatTurnManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.7f);
         //TODO: Maybe handle retaliation logic someplace else...
-        if (!defender.hasRetaliated && defender.currentHP > 0)
+        if (!defender.hasRetaliated && defender.stackSize > 0)
         {
             CombatEventBus<UnitRetaliateEvent>.Publish(new UnitRetaliateEvent(defender, attacker));
             attacker.TakeDamage(CalculateDamage(defender, attacker));

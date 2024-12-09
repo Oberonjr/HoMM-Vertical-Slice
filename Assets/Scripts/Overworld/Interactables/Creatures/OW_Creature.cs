@@ -7,13 +7,12 @@ using AYellowpaper.SerializedCollections;
 
 public class OW_Creature : Interactable
 {
-
-    
     public Army neutralArmy = new Army();
     
     public override void InitializeInteractable(InitializeWorld e = null)
     {
         base.InitializeInteractable(e);
+        neutralArmy.owner = new HeroInfo(0, neutralArmy);
     }
 
     public override void Interact(HeroManager interactor)
