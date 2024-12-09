@@ -15,10 +15,15 @@ public class CombatTurnManager : MonoBehaviour
     [HideInInspector]public Unit nextUnit;
     [HideInInspector]public GameObject indicator;
 
+    [SerializeField] private GameObject aggressorArmySpawnParent;
+    [SerializeField] private GameObject defenderArmySpawnParent;
+    //TODO: Move these to a combat UI manager
     [SerializeField] private GameObject indicatorPrefab;
     [SerializeField] private GameObject TileHighlightSprite;
     
     private CombatStateMachine stateMachine;
+    private Army aggressorArmy;
+    private Army defenderArmy;
     
     private void Awake()
     {
@@ -43,6 +48,7 @@ public class CombatTurnManager : MonoBehaviour
         CombatEventBus<MouseLeftClickEvent>.OnEvent += HandleInput;
         StartCoroutine(MyUtils.LateStart(0.1f, () =>
         {
+            //Combat Start happens here. Doing it late so all the other components of the scene have time to initialize and set themselves before starting to use them
             stateMachine.ChangeState(new CombatStartState(stateMachine));
             
         }));
@@ -97,11 +103,34 @@ public class CombatTurnManager : MonoBehaviour
     {
         //TODO: Once event takes in Hero stats, make this read e to initialize the list with the armies' creatures
         // Sort units by initiative.
+        if(CombatBridgeManager.Instance == null) throw new Exception("CombatBridgeManager is null");
+        aggressorArmy = CombatBridgeManager.Instance.AggressorArmy;
+        defenderArmy = CombatBridgeManager.Instance.DefenderArmy;
+        SpawnArmy(aggressorArmy, aggressorArmySpawnParent, false);
+        SpawnArmy(defenderArmy, defenderArmySpawnParent, true);
         unitsInCombat = unitsInCombat.OrderByDescending(u => u.unitStats.initiative).ToList();
         currentTurnIndex = 0;
         currentUnit = unitsInCombat[0];
         
     }
+
+    public void SpawnArmy(Army army, GameObject location, bool isDefender)
+    {
+        for (int i = 0; i < location.transform.childCount; i++)
+        {
+            Transform spawnLocation = location.transform.GetChild(i);
+            Debug.Log(spawnLocation.name);
+            spawnLocation.transform.position = MyUtils.ClosestNode(spawnLocation.transform.position).GridPosition;
+            if (army._units[i].unitPrefab == null) return;
+            GameObject spawnUnit = Instantiate(army._units[i].unitPrefab, spawnLocation.position, Quaternion.identity);
+            spawnUnit.GetComponent<Unit>().stackSize = army._units[i].amount;
+            CombatUnitMovement.Instance.SnapToGridCenter(spawnUnit.GetComponent<Unit>());
+            unitsInCombat.Add(spawnUnit.GetComponent<Unit>());
+            spawnUnit.GetComponentInChildren<SpriteRenderer>().flipX = isDefender;
+            
+        }
+    }
+    
     public void StartUnitTurn(UnitTurnStartEvent e = null)
     {
         foreach (Unit unit in unitsInCombat)
@@ -214,6 +243,7 @@ public class CombatTurnManager : MonoBehaviour
         Unit attacker = e.attacker;
         Unit defender = e.defender;
         int damage = CalculateDamage(attacker, defender);
+        Debug.Log(attacker.UnitName + " is attacking " + defender.UnitName + " for " + damage + " damage");
         defender.TakeDamage(damage);
 
         yield return new WaitForSeconds(0.7f);

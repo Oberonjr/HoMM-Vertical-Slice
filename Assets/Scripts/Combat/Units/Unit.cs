@@ -22,7 +22,9 @@ public class Unit : MonoBehaviour
     public string UnitName;
     [HideInInspector]public bool isUnitTurn;
     [HideInInspector]public Animator animator;
-    [HideInInspector] public HeroInfo OwnerHero; //TODO: Remove
+    [HideInInspector]public HeroInfo OwnerHero; //TODO: Remove
+
+    private TMPro.TMP_Text stackSizeText;
     
     private void Start()
     {
@@ -32,17 +34,35 @@ public class Unit : MonoBehaviour
         CombatUnitMovement.Instance.SnapToGridCenter(this);
         currentNodePosition.stationedUnit = this;
         animator = GetComponentInChildren<Animator>() ?? throw new System.Exception($"No animator component found on {name}'s VFX child");
+        stackSizeText = transform.GetComponentInChildren<TMPro.TMP_Text>() ?? throw new System.Exception($"No text component found on {name}'s Canvas child");
+        stackSizeText.text = stackSize.ToString();
+    }
+    
+    private void OnDisable()
+    {
         
     }
 
     public void TakeDamage(int damage)
     {
-        currentHP = Mathf.Max(0, currentHP - damage);
-        CombatEventBus<DamageReceivedEvent>.Publish(new DamageReceivedEvent(this));
-        if (currentHP == 0)
+        int leftoverDamage = damage;
+        while (leftoverDamage > 0 && stackSize > 0)
         {
-            Die();
+            currentHP = Mathf.Max(0, currentHP - leftoverDamage);
+            leftoverDamage = Mathf.Max(0, leftoverDamage - currentHP);
+            if (currentHP == 0)
+            {
+                currentHP = unitStats.maxHP;
+                stackSize--;
+                stackSizeText.text = stackSize.ToString();
+                if (stackSize == 0)
+                {
+                    Die();    
+                }
+            }
         }
+        CombatEventBus<DamageReceivedEvent>.Publish(new DamageReceivedEvent(this));
+        
     }
 
     public void Die()
@@ -54,6 +74,7 @@ public class Unit : MonoBehaviour
         //isAlive = false;
         currentNodePosition.IsWalkable = true;
         currentNodePosition.stationedUnit = null;
+        Destroy(transform.GetChild(1));
         Destroy(this, 0.2f);
     }
 
@@ -116,9 +137,6 @@ public class Unit : MonoBehaviour
         return reachableNodes;
     }
 
-    private void OnDisable()
-    {
-        
-    }
+    
 }
 
