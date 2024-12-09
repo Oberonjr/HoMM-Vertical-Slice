@@ -66,11 +66,11 @@ public class RecruitPanelLogic : MonoBehaviour
         if (currentPlayer.Kingdom.Economy.CanSpendResource(ResourceData.ResourceType.Gold,
                 Mathf.RoundToInt(slider.value) * currentUnit.Cost)) //The check already happens in Spend(), but my sequencing is still currently all wrong
         {
+            OverworldEventBus<RecruitUnit>.Publish(new RecruitUnit(currentUnit, Mathf.RoundToInt(slider.value)));
             currentPlayer.Heroes[0].cHeroInfo.Army.AddUnit(currentUnit, Mathf.RoundToInt(slider.value));
             currentPlayer.Kingdom.Economy.SpendResource(ResourceData.ResourceType.Gold, Mathf.RoundToInt(slider.value) * currentUnit.Cost);
             slider.maxValue -= slider.value;
             availableText.text = "Available: " + slider.maxValue;
-            OverworldEventBus<RecruitUnit>.Publish(new RecruitUnit(currentUnit, Mathf.RoundToInt(slider.value)));
         }
         else
         {
