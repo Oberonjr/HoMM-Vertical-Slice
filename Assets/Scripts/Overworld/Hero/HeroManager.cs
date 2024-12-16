@@ -67,7 +67,7 @@ public class HeroManager : MonoBehaviour
     //         {
     //             cHeroInfo.Army[i] = unit;
     //             cHeroInfo.Army[i].stackSize = amount;
-    //             cHeroInfo.Army[i].OwnerHero = this;
+    //             cHeroInfo.Army[i].OwnerArmy = this;
     //             return;
     //         }
     //         else

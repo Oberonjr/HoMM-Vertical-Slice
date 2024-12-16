@@ -46,6 +46,7 @@ public class CombatTurnManager : MonoBehaviour
         CombatEventBus<UnitEndMovingEvent>.OnEvent += OnUnitArrival;
         CombatEventBus<AttackStartEvent>.OnEvent += ApplyDamage;
         CombatEventBus<MouseLeftClickEvent>.OnEvent += HandleInput;
+        CombatEventBus<UnitKilledEvent>.OnEvent += HandleUnitDeath;
         StartCoroutine(MyUtils.LateStart(0.1f, () =>
         {
             //Combat Start happens here. Doing it late so all the other components of the scene have time to initialize and set themselves before starting to use them
@@ -53,6 +54,17 @@ public class CombatTurnManager : MonoBehaviour
             
         }));
         indicator = Instantiate(indicatorPrefab);
+    }
+    
+    private void OnDisable()
+    {
+        CombatEventBus<CombatStartEvent>.OnEvent -= StartCombat;
+        CombatEventBus<UnitTurnStartEvent>.OnEvent -= StartUnitTurn;
+        CombatEventBus<UnitTurnEndEvent>.OnEvent -= EndTurn;
+        CombatEventBus<UnitEndMovingEvent>.OnEvent -= OnUnitArrival;
+        CombatEventBus<AttackStartEvent>.OnEvent -= ApplyDamage;
+        CombatEventBus<MouseLeftClickEvent>.OnEvent -= HandleInput;
+        CombatEventBus<UnitKilledEvent>.OnEvent -= HandleUnitDeath;
     }
 
     private void Update()
@@ -128,7 +140,7 @@ public class CombatTurnManager : MonoBehaviour
             unitComponent.stackSize = army._units[i].amount;
             if (army.owner != null)
             {
-                unitComponent.OwnerHero = army.owner;
+                unitComponent.OwnerArmy = army;
             }
             MyUtils.SnapToGridCenter(spawnUnit.transform, out unitComponent.currentNodePosition);
             unitsInCombat.Add(spawnUnit.GetComponent<Unit>());
@@ -142,7 +154,7 @@ public class CombatTurnManager : MonoBehaviour
         foreach (Unit unit in unitsInCombat)
         {
             //Can't walk and target allies, but can walk and to enemies and target them. This might make enemies walkable through, but eh
-            if (unit.OwnerHero.Name == currentUnit.OwnerHero.Name)
+            if (unit.OwnerArmy == currentUnit.OwnerArmy)
             {
                 unit.currentNodePosition.IsWalkable = false;
             }
@@ -259,7 +271,7 @@ public class CombatTurnManager : MonoBehaviour
         Unit attacker = e.attacker;
         Unit defender = e.defender;
         int damage = CalculateDamage(attacker, defender);
-        Debug.Log(attacker.UnitName + " is attacking " + defender.UnitName + " for " + damage + " damage");
+        //Debug.Log(attacker.UnitName + " is attacking " + defender.UnitName + " for " + damage + " damage");
         defender.TakeDamage(damage);
 
         yield return new WaitForSeconds(0.7f);
@@ -277,14 +289,11 @@ public class CombatTurnManager : MonoBehaviour
         StartCoroutine(AttackLogic(e));
     }
 
-    private void OnDisable()
+    void HandleUnitDeath(UnitKilledEvent e)
     {
-        CombatEventBus<CombatStartEvent>.OnEvent -= StartCombat;
-        CombatEventBus<UnitTurnStartEvent>.OnEvent -= StartUnitTurn;
-        CombatEventBus<UnitTurnEndEvent>.OnEvent -= EndTurn;
-        CombatEventBus<UnitEndMovingEvent>.OnEvent -= OnUnitArrival;
-        CombatEventBus<AttackStartEvent>.OnEvent -= ApplyDamage;
-        CombatEventBus<MouseLeftClickEvent>.OnEvent -= HandleInput;
+        unitsInCombat.Remove(e.unit);
     }
+
+    
 }
 

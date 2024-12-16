@@ -12,7 +12,8 @@ public class UnitSlot
     
     public GameObject unitPrefab;
 
-    [HideInInspector] public string identifier;
+    //[HideInInspector]
+    public string identifier;
     
     public UnitSlot(UnitStats pStats, int pAmount, GameObject pUnitPrefab = null)
     {

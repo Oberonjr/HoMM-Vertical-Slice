@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 
@@ -22,7 +23,7 @@ public class Unit : MonoBehaviour
     public string UnitName;
     [HideInInspector]public bool isUnitTurn;
     [HideInInspector]public Animator animator;
-    [HideInInspector]public HeroInfo OwnerHero; 
+    [FormerlySerializedAs("OwnerHero")] [HideInInspector]public Army OwnerArmy; 
 
     private TMPro.TMP_Text stackSizeText;
     
@@ -57,6 +58,7 @@ public class Unit : MonoBehaviour
         {
             currentHP = unitStats.maxHP;
             stackSize--;
+            OwnerArmy.RemoveUnit(unitStats, 1);
             stackSizeText.text = stackSize.ToString();
             if (stackSize == 0)
             {
@@ -75,13 +77,13 @@ public class Unit : MonoBehaviour
     public void Die()
     {
         // Handle unit death (remove from grid, remove from turn order, etc.)
-        CombatTurnManager.Instance.unitsInCombat.Remove(this);
         CombatEventBus<UnitKilledEvent>.Publish(new UnitKilledEvent(this));
         Debug.Log(name + " has been killed");
         //isAlive = false;
+        
         currentNodePosition.IsWalkable = true;
         currentNodePosition.stationedUnit = null;
-        transform.GetChild(1).gameObject.SetActive(false);
+        transform.GetChild(1).gameObject.SetActive(false); //TODO: For the love of god find a better way to disable the textBox
         Destroy(this, 0.2f); //TODO: Either set this as inactive or create a dependency on a boolean isDead
     }
 

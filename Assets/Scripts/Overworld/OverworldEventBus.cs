@@ -139,11 +139,15 @@ public class OnHeroInteract : Event
 public class InitiateCombat : Event
 {
     public Army AggressorArmy { get; }
+    public GameObject AggresorObject { get; }
     public Army DefenderArmy { get; }
+    public GameObject DefenderObject { get; }
 
-    public InitiateCombat(Army pAggressorArmy, Army pDefenderArmy)
+    public InitiateCombat(Army pAggressorArmy, Army pDefenderArmy, GameObject pAggressorObject, GameObject pDefenderObject)
     {
         AggressorArmy = pAggressorArmy;
         DefenderArmy = pDefenderArmy;
+        AggresorObject = pAggressorObject;
+        DefenderObject = pDefenderObject;
     }
 }

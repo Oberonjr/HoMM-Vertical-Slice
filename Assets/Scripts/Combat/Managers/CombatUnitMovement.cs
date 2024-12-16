@@ -45,7 +45,7 @@ public class CombatUnitMovement : MonoBehaviour
     public IEnumerator MoveAlongPath(List<Node> path)
     {
         Transform currentUnitTransform = currentUnit.transform;
-        Debug.Log(currentUnit.gameObject.name);
+        //Debug.Log(currentUnit.gameObject.name);
         currentUnit.isMoving = true;
         int tilesMoved = 0;
         
@@ -73,7 +73,7 @@ public class CombatUnitMovement : MonoBehaviour
             tilesMoved++;
         }
         currentUnit.isMoving = false;
-        Debug.Log("The node the unit ended is at: " + currentUnit.currentNodePosition.GridPosition);
+        //Debug.Log("The node the unit ended is at: " + currentUnit.currentNodePosition.GridPosition);
         CombatEventBus<UnitEndMovingEvent>.Publish(new UnitEndMovingEvent(currentUnit));
     }
     

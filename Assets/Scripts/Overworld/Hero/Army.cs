@@ -94,6 +94,7 @@ public class Army
                 {
                     _units[i].stats = null;
                     _units[i].identifier = null;
+                    _units[i].unitPrefab = null;
                 }
                 return;
             }
