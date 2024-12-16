@@ -3,39 +3,30 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.Tilemaps;
+using NaughtyAttributes;
 
 public class GridManager : MonoBehaviour
 {
-    public static GridManager Instance;
-    
     public Tilemap tilemap;
     public Dictionary<Vector2, Node> grid = new Dictionary<Vector2, Node>();
     public Vector3 tileSize; 
     public Color gridColor = Color.black; 
     public float lineWidth = 0.05f; 
     public GameObject temp;
-    
-    [FormerlySerializedAs("nodePlotting")] [SerializeReference]
     public GridPlottingStrategy gridPlottingStrategy;
+    
     private Grid gridType;
     
-    
-    void Awake()
+    void Start()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else if (Instance != this)
-        {
-            Destroy(this);
-        }
         tileSize = tilemap.layoutGrid.cellSize;
         gridType = tilemap.layoutGrid;
         GenerateGrid();
-        if(gridType.cellLayout == GridLayout.CellLayout.Rectangle) DrawGridLines();
-    }
+        if (gridType.cellLayout == GridLayout.CellLayout.Rectangle) DrawGridLines();
+        
 
+    }
+    
     
     void GenerateGrid()
     {
@@ -89,9 +80,10 @@ public class GridManager : MonoBehaviour
         {
             Destroy(tempObjects[i]);
         }
+        GeneralEventBus<GenerateGridEvent>.Publish(new GenerateGridEvent(grid));
+        
     }
     
-
     int GetMovementCost(TileBase tile)
     {
         //Debug.Log(tile.name);
@@ -148,17 +140,24 @@ public class GridManager : MonoBehaviour
         lineRenderer.sortingOrder = 10; // Ensure it's rendered on top
     }
 
-    
-    
-    Vector2 CalculateHexWorldPosition(float x, float y)
-    {
-        //TODO: Remove hard-set numbers, figure out the exact variables that slot in here
-        float posX = y * tileSize.x + (x % 2 == 0 ? 0 : 1 / 2f); //0.8... is the current x-size of the hexagons in the grid
 
-        // Calculate y position with the correct offset for staggered rows
-        float posY = x * (tileSize.x * 0.75f); // Adjust row stagger
-        
-        return new Vector2(posX, posY);
+    private List<GameObject> gridVisuals = new List<GameObject>();
+    [Button("Generate Grid Visuals", EButtonEnableMode.Playmode)]
+    public void VisualiseNodeGrid()
+    {
+        if(grid == null || grid.Count == 0) return;
+        foreach (Node gridNode in grid.Values)
+        {
+           GameObject nodeHighlight = Instantiate(temp, gridNode.GridPosition, Quaternion.identity);
+           gridVisuals.Add(nodeHighlight);
+        }
     }
 
+    [Button("Clear Grid Visuals", EButtonEnableMode.Playmode)]
+    public void ClearGridVisuals()
+    {
+        foreach(GameObject gridVisual in gridVisuals){
+            Destroy(gridVisual);    
+        }
+    }
 }

@@ -283,7 +283,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.83
+  orthographic size: 5.447742
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -308,7 +308,7 @@ Transform:
   m_GameObject: {fileID: 89652093}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.81, y: 0, z: -10}
+  m_LocalPosition: {x: -1.81, y: 0.39, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 516129049}
   - component: {fileID: 516129048}
   m_Layer: 0
-  m_Name: CmBkGrMt
+  m_Name: BackgroundImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -403,9 +403,9 @@ Transform:
   m_GameObject: {fileID: 516129047}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.81, y: 0, z: 0}
-  m_LocalScale: {x: 2.32, y: 2.32, z: 2.32}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: -1.81, y: 0.4, z: 0}
+  m_LocalScale: {x: 2.71803, y: 1.954152, z: 2.32}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -466,7 +466,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1163391800, guid: a5ea5a6f6aae32f4286efd5217362da5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -732,7 +732,7 @@ GameObject:
   - component: {fileID: 1139937755}
   - component: {fileID: 1139937754}
   m_Layer: 0
-  m_Name: Tilemap (1)
+  m_Name: CombatMovement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2595,6 +2595,10 @@ PrefabInstance:
       propertyPath: players.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5401257361528177362, guid: b140281fb79079243a0425111b42fdcf, type: 3}
+      propertyPath: pathfindingVisualizer
+      value: 
+      objectReference: {fileID: 3858826876079537987, guid: 96cf85b748668074cb325c47013167e4, type: 3}
     - target: {fileID: 5857877479282901334, guid: b140281fb79079243a0425111b42fdcf, type: 3}
       propertyPath: temp
       value: 
@@ -2605,6 +2609,10 @@ PrefabInstance:
       objectReference: {fileID: 1139937755}
     - target: {fileID: 5857877479282901334, guid: b140281fb79079243a0425111b42fdcf, type: 3}
       propertyPath: nodePlotting
+      value: 
+      objectReference: {fileID: 11400000, guid: e6e5d67a7e8d58740aede98a6a10ab77, type: 2}
+    - target: {fileID: 5857877479282901334, guid: b140281fb79079243a0425111b42fdcf, type: 3}
+      propertyPath: gridPlottingStrategy
       value: 
       objectReference: {fileID: 11400000, guid: e6e5d67a7e8d58740aede98a6a10ab77, type: 2}
     - target: {fileID: 8869953575301307725, guid: b140281fb79079243a0425111b42fdcf, type: 3}
@@ -2650,6 +2658,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 971944064594659506, guid: b140281fb79079243a0425111b42fdcf, type: 3}
     - {fileID: 4996304042277827876, guid: b140281fb79079243a0425111b42fdcf, type: 3}
+    - {fileID: 5401257361528177362, guid: b140281fb79079243a0425111b42fdcf, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -2923,7 +2932,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1037038321, guid: a5ea5a6f6aae32f4286efd5217362da5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1

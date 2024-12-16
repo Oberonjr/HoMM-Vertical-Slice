@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-
+using NaughtyAttributes;
 
 public class Pathfinding : MonoBehaviour
 {
     public static Pathfinding Instance;
+    public GameObject pathfindingVisualizer;
     
     [Range(0, 1)]
     [SerializeField] private float distanceWeight = 0.5f;
@@ -26,23 +27,25 @@ public class Pathfinding : MonoBehaviour
         }
     }
 
+    List<GameObject> pathfindingVisualizers = new List<GameObject>();
     public List<Node> FindPath(Vector2 start, Vector2 target, Dictionary<Vector2, Node> grid)
     {
         GeneralEventBus<StartPathGenEvent>.Publish(new StartPathGenEvent());
         List<Node> openList = new List<Node>();
         HashSet<Node> closedList = new HashSet<Node>();
-
+        
         Node startNode = grid[start];
         Node targetNode = grid[target];
 
         openList.Add(startNode);
-
+        
         while (openList.Count > 0)
         {
             Node currentNode = openList.OrderBy(n => n.FCost).ThenBy(n => n.HCost).First();
 
             if (currentNode == targetNode)
             {
+                
                 GeneralEventBus<GeneratePathEvent>.Publish(new GeneratePathEvent(RetracePath(startNode, targetNode)));
                 return RetracePath(startNode, targetNode);
             }
@@ -93,9 +96,22 @@ public class Pathfinding : MonoBehaviour
         }
 
         path.Reverse();
+        foreach (Node node in path)
+        {
+            if (pathfindingVisualizer == null) break;
+            GameObject pV = Instantiate(pathfindingVisualizer, node.GridPosition, Quaternion.identity);
+            pathfindingVisualizers.Add(pV);
+        }
         return path;
     }
 
-    
+    [Button("Clear visuals", EButtonEnableMode.Playmode)]
+    public void ClearVisualizers()
+    {
+        foreach (GameObject v in pathfindingVisualizers)
+        {
+            Destroy(v);
+        }
+    }
 
 }

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CombatBridgeManager : MonoBehaviour
 {
+    [SerializeField] private GameObject Overworld;
     public static CombatBridgeManager Instance;
 
     public Army AggressorArmy; // { get; private set; }
@@ -15,7 +16,7 @@ public class CombatBridgeManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(this);
+            DontDestroyOnLoad(gameObject);
         }
         else if (Instance != this)
         {
@@ -38,6 +39,9 @@ public class CombatBridgeManager : MonoBehaviour
         AggressorArmy = e.AggressorArmy;
         DefenderArmy = e.DefenderArmy;
         
-        SceneManager.LoadScene("CombatScene");
+        HeroMovementManager.Instance.allowInput = false;
+        Overworld.SetActive(false);
+        SceneManager.LoadScene("CombatScene", LoadSceneMode.Additive);
     }
+    
 }

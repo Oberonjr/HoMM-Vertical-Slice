@@ -28,14 +28,20 @@ public class Unit : MonoBehaviour
     
     private void Start()
     {
-        UnitName = unitStats.unitName;
-        currentHP = unitStats.maxHP;
-        currentMovementPoints = unitStats.movementSpeed;
-        CombatUnitMovement.Instance.SnapToGridCenter(this);
-        currentNodePosition.stationedUnit = this;
-        animator = GetComponentInChildren<Animator>() ?? throw new System.Exception($"No animator component found on {name}'s VFX child");
-        stackSizeText = transform.GetComponentInChildren<TMPro.TMP_Text>() ?? throw new System.Exception($"No text component found on {name}'s Canvas child");
-        stackSizeText.text = stackSize.ToString();
+            UnitName = unitStats.unitName;
+            currentHP = unitStats.maxHP;
+            currentMovementPoints = unitStats.movementSpeed;
+            MyUtils.SnapToGridCenter(transform, out currentNodePosition);
+            currentNodePosition.stationedUnit = this;
+            animator = GetComponentInChildren<Animator>() ??
+                       throw new System.Exception($"No animator component found on {name}'s VFX child");
+            stackSizeText = transform.GetComponentInChildren<TMPro.TMP_Text>() ??
+                            throw new System.Exception($"No text component found on {name}'s Canvas child");
+            stackSizeText.text = stackSize.ToString();
+        MyUtils.LateStart(0.1f, () =>
+        {
+        });
+
     }
     
     private void OnDisable()
@@ -75,8 +81,8 @@ public class Unit : MonoBehaviour
         //isAlive = false;
         currentNodePosition.IsWalkable = true;
         currentNodePosition.stationedUnit = null;
-        Destroy(transform.GetChild(1));
-        Destroy(this, 0.2f);
+        transform.GetChild(1).gameObject.SetActive(false);
+        Destroy(this, 0.2f); //TODO: Either set this as inactive or create a dependency on a boolean isDead
     }
 
     public bool CanMove(int movementCost)
@@ -86,7 +92,7 @@ public class Unit : MonoBehaviour
 
     public bool CanReachNode(Node targetNode)
     {
-        List<Node> path = Pathfinding.Instance.FindPath(transform.position, targetNode.GridPosition, GridManager.Instance.grid);
+        List<Node> path = Pathfinding.Instance.FindPath(transform.position, targetNode.GridPosition, GridTracker.Instance.CombatGrid);
         
         return path != null && currentMovementPoints >= path.Count ;
     }
@@ -129,7 +135,7 @@ public class Unit : MonoBehaviour
     public List<Node> ReachableNodes()
     {
         List<Node> reachableNodes = new List<Node>();
-        foreach (Node node in GridManager.Instance.grid.Values)
+        foreach (Node node in GridTracker.Instance.CombatGrid.Values)
         {
             if (CanReachNode(node))
             {

@@ -15,8 +15,8 @@ public static class MyUtils
     {
         float shortestDistance = Mathf.Infinity;
         Node closestNode = null;
-        if(GridManager.Instance == null) throw new System.Exception("Grid Manager is null");
-        foreach (Node node in GridManager.Instance.grid.Values)
+        if(GridTracker.Instance == null) throw new System.Exception("Grid Tracker is null");
+        foreach (Node node in GridTracker.Instance.CurrentGrid.Values)
         {
             float specificDistance = Vector2.Distance(node.GridPosition, clickedPosition);
             if (specificDistance < shortestDistance)
@@ -27,7 +27,7 @@ public static class MyUtils
         }
         //Debug.Log("Mouse click position is: " + clickedPosition);
         //Debug.Log("Closest node attributed to that is: " + closestNode.GridPosition);
-        if (Vector2.Distance(clickedPosition, closestNode.GridPosition) <= GridManager.Instance.tileSize.x / 2)
+        if (Vector2.Distance(clickedPosition, closestNode.GridPosition) <= GridTracker.Instance.currentTilemap.layoutGrid.cellSize.x / 2)
         {
             return closestNode;
         }
@@ -36,6 +36,13 @@ public static class MyUtils
             //Debug.Log("Clicked position is too far from closest eligible node.");
             return null;
         }
-        
+    }
+    
+    public static void SnapToGridCenter(Transform targetTransform, out Node objectNode)
+    {
+        Vector3Int playerGridPosition = GridTracker.Instance.currentTilemap.WorldToCell(targetTransform.position);
+        Vector3 snappedPosition = GridTracker.Instance.currentTilemap.GetCellCenterWorld(playerGridPosition);
+        targetTransform.position = snappedPosition;
+        objectNode = ClosestNode(snappedPosition);
     }
 }

@@ -9,17 +9,17 @@ public class HeroMovementManager : MonoBehaviour
 {
     public static HeroMovementManager Instance;
     
-    public Pathfinding pathfinding;
-    public Transform playerTransform;
     public float animationSpeed = 3f;
     public GameObject pathSpritePrefab; // Sprite for visualizing the path
     public GameObject destinationSpritePrefab; // Sprite for the destination
-    public OverworldTurnManager turnManager; //TODO: remove refference as it's Singleton
     public HeroManager hero;
     
     [HideInInspector]public bool isMoving;
     [HideInInspector]public bool allowInput = true;
     
+    private Transform playerTransform;
+    private Pathfinding pathfinding;
+    private OverworldTurnManager turnManager;
     private List<Node> currentPath;
     private List<Node> remainingPath; //TODO: Tie to UIManager
     private Node selectedDestination;
@@ -43,10 +43,17 @@ public class HeroMovementManager : MonoBehaviour
     
     void Start()
     {
-        SnapToGridCenter();
-        OverworldEventBus<OnPlayerTurnStart>.OnEvent += StartPlayerTurn; //TODO: MOVE THIS!!!
-        OverworldEventBus<OnPlayerTurnEnd>.OnEvent += EndPlayerTurn; //TODO: MOVE THIS TOO!!!
-        OverworldEventBus<OnHeroMoveEnd>.OnEvent += ProcessActionQueue;
+            pathfinding = Pathfinding.Instance;
+            turnManager = OverworldTurnManager.Instance;
+            playerTransform = hero.transform;
+            MyUtils.SnapToGridCenter(playerTransform, out currentNodePosition);
+            OverworldEventBus<OnPlayerTurnStart>.OnEvent += StartPlayerTurn; //TODO: MOVE THIS!!!
+            OverworldEventBus<OnPlayerTurnEnd>.OnEvent += EndPlayerTurn; //TODO: MOVE THIS TOO!!!
+            OverworldEventBus<OnHeroMoveEnd>.OnEvent += ProcessActionQueue;
+        MyUtils.LateStart(0.1f, () =>
+        {
+        });
+        
 
     }
 
@@ -57,13 +64,7 @@ public class HeroMovementManager : MonoBehaviour
         OverworldEventBus<OnHeroMoveEnd>.OnEvent -= ProcessActionQueue;
     }
     
-    void SnapToGridCenter()
-    {
-        Vector3Int playerGridPosition = GridManager.Instance.tilemap.WorldToCell(playerTransform.position);
-        Vector3 snappedPosition = GridManager.Instance.tilemap.GetCellCenterWorld(playerGridPosition);
-        playerTransform.position = snappedPosition;
-        currentNodePosition = MyUtils.ClosestNode(snappedPosition);
-    }
+    
 
     //TODO: Move away from here
     void StartPlayerTurn(OnPlayerTurnStart e)
@@ -115,7 +116,7 @@ public class HeroMovementManager : MonoBehaviour
                 {
                     // Generate path 
                     selectedDestination = clickedNode;
-                    currentPath = pathfinding.FindPath(currentNodePosition.GridPosition, clickedNode.GridPosition, GridManager.Instance.grid);
+                    currentPath = pathfinding.FindPath(currentNodePosition.GridPosition, clickedNode.GridPosition, GridTracker.Instance.OverworldGrid);
 
                     if (currentPath != null)
                     {
@@ -170,7 +171,7 @@ public class HeroMovementManager : MonoBehaviour
     {
         //Debug.Log("Clearing previous path");
         List<GameObject> currentPathSprites = new List<GameObject>();
-        foreach (Node node in GridManager.Instance.grid.Values)
+        foreach (Node node in GridTracker.Instance.OverworldGrid.Values)
         {
             if (node.spriteHighlight != null)
             {

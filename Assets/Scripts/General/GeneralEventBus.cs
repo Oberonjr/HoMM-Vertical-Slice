@@ -30,3 +30,14 @@ public class GeneratePathEvent : Event
         this.path = path;
     }
 }
+
+public class GenerateGridEvent : Event
+{
+    public Dictionary<Vector2, Node> grid;
+
+    public GenerateGridEvent(Dictionary<Vector2, Node> pGrid)
+    {
+        grid = pGrid;
+    }
+    
+}

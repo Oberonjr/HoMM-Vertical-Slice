@@ -83,7 +83,7 @@ public class CombatTurnManager : MonoBehaviour
             else 
             {
                 //Get the path to the target
-                List<Node> pathToTarget = Pathfinding.Instance.FindPath(currentUnit.currentNodePosition.GridPosition, targetUnit.currentNodePosition.GridPosition, GridManager.Instance.grid);
+                List<Node> pathToTarget = Pathfinding.Instance.FindPath(currentUnit.currentNodePosition.GridPosition, targetUnit.currentNodePosition.GridPosition, GridTracker.Instance.CombatGrid);
                 //As the tile that the target is not walkable, we need the node that comes before it
                 pathToTarget.Remove(pathToTarget.Last());
                 //Set our correct target node for movement
@@ -119,17 +119,18 @@ public class CombatTurnManager : MonoBehaviour
         for (int i = 0; i < location.transform.childCount; i++)
         {
             Transform spawnLocation = location.transform.GetChild(i);
-            Debug.Log(spawnLocation.name);
+            //Debug.Log(spawnLocation.name);
             spawnLocation.transform.position = MyUtils.ClosestNode(spawnLocation.transform.position).GridPosition;
             if (army._units[i].unitPrefab == null) return;
-            GameObject spawnUnit = Instantiate(army._units[i].unitPrefab, spawnLocation.position, Quaternion.identity);
+            GameObject spawnUnit = Instantiate(army._units[i].unitPrefab, spawnLocation.position, Quaternion.identity, spawnLocation.transform);
+            spawnUnit.transform.parent = null;
             Unit unitComponent = spawnUnit.GetComponent<Unit>();
             unitComponent.stackSize = army._units[i].amount;
             if (army.owner != null)
             {
                 unitComponent.OwnerHero = army.owner;
             }
-            CombatUnitMovement.Instance.SnapToGridCenter(unitComponent);
+            MyUtils.SnapToGridCenter(spawnUnit.transform, out unitComponent.currentNodePosition);
             unitsInCombat.Add(spawnUnit.GetComponent<Unit>());
             spawnUnit.GetComponentInChildren<SpriteRenderer>().flipX = isDefender;
             
@@ -166,6 +167,7 @@ public class CombatTurnManager : MonoBehaviour
         
         currentUnit.ReplenishMovementPoints();
         indicator.transform.position = new Vector3(currentUnit.currentNodePosition.GridPosition.x, currentUnit.currentNodePosition.GridPosition.y + 1.25f, -1);
+        indicator.transform.SetParent(currentUnit.transform);
         HighlightWalkableArea();
     }
 
@@ -229,7 +231,8 @@ public class CombatTurnManager : MonoBehaviour
     {
         foreach (Node node in currentUnit.ReachableNodes())
         {
-            GameObject nodeHighlight = Instantiate(TileHighlightSprite, new Vector3(node.GridPosition.x, node.GridPosition.y, 0), Quaternion.identity);
+            GameObject nodeHighlight = Instantiate(TileHighlightSprite,
+                new Vector3(node.GridPosition.x, node.GridPosition.y, 0), Quaternion.identity);
             highlightedSprites.Add(nodeHighlight);
             nodeHighlight.transform.SetParent(currentUnit.transform);
         }
