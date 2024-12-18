@@ -43,10 +43,10 @@ public class HeroPanelLogic : MonoBehaviour
         //so I can set empty slots to other visual stuff to check that logic works
         for (int i = 0; i < creatureIcons.Length; i++)
         {
-            if (_currentHero.Army()[i] != null)
+            if (_currentHero.Army()[i] != null && _currentHero.Army()[i].amount > 0)
             {
-                creatureIcons[i].sprite = _currentHero.Army()[i].unitStats.icon;
-                stackSizeText[i].text = _currentHero.Army()[i].stackSize.ToString();
+                creatureIcons[i].sprite = _currentHero.Army()[i].stats.icon;
+                stackSizeText[i].text = _currentHero.Army()[i].amount.ToString();
             }
             else
             {

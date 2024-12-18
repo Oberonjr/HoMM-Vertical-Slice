@@ -27,24 +27,30 @@ public class CombatUnitMovement : MonoBehaviour
         {
             Destroy(this);
         }
-        currentGrid = GridManager.Instance.grid;
     }
 
     private void Start()
     {
+        currentGrid = GridTracker.Instance.CombatGrid;
         CombatEventBus<UnitStartMovingEvent>.OnEvent += StartMovement;
+    }
+
+    void OnDestroy()
+    {
+        CombatEventBus<UnitStartMovingEvent>.OnEvent -= StartMovement;
     }
     
 
     void StartMovement(UnitStartMovingEvent e)
     {
-        List<Node> path = Pathfinding.Instance.FindPath(e.unit.currentNodePosition.GridPosition, e.destination, GridManager.Instance.grid);
+        List<Node> path = Pathfinding.Instance.FindPath(e.unit.currentNodePosition.GridPosition, e.destination, currentGrid);
         StartCoroutine(MoveAlongPath(path));
     }
     
     public IEnumerator MoveAlongPath(List<Node> path)
     {
         Transform currentUnitTransform = currentUnit.transform;
+        //Debug.Log(currentUnit.gameObject.name);
         currentUnit.isMoving = true;
         int tilesMoved = 0;
         
@@ -58,6 +64,7 @@ public class CombatUnitMovement : MonoBehaviour
             Vector3 targetPosition = node.GridPosition;
             while (Vector3.Distance(currentUnitTransform.position, targetPosition) > Mathf.Epsilon)
             {
+                //Debug.Log(Vector3.Distance(currentUnitTransform.position, targetPosition));
                 currentUnitTransform.position = Vector3.MoveTowards(currentUnitTransform.position, targetPosition, animationSpeed * Time.deltaTime);
                 yield return null;
             }
@@ -70,46 +77,9 @@ public class CombatUnitMovement : MonoBehaviour
             //yield return null;
             tilesMoved++;
         }
-        path = new List<Node>();
         currentUnit.isMoving = false;
         //Debug.Log("The node the unit ended is at: " + currentUnit.currentNodePosition.GridPosition);
         CombatEventBus<UnitEndMovingEvent>.Publish(new UnitEndMovingEvent(currentUnit));
-        //CombatTurnManager.Instance.EndTurn();
     }
     
-    public void SnapToGridCenter(Unit unit)
-    {
-        //TODO: Find an alternative node if the one selected is not valid
-        Vector3Int playerGridPosition = GridManager.Instance.tilemap.WorldToCell(unit.transform.position);
-        Vector3 snappedPosition = GridManager.Instance.tilemap.GetCellCenterWorld(playerGridPosition);
-        unit.currentNodePosition = ClosestNode(snappedPosition);
-        unit.transform.position = snappedPosition;
-    }
-    
-    Node ClosestNode(Vector2 clickedPosition)
-    {
-        float shortestDistance = Mathf.Infinity;
-        Node closestNode = null;
-        foreach (Node node in currentGrid.Values)
-        {
-            float specificDistance = Vector2.Distance(node.GridPosition, clickedPosition);
-            if (specificDistance < shortestDistance)
-            {
-                shortestDistance = specificDistance;
-                closestNode = node;
-            }
-        }
-        //Debug.Log("Mouse click position is: " + clickedPosition);
-        //Debug.Log("Closest node attributed to that is: " + closestNode.GridPosition);
-        if (Vector2.Distance(clickedPosition, closestNode.GridPosition) <= GridManager.Instance.tileSize.x / 2)
-        {
-            return closestNode;
-        }
-        else
-        {
-            Debug.Log("Clicked position is too far from closest eligible node.");
-            return null;
-        }
-        
-    }
 }

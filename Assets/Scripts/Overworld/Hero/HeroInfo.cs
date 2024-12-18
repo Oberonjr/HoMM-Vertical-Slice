@@ -9,7 +9,7 @@ public class HeroInfo
 {
     public string Name;
     public Sprite Icon;
-    public Unit[] Army;
+    public Army Army;
 
     public int AttackStat;
     public int DefenseStat;
@@ -20,11 +20,12 @@ public class HeroInfo
 
     public Node currentPosition;
 
-    public HeroInfo(int pMovementPoints, Unit[] pArmy, string pName = "NoName Mcgee", Sprite pIcon = null,  int pAttack = 0, int pDefense = 0, int pPower = 0, int pKnowledge = 0)
+    public HeroInfo(int pMovementPoints, Army pArmy, string pName = "NoName Mcgee", Sprite pIcon = null,  int pAttack = 0, int pDefense = 0, int pPower = 0, int pKnowledge = 0)
     {
         Name = pName;
         Icon = pIcon;
         Army = pArmy;
+        Army.owner = this;
         MovementPoints = pMovementPoints;
         AttackStat = pAttack;
         DefenseStat = pDefense;

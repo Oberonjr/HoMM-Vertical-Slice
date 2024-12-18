@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Dwelling : FlaggableBuilding
 {
-    public Unit ProducedUnit;
+    public UnitStats ProducedUnit;
     public int StationedAmont = 0;
     
     public override void InitializeInteractable(InitializeWorld e = null)
     {
         base.InitializeInteractable(e);
         buildingType = BuildingType.DWELLING;
-        StationedAmont = ProducedUnit.unitStats.Growth;
+        StationedAmont = ProducedUnit.Growth;
         OverworldEventBus<NewWeek>.OnEvent += AddUnitGrowth;
         OverworldEventBus<RecruitUnit>.OnEvent += RemoveRecruitedUnit;
     }
@@ -30,7 +30,7 @@ public class Dwelling : FlaggableBuilding
     
     public void AddUnitGrowth(NewWeek e)
     {
-        StationedAmont += ProducedUnit.unitStats.Growth;
+        StationedAmont += ProducedUnit.Growth;
     }
 
     public void RemoveRecruitedUnit(RecruitUnit e)

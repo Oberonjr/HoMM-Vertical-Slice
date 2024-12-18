@@ -8,8 +8,7 @@ public class HeroStartingStats : ScriptableObject
 {
     public string Name;
     public Sprite Icon;
-    [SerializedDictionary("Unit", "Count")]
-    public SerializedDictionary<Unit, int> StartingArmy;
+    public Army StartingArmy;
 
     public int AttackStat;
     public int DefenseStat;

@@ -28,6 +28,7 @@ public class Town : FlaggableBuilding
     {
         base.Interact(interactor);
         TownUIScreen.SetActive(true);
+        HeroMovementManager.Instance.allowInput = false;
     }
 
     void ChangeIncome(ResourceData.ResourceType resourceType, int newAmount)

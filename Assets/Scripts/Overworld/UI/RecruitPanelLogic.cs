@@ -15,7 +15,7 @@ public class RecruitPanelLogic : MonoBehaviour
     [SerializeField] private TMP_Text availableText;
 
     private Player currentPlayer;
-    private Unit currentUnit;
+    private UnitStats currentUnit;
     
     void Awake()
     {
@@ -30,12 +30,19 @@ public class RecruitPanelLogic : MonoBehaviour
     void InitializeScreen(OpenRecruitScreen e)
     {
         recruitPanel.SetActive(true);
-        icon.sprite = e.unit.unitStats.icon;
+        HeroMovementManager.Instance.allowInput = false;
+        icon.sprite = e.unit.icon;
         slider.maxValue = e.amount;
         availableText.text = "Available: " + e.amount;
         
         currentPlayer = OverworldTurnManager.Instance.ActivePlayer;
         currentUnit = e.unit;
+    }
+
+    public void CloseScreen()
+    {
+        recruitPanel.SetActive(false);
+        HeroMovementManager.Instance.allowInput = true;
     }
 
     public void AddRecruit()
@@ -57,12 +64,13 @@ public class RecruitPanelLogic : MonoBehaviour
     public void RecruitUnit()
     {
         if (currentPlayer.Kingdom.Economy.CanSpendResource(ResourceData.ResourceType.Gold,
-                Mathf.RoundToInt(slider.value) * currentUnit.unitStats.Cost)) //The check already happens in Spend(), but my sequencing is still currently all wrong
+                Mathf.RoundToInt(slider.value) * currentUnit.Cost)) //The check already happens in Spend(), but my sequencing is still currently all wrong
         {
-            currentPlayer.Heroes[0].AddUnit(currentUnit, Mathf.RoundToInt(slider.value));
-            currentPlayer.Kingdom.Economy.SpendResource(ResourceData.ResourceType.Gold, Mathf.RoundToInt(slider.value) * currentUnit.unitStats.Cost);
-            slider.maxValue -= slider.value;
             OverworldEventBus<RecruitUnit>.Publish(new RecruitUnit(currentUnit, Mathf.RoundToInt(slider.value)));
+            currentPlayer.Heroes[0].cHeroInfo.Army.AddUnit(currentUnit, Mathf.RoundToInt(slider.value));
+            currentPlayer.Kingdom.Economy.SpendResource(ResourceData.ResourceType.Gold, Mathf.RoundToInt(slider.value) * currentUnit.Cost);
+            slider.maxValue -= slider.value;
+            availableText.text = "Available: " + slider.maxValue;
         }
         else
         {

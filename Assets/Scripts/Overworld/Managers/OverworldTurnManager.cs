@@ -51,7 +51,7 @@ public class OverworldTurnManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(MyUtils.LateStart(0.01f, () =>
+        StartCoroutine(MyUtils.LateStart(0.2f, () =>
         {
             OverworldEventBus<InitializeWorld>.Publish(new InitializeWorld());
             if(_economyManager == null)_economyManager = new EconomyManager();
@@ -64,7 +64,7 @@ public class OverworldTurnManager : MonoBehaviour
     private void Update()
     {
         // Also end turn when 'E' is pressed
-        if (Input.GetKeyDown(KeyCode.E) && !HeroMovementManager.Instance.isMoving)
+        if (Input.GetKeyDown(KeyCode.E) && !HeroMovementManager.Instance.isMoving && HeroMovementManager.Instance.allowInput)
         {
             EndTurn();
         }

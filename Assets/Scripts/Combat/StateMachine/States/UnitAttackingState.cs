@@ -19,11 +19,11 @@ public class UnitAttackingState : ICombatState
 
     public void EnterState()
     {
-        Debug.Log("Entered Unit Attacking State");
+        //Debug.Log("Entered Unit Attacking State");
         CombatEventBus<AttackStartEvent>.Publish(new AttackStartEvent(attackerUnit, targetUnit));
         if (attackerUnit == CombatTurnManager.Instance.currentUnit && !isQueued)
         {
-            Debug.Log("Ending attacker's turn");
+            //Debug.Log("Ending attacker's turn");
             _stateMachine.ChangeState(new UnitTurnEndState(_stateMachine, attackerUnit));
         }
     }

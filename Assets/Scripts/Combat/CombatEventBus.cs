@@ -181,7 +181,17 @@ public static class CombatEventBus<T> where T : Event
 
     // Combat start/end
     //TODO: Implement Hero dependency on these events
-    public class CombatStartEvent : Event { } 
+    public class CombatStartEvent : Event { }
 
-    public class CombatEndEvent : Event { }
+    public class CombatEndEvent : Event
+    {
+        public Army winner;
+        public Army loser;
+
+        public CombatEndEvent(Army pWinner, Army pLoser)
+        {
+            winner = pWinner;
+            loser = pLoser;
+        }
+    }
 

@@ -28,10 +28,10 @@ public class NewMonth : Event{}
 //UI
 public class OpenRecruitScreen : Event
 {
-    public Unit unit;
+    public UnitStats unit;
     public int amount;
 
-    public OpenRecruitScreen(Unit pUnit, int pAmount)
+    public OpenRecruitScreen(UnitStats pUnit, int pAmount)
     {
         unit = pUnit;
         amount = pAmount;
@@ -74,10 +74,10 @@ public class UpdateKindgomIncome : Event
 
 public class RecruitUnit : Event
 {
-    public Unit unit;
+    public UnitStats unit;
     public int amount;
 
-    public RecruitUnit(Unit pUnit, int pAmount)
+    public RecruitUnit(UnitStats pUnit, int pAmount)
     {
         unit = pUnit;
         amount = pAmount;
@@ -132,5 +132,22 @@ public class OnHeroInteract : Event
     {
         hero = pHero;
         interactable = pInteractable;
+    }
+}
+
+//Initiate Combat
+public class InitiateCombat : Event
+{
+    public Army AggressorArmy { get; }
+    public GameObject AggresorObject { get; }
+    public Army DefenderArmy { get; }
+    public GameObject DefenderObject { get; }
+
+    public InitiateCombat(Army pAggressorArmy, Army pDefenderArmy, GameObject pAggressorObject, GameObject pDefenderObject)
+    {
+        AggressorArmy = pAggressorArmy;
+        DefenderArmy = pDefenderArmy;
+        AggresorObject = pAggressorObject;
+        DefenderObject = pDefenderObject;
     }
 }
