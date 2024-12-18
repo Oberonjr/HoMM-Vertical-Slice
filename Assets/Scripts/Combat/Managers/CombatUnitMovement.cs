@@ -34,6 +34,11 @@ public class CombatUnitMovement : MonoBehaviour
         currentGrid = GridTracker.Instance.CombatGrid;
         CombatEventBus<UnitStartMovingEvent>.OnEvent += StartMovement;
     }
+
+    void OnDestroy()
+    {
+        CombatEventBus<UnitStartMovingEvent>.OnEvent -= StartMovement;
+    }
     
 
     void StartMovement(UnitStartMovingEvent e)

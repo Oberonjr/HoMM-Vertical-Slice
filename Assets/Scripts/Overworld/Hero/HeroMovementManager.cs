@@ -82,7 +82,7 @@ public class HeroMovementManager : MonoBehaviour
                 remainingPath.Clear();
                 foreach (Node n in currentPath)
                 {
-                    Debug.Log(n.GridPosition);
+                    //Debug.Log(n.GridPosition);
                 }
             }
         }

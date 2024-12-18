@@ -75,7 +75,7 @@ public class GridTracker : MonoBehaviour
             currentSceneField = OverworldScene;
             if(!(OverworldGrid.Count <= 0))CurrentGrid = OverworldGrid;
             currentTilemap = FindObjectOfType<Tilemap>();
-            CombatGrid = null;
+            CombatGrid = new Dictionary<Vector2, Node>();
         }
     }
 
