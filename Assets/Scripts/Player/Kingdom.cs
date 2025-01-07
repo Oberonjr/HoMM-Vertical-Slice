@@ -56,7 +56,7 @@ public class Kingdom
         Dictionary<ResourceData.ResourceType, int> dailyIncome = Economy.DailyIncome;
         foreach (Town town in Towns)
         {
-            town.AddIncome(dailyIncome);
+            town.townData.AddIncome(dailyIncome);
         }
 
         foreach (Mine mine in Mines)

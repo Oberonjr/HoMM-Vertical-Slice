@@ -61,7 +61,7 @@ public class OnPlayerTurnEnd : Event
     }
 }
 
-//Economy
+///////////Economy
 public class UpdateKindgomIncome : Event
 {
     public Player player;
@@ -81,6 +81,17 @@ public class RecruitUnit : Event
     {
         unit = pUnit;
         amount = pAmount;
+    }
+}
+
+//Town-specific
+public class BuildTownBuilding : Event
+{
+    public TownBuildingData builtBuilding;
+
+    public BuildTownBuilding(TownBuildingData pBuildingData)
+    {
+        builtBuilding = pBuildingData;
     }
 }
 

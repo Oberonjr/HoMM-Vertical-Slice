@@ -15,4 +15,6 @@ public class ResourceData : ScriptableObject
     }
 
     public ResourceType Resource;
+    public Sprite BigIcon;
+    public Sprite SmallIcon;
 }
