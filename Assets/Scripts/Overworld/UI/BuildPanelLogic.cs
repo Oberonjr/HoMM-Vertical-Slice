@@ -8,7 +8,6 @@ using TMPro;
 
 public class BuildPanelLogic : MonoBehaviour
 {
-    public static BuildPanelLogic Instance;
     
     [HideInInspector]public TownData currentTown;
     [HideInInspector]public TownBuildingData selectedBuildingData;
@@ -25,20 +24,9 @@ public class BuildPanelLogic : MonoBehaviour
     [SerializeField] private GameObject cannotBuildButton;
     
     
-    void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else if(Instance != this)
-        {
-            Destroy(gameObject);
-        }
-    }
-    
     private void OnEnable()
     {
+        currentTown = OverworldUIManager.Instance.currentTown;
         icon.sprite = selectedBuildingData.buildScreenSprite;
         buildingName.text = selectedBuildingData.name;
         buildingDescription.text = selectedBuildingData.description;

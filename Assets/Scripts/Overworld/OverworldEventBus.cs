@@ -39,6 +39,20 @@ public class OpenRecruitScreen : Event
 
 }
 
+public class OpenBuildScreen : Event
+{
+    public TownBuildingData buildingData;
+    public GameObject buildingToBuild;
+    public GameObject buildingToReplace;
+
+    public OpenBuildScreen(TownBuildingData pBuildingData, GameObject pBuildingToBuild, GameObject pBuildingToReplace)
+    {
+        buildingData = pBuildingData;
+        buildingToBuild = pBuildingToBuild;
+        buildingToReplace = pBuildingToReplace;
+    }
+}
+
 //////////////////////////////////////Player related events
 //Turn management
 public class OnPlayerTurnStart : Event

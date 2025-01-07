@@ -18,8 +18,9 @@ public class Town : FlaggableBuilding
     public override void Interact(HeroManager interactor)
     {
         base.Interact(interactor);
+        townData.ownerPlayer = owner;
         TownUIScreen.SetActive(true);
-        BuildPanelLogic.Instance.currentTown = townData;
+        OverworldUIManager.Instance.currentTown = townData;
         HeroMovementManager.Instance.allowInput = false;
     }
     

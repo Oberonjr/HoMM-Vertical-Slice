@@ -6,6 +6,8 @@ using TMPro;
 
 public class OverworldUIManager : MonoBehaviour
 {
+    public static OverworldUIManager Instance;
+    
     #region EconomyText
     [Header("Economy")]
     [SerializeField] private TMP_Text goldText;
@@ -21,17 +23,38 @@ public class OverworldUIManager : MonoBehaviour
     [SerializeField] private TMP_Text monthText;
     #endregion
     
+    #region Town
+    [Header("Town & Building Panel")]
+    [HideInInspector] public TownData currentTown;
+
+    [SerializeField] private BuildPanelLogic BuildPanel;
+    #endregion
+    
     private Economy playerEconomy;
     private Calendar _calendar;
 
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+    
     void OnEnable()
     {
         OverworldEventBus<NewDay>.OnEvent += UpdateTime;
+        OverworldEventBus<OpenBuildScreen>.OnEvent += EnableBuildScreen;
     }
 
     void OnDisable()
     {
         OverworldEventBus<NewDay>.OnEvent -= UpdateTime;
+        OverworldEventBus<OpenBuildScreen>.OnEvent -= EnableBuildScreen;
     }
     void Start()
     {
@@ -53,5 +76,13 @@ public class OverworldUIManager : MonoBehaviour
         dayText.text = "Day: " + _calendar.Day;
         weekText.text = "Week: " + _calendar.Week;
         monthText.text = "Month: " + _calendar.Month;
+    }
+
+    void EnableBuildScreen(OpenBuildScreen e)
+    {
+        BuildPanel.selectedBuildingData = e.buildingData;
+        BuildPanel.townBuildingObject = e.buildingToBuild;
+        BuildPanel.buildingObjectToDisable = e.buildingToReplace;
+        BuildPanel.gameObject.SetActive(true);
     }
 }

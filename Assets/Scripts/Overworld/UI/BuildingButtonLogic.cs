@@ -40,8 +40,6 @@ public class BuildingButtonLogic : MonoBehaviour
 
     public void OpenBuildPanel()
     {
-        BuildPanelLogic.Instance.gameObject.SetActive(true);
-        BuildPanelLogic.Instance.selectedBuildingData = townBuildingData;
-        BuildPanelLogic.Instance.townBuildingObject = townBuildingObject;
+        OverworldEventBus<OpenBuildScreen>.Publish(new OpenBuildScreen(townBuildingData, townBuildingObject, buildingToBeReplaced));
     }
 }
