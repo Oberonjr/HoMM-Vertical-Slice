@@ -22,8 +22,8 @@ public class BuildPanelLogic : MonoBehaviour
     [SerializeField] private GameObject buildingCostVisuals;
     [SerializeField] private GameObject canBuildButton;
     [SerializeField] private GameObject cannotBuildButton;
-    
-    
+
+    private List<GameObject> costVisuals = new List<GameObject>();
     private void OnEnable()
     {
         currentTown = OverworldUIManager.Instance.currentTown;
@@ -33,6 +33,7 @@ public class BuildPanelLogic : MonoBehaviour
         foreach (KeyValuePair<ResourceData.ResourceType, int> cost in selectedBuildingData.cost)
         {
             GameObject costVisual = Instantiate(buildingCostVisuals, resourceGridLayout.transform);
+            costVisuals.Add(costVisual);
             //costVisual.GetComponent<Sprite>().texture =
             costVisual.GetComponentInChildren<TextMeshProUGUI>().text = cost.Value.ToString();
         }
@@ -49,6 +50,15 @@ public class BuildPanelLogic : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        foreach (GameObject costVisual in costVisuals)
+        {
+            Destroy(costVisual);    
+        }
+        costVisuals.Clear();
+    }
+    
     public void Build()
     {
         selectedBuildingData.OnBuild(currentTown);
