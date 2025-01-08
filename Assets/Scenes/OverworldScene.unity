@@ -964,8 +964,17 @@ MonoBehaviour:
   townData:
     faction: {fileID: 11400000, guid: 1d1028ef91f775f498fceda0339ce1a2, type: 2}
     ResourceAmountGenerated:
-      _serializedList: []
-    builtBuildings: []
+      _serializedList:
+      - Key: 0
+        Value: 0
+      - Key: 1
+        Value: 0
+      - Key: 2
+        Value: 0
+      - Key: 3
+        Value: 0
+    builtBuildings:
+    - {fileID: 0}
   TownUIScreen: {fileID: 2021539075}
 --- !u!4 &232592761
 Transform:
