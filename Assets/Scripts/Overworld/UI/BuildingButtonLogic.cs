@@ -30,7 +30,7 @@ public class BuildingButtonLogic : MonoBehaviour
     
     private void OnEnable()
     {
-        //TODO: Initialize the data here properly in order to set the correct graphic depending on built status
+        currentTown = OverworldUIManager.Instance.currentTown;
         
         if (currentTown.builtBuildings.Contains(townBuildingData) && townBuildingData.buildingToEnable == null)
         {

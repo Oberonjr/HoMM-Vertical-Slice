@@ -30,8 +30,8 @@ public class OverworldUIManager : MonoBehaviour
     
     #region Town
     [HideInInspector] public TownData currentTown;
+    private BuildPanelLogic BuildPanel;
     [Header("Building Panel")]
-    [SerializeField] private BuildPanelLogic BuildPanel;
     #endregion
     
     #region StatusImages
@@ -86,7 +86,7 @@ public class OverworldUIManager : MonoBehaviour
     void OpenTownScreen(OpenTownScreen e)
     {
         GameObject townScreen = Instantiate(e.town.faction.factionTownUIScreen, mainCanvas.transform);
-        
+        BuildPanel = townScreen.GetComponent<TownScreenLogic>().buildPanel;
     }
 
     void UpdateTime(NewDay e)

@@ -1284,9 +1284,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: RecruitPanelLogic, Assembly-CSharp
-        m_MethodName: CloseScreen
+      - m_Target: {fileID: 4805939890961440159}
+        m_TargetAssemblyTypeName: TownScreenLogic, Assembly-CSharp
+        m_MethodName: CloseTownScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1772,7 +1772,7 @@ GameObject:
   - component: {fileID: 6665479439121577518}
   - component: {fileID: 1356366561249349339}
   m_Layer: 5
-  m_Name: Building description (1)
+  m_Name: Building requirments
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2138,6 +2138,7 @@ MonoBehaviour:
   icon: {fileID: 5530692881630817782}
   buildingName: {fileID: 3227269710610568823}
   buildingDescription: {fileID: 7495218792447077876}
+  buildingRequirments: {fileID: 1356366561249349339}
   resourceGridLayout: {fileID: 3525979964066212826}
   buildingCostVisuals: {fileID: 8083426916776757598, guid: fd55aedeb8f78f14c9648002d9c8044b, type: 3}
   canBuildButton: {fileID: 790937162754705451}
@@ -2786,13 +2787,14 @@ GameObject:
   - component: {fileID: 5660558203623233726}
   - component: {fileID: 3849568302340510502}
   - component: {fileID: 2563652902029588319}
+  - component: {fileID: 4805939890961440159}
   m_Layer: 5
   m_Name: HavenTownPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5660558203623233726
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2853,6 +2855,38 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4805939890961440159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6575942117857199700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ed0da8507c365b4086d7fb271eebcaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  factionType: 0
+  BuildingsMapping:
+    _serializedList:
+    - Key: {fileID: 11400000, guid: 5438bcb0d20cf12499918a0ff6d3d86c, type: 2}
+      Value: {fileID: 3171186540583160797}
+  buildPanel: {fileID: 8336858612886190334}
+  currentTown:
+    faction: {fileID: 0}
+    ResourceAmountGenerated:
+      _serializedList:
+      - Key: 0
+        Value: 0
+      - Key: 1
+        Value: 0
+      - Key: 2
+        Value: 0
+      - Key: 3
+        Value: 0
+    builtBuildings: []
+    CanBuild: 1
 --- !u!1 &6621205392371244275
 GameObject:
   m_ObjectHideFlags: 0
@@ -3547,6 +3581,10 @@ PrefabInstance:
       propertyPath: buildingToBeReplaced
       value: 
       objectReference: {fileID: 7876897605647425684}
+    - target: {fileID: 2593763629827892252, guid: e7e1dda037fc56f41834a726e30f0893, type: 3}
+      propertyPath: buildingNameTextField
+      value: 
+      objectReference: {fileID: 709283028594713269}
     - target: {fileID: 3101413328403979464, guid: e7e1dda037fc56f41834a726e30f0893, type: 3}
       propertyPath: m_Name
       value: BuildButton
@@ -3644,6 +3682,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7e1dda037fc56f41834a726e30f0893, type: 3}
+--- !u!114 &709283028594713269 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8605137992726552529, guid: e7e1dda037fc56f41834a726e30f0893, type: 3}
+  m_PrefabInstance: {fileID: 9132304168214003044}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2209779842703675852 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6923934020482706600, guid: e7e1dda037fc56f41834a726e30f0893, type: 3}

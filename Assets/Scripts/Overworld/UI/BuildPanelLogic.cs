@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -20,6 +21,7 @@ public class BuildPanelLogic : MonoBehaviour
     [SerializeField] private Image icon;
     [SerializeField] private TextMeshProUGUI buildingName;
     [SerializeField] private TextMeshProUGUI buildingDescription;
+    [SerializeField] private TextMeshProUGUI buildingRequirments;
     [SerializeField] private GridLayoutGroup resourceGridLayout;
     [SerializeField] private GameObject buildingCostVisuals;
     [SerializeField] private GameObject canBuildButton;
@@ -47,11 +49,36 @@ public class BuildPanelLogic : MonoBehaviour
         {
             canBuildButton.SetActive(true);
             cannotBuildButton.SetActive(false);
+            buildingRequirments.text = "You can build this today.";
         }
         else
         {
             cannotBuildButton.SetActive(true);
             canBuildButton.SetActive(false);
+            if (!currentTown.CanBuild)
+            {
+                buildingRequirments.text = "You have already built today";
+            }
+            else if (!selectedBuildingData.hasBuildingPrerequisites)
+            {
+                buildingRequirments.text = "Requires ";
+                foreach (TownBuildingData requiredBuilding in selectedBuildingData.prerequisites)
+                {
+                    buildingRequirments.text += requiredBuilding.name;
+                    if (requiredBuilding != selectedBuildingData.prerequisites.Last())
+                    {
+                        buildingRequirments.text += ", ";
+                    }
+                }
+            }
+            else if (!selectedBuildingData.hasResources)
+            {
+                buildingRequirments.text = "Not enough resources.";
+            }
+            else
+            {
+                Debug.LogError("Cannot build for unknown reason. PANIC!!!");
+            }
         }
     }
 
