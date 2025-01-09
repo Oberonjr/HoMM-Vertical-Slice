@@ -15,12 +15,16 @@ public class TownBuildingData : ScriptableObject
 
     public TownBuildingData[] prerequisites;
     public TownBuildingData buildingToReplace;
+    public TownBuildingData buildingToEnable;
+
+    private bool canBeBuilt = true;
     
     public virtual void OnBuild(TownData town)
     {
         town.builtBuildings.Add(this);
         if(town.builtBuildings.Contains(buildingToReplace)) town.builtBuildings.Remove(buildingToReplace);
         town.ownerPlayer.Kingdom.Economy.SpendResource(cost);
+        canBeBuilt = false;
     }
 
     public bool CanBeBuilt(TownData town)
@@ -37,6 +41,6 @@ public class TownBuildingData : ScriptableObject
         {
             return false;  
         }
-        return true;
+        return canBeBuilt;
     }
 }

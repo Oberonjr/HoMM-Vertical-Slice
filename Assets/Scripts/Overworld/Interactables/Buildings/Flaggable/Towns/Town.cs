@@ -19,8 +19,8 @@ public class Town : FlaggableBuilding
     {
         base.Interact(interactor);
         townData.ownerPlayer = owner;
-        TownUIScreen.SetActive(true);
         OverworldUIManager.Instance.currentTown = townData;
+        OverworldEventBus<OpenTownScreen>.Publish(new OpenTownScreen(townData));
         HeroMovementManager.Instance.allowInput = false;
     }
     

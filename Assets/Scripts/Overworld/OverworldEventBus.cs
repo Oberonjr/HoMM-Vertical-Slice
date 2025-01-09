@@ -26,6 +26,16 @@ public class NewWeek: Event{}
 public class NewMonth : Event{}
 
 //UI
+public class OpenTownScreen : Event
+{
+    public TownData town;
+
+    public OpenTownScreen(TownData pTownData)
+    {
+        town = pTownData;
+    }
+    
+}
 public class OpenRecruitScreen : Event
 {
     public UnitStats unit;

@@ -16,6 +16,8 @@ public class TownData
     
     public List<TownBuildingData> builtBuildings = new List<TownBuildingData>();
 
+    [HideInInspector]public bool CanBuild = true;
+    
     public TownData()
     {
         ResourceAmountGenerated = new SerializedDictionary<ResourceData.ResourceType, int>
@@ -59,5 +61,10 @@ public class TownData
         {
             income[resourceIncome.Key] -= resourceIncome.Value;
         }
+    }
+
+    void UpdateDailyParameters(NewDay e)
+    {
+        CanBuild = true;
     }
 }

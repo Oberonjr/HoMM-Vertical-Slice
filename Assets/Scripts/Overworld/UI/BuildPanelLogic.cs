@@ -14,6 +14,8 @@ public class BuildPanelLogic : MonoBehaviour
     [HideInInspector]public GameObject townBuildingObject;
     [HideInInspector]public GameObject buildingObjectToDisable;
     
+    #region PanelUI
+    [Header("Panel UI Elements")]
     [SerializeField] private GameObject buildPanel;
     [SerializeField] private Image icon;
     [SerializeField] private TextMeshProUGUI buildingName;
@@ -22,7 +24,10 @@ public class BuildPanelLogic : MonoBehaviour
     [SerializeField] private GameObject buildingCostVisuals;
     [SerializeField] private GameObject canBuildButton;
     [SerializeField] private GameObject cannotBuildButton;
-
+    #endregion
+    
+    
+    
     private List<GameObject> costVisuals = new List<GameObject>();
     private void OnEnable()
     {
@@ -38,7 +43,7 @@ public class BuildPanelLogic : MonoBehaviour
             costVisual.GetComponentInChildren<TextMeshProUGUI>().text = cost.Value.ToString();
         }
 
-        if (selectedBuildingData.CanBeBuilt(currentTown)) 
+        if (selectedBuildingData.CanBeBuilt(currentTown) && currentTown.CanBuild) 
         {
             canBuildButton.SetActive(true);
             cannotBuildButton.SetActive(false);

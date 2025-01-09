@@ -8,6 +8,11 @@ public class OverworldUIManager : MonoBehaviour
 {
     public static OverworldUIManager Instance;
     
+    #region MainCanvas
+    [Header("Main Canvas")]
+    [SerializeField] private GameObject mainCanvas;
+    #endregion
+    
     #region EconomyText
     [Header("Economy")]
     [SerializeField] private TMP_Text goldText;
@@ -24,10 +29,16 @@ public class OverworldUIManager : MonoBehaviour
     #endregion
     
     #region Town
-    [Header("Town & Building Panel")]
     [HideInInspector] public TownData currentTown;
-
+    [Header("Building Panel")]
     [SerializeField] private BuildPanelLogic BuildPanel;
+    #endregion
+    
+    #region StatusImages
+    [Header("Status Bar Image Prefabs")]
+    public Sprite CanBeBuiltBar;
+    public Sprite CanNotBeBuiltBar;
+    public Sprite HasBeenBuiltBar;
     #endregion
     
     private Economy playerEconomy;
@@ -49,26 +60,33 @@ public class OverworldUIManager : MonoBehaviour
     {
         OverworldEventBus<NewDay>.OnEvent += UpdateTime;
         OverworldEventBus<OpenBuildScreen>.OnEvent += EnableBuildScreen;
+        OverworldEventBus<OpenTownScreen>.OnEvent += OpenTownScreen;
     }
 
     void OnDisable()
     {
         OverworldEventBus<NewDay>.OnEvent -= UpdateTime;
         OverworldEventBus<OpenBuildScreen>.OnEvent -= EnableBuildScreen;
+        OverworldEventBus<OpenTownScreen>.OnEvent -= OpenTownScreen;
     }
     void Start()
     {
         playerEconomy = OverworldTurnManager.Instance.ActivePlayer.Kingdom.Economy;
         _calendar = Calendar.Instance;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         goldText.text = playerEconomy.ResourceAmount[ResourceData.ResourceType.Gold].ToString();
         woodText.text = playerEconomy.ResourceAmount[ResourceData.ResourceType.Wood].ToString();
         oreText.text = playerEconomy.ResourceAmount[ResourceData.ResourceType.Ore].ToString();
         crystalText.text = playerEconomy.ResourceAmount[ResourceData.ResourceType.Crystal].ToString();
+    }
+
+    void OpenTownScreen(OpenTownScreen e)
+    {
+        GameObject townScreen = Instantiate(e.town.faction.factionTownUIScreen, mainCanvas.transform);
+        
     }
 
     void UpdateTime(NewDay e)
