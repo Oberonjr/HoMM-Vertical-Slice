@@ -7,7 +7,6 @@ using AYellowpaper.SerializedCollections;
 public class Town : FlaggableBuilding
 {
     public TownData townData;
-    public GameObject TownUIScreen; 
     
     public override void InitializeInteractable(InitializeWorld e = null)
     {

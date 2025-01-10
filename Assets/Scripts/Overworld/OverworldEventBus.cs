@@ -38,13 +38,15 @@ public class OpenTownScreen : Event
 }
 public class OpenRecruitScreen : Event
 {
+    public CreatureDwellingInfo dwellingInfo;
     public UnitStats unit;
     public int amount;
 
-    public OpenRecruitScreen(UnitStats pUnit, int pAmount)
+    public OpenRecruitScreen(CreatureDwellingInfo pDwellingInfo)
     {
-        unit = pUnit;
-        amount = pAmount;
+        dwellingInfo = pDwellingInfo;
+        unit = pDwellingInfo.ProducedUnit;
+        amount = pDwellingInfo.StationedAmont;
     }
 
 }

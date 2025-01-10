@@ -16,10 +16,11 @@ public class TownData
     
     public List<TownBuildingData> builtBuildings = new List<TownBuildingData>();
 
-    [HideInInspector]public bool CanBuild = true;
+    [HideInInspector] public bool CanBuild = true;
     
     public TownData()
     {
+        OverworldEventBus<NewDay>.OnEvent += UpdateDailyParameters;
         ResourceAmountGenerated = new SerializedDictionary<ResourceData.ResourceType, int>
         {
             { ResourceData.ResourceType.Gold    , 0},
@@ -37,6 +38,11 @@ public class TownData
                 }
             }
         }
+    }
+
+    ~TownData()
+    {
+        OverworldEventBus<NewDay>.OnEvent -= UpdateDailyParameters;
     }
     
     void ChangeIncome(ResourceData.ResourceType resourceType, int newAmount)
@@ -66,5 +72,13 @@ public class TownData
     void UpdateDailyParameters(NewDay e)
     {
         CanBuild = true;
+    }
+
+    void UpdateWeeklyParameters(NewWeek e)
+    {
+        foreach (DwellingBuildingData dwelling in builtBuildings)
+        {
+            
+        }
     }
 }

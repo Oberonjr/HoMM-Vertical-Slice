@@ -8,9 +8,9 @@ public class OverworldUIManager : MonoBehaviour
 {
     public static OverworldUIManager Instance;
     
-    #region MainCanvas
+    #region townCanvas
     [Header("Main Canvas")]
-    [SerializeField] private GameObject mainCanvas;
+    [SerializeField] private GameObject townCanvas;
     #endregion
     
     #region EconomyText
@@ -85,7 +85,7 @@ public class OverworldUIManager : MonoBehaviour
 
     void OpenTownScreen(OpenTownScreen e)
     {
-        GameObject townScreen = Instantiate(e.town.faction.factionTownUIScreen, mainCanvas.transform);
+        GameObject townScreen = Instantiate(e.town.faction.factionTownUIScreen, townCanvas.transform);
         BuildPanel = townScreen.GetComponent<TownScreenLogic>().buildPanel;
     }
 
