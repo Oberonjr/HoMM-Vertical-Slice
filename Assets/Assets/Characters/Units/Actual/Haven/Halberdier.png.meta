@@ -1,0 +1,1445 @@
+fileFormatVersion: 2
+guid: e786437e801cca04c86cedbd7e004b46
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 75
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Halberdier_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 485
+        width: 45
+        height: 101
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2191267622c8e7445b0f0c4ee7f8a845
+      internalID: -944258553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 485
+        width: 45
+        height: 102
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2185661347a9cf4ea0f8d07c3b7faaf
+      internalID: -671376118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_2
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 485
+        width: 45
+        height: 102
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a733d2958dc48c4ba54ffdad91c5284
+      internalID: -506181004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_3
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 485
+        width: 45
+        height: 102
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f7969ca0f11a994baa727006332eb51
+      internalID: -1444995964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_4
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 485
+        width: 46
+        height: 102
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c866bacd23da3479f9ac08bffbaa21
+      internalID: 647153571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_5
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 484
+        width: 50
+        height: 104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42faf2ad04b8059419f720c4be9d00bd
+      internalID: 1195991162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_6
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 485
+        width: 57
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f6ff1a0a4c1a047b1a4de7515fc2bd
+      internalID: -148673971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_7
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 485
+        width: 54
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a2f0ed01b438b46b509731de02b786
+      internalID: 840706402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_8
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 485
+        width: 50
+        height: 104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad644184744cadc4ea52b78b607f9e8c
+      internalID: 83130869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_9
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 484
+        width: 44
+        height: 100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c788a071d395545b0c75f72539ff4a
+      internalID: -921908997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_10
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 484
+        width: 45
+        height: 102
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6fc0a6fd6393644c86ac152049fc33a
+      internalID: -921648317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_11
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 484
+        width: 46
+        height: 102
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82cd84cfb30a7f54781ff5e78185bde8
+      internalID: -1074600120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_12
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 484
+        width: 51
+        height: 100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e023974ca8f10f947996aebcc42a744b
+      internalID: -153242093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_13
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 484
+        width: 50
+        height: 101
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c2b2d33c4268841964ba13bc940381
+      internalID: 2017968308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_14
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 484
+        width: 44
+        height: 103
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c663ad6c642e9b4fa6ea659a9f971b7
+      internalID: 1448036613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_15
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 355
+        width: 33
+        height: 101
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75e9446f6b0d4ed4b8d93e106152b6c2
+      internalID: 1106437148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_16
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 355
+        width: 88
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 351d863fdf8ef8241beaac5c46392603
+      internalID: -2039183309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_17
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 355
+        width: 100
+        height: 89
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3626e88f61d5ec4e9c9428a6e7d4bd7
+      internalID: 1803381382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_18
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 355
+        width: 71
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a2c91d75a8687488b823bceed855e7
+      internalID: -1338534364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_19
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 355
+        width: 65
+        height: 81
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c72c11be2dbc82248867cc3d30cf7359
+      internalID: 1886489653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_20
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 355
+        width: 62
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71cd4baa8189c7645b1f5d6460596e74
+      internalID: 237495484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_21
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 370
+        width: 46
+        height: 99
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9592b5ae8507db34482d566c63702c35
+      internalID: -222522065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_22
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 370
+        width: 50
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d01939e194e0b45a766c6161102e54
+      internalID: -260157859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_23
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 369
+        width: 61
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c35e0a46e3ba444bd8175bdaf7dc4a
+      internalID: -432554063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_24
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 368
+        width: 66
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c711422405ddbd4fa476952c080b194
+      internalID: -9292774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_26
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 365
+        width: 75
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002efb8a6a11d424a88a6d1dbafcc3f0
+      internalID: 1350637119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_28
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 221
+        width: 32
+        height: 98
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d65d5d5d1a7135d4d80c93f809f8c323
+      internalID: -1424425135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_29
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 220
+        width: 34
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000bb337a0cb5804ba6ebb75d4681702
+      internalID: -763236648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_30
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 220
+        width: 37
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a1dc3fc3fe1fe4bb3db1da6c1af0cb
+      internalID: -732455959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_31
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 219
+        width: 97
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abff073c67269c24886bb4a81b30ca1d
+      internalID: 1154717501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_32
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 220
+        width: 91
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0579fc6bf2b1a479fa971092d19b54
+      internalID: 396531645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_33
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 220
+        width: 81
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87197193db40443499a4200ddb2ae28a
+      internalID: -2081102683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_34
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 259
+        width: 39
+        height: 98
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af14ee4d5b299d48b445e84a5a5586c
+      internalID: 1095043343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_35
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 259
+        width: 39
+        height: 94
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecc09806a57b0a147a997489bc0e9e71
+      internalID: 616240532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_36
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 260
+        width: 49
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e0db703afdcb5248ab6b12eddf72be8
+      internalID: 1928122364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_37
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 258
+        width: 58
+        height: 89
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fca3a9c000898d744985a49aa833f419
+      internalID: -539423331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_38
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 256
+        width: 62
+        height: 89
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57048bd01e557b44e8e01f6fe5fb78c5
+      internalID: 1637853720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_39
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 256
+        width: 65
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5afdfbf333b48e4284799af282a7691
+      internalID: -534002335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_41
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 105
+        width: 58
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a640e77509e3b7459055ebaa41071f1
+      internalID: -1912072402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_42
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 103
+        width: 56
+        height: 81
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c70965281e3ee44f93e75dedf2d1931
+      internalID: 358941935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_43
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 103
+        width: 39
+        height: 77
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8feb7369006b014f8066efdec6a1551
+      internalID: 1517658702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_44
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 102
+        width: 42
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 216caee59115f6c4899d603621b8b2b4
+      internalID: -406117231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_45
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 170
+        width: 61
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7219bb7d4d189446ad863f8a6d0d0a5
+      internalID: 1124421023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_46
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 174
+        width: 59
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4616852198c2bb242af6e7fa5632483f
+      internalID: -952370950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_47
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 171
+        width: 37
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b0e25959f3be384691768ba3b699348
+      internalID: 1295632510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_48
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 117
+        width: 43
+        height: 104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747d98046d5ce0448b3f5e9c7281c799
+      internalID: -521594950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_49
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 117
+        width: 36
+        height: 104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc5df611922cd114788d6dad1dce874b
+      internalID: 2063654980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_50
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 102
+        width: 87
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8baae690959ac4d91535c407e1c836
+      internalID: -480803705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_51
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 98
+        width: 72
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93b2081feefe364085d36dcb3eddb19
+      internalID: -900770933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_52
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 102
+        width: 84
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3591986daed2cbb4986336886fc8ab2b
+      internalID: -1147753978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_54
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 18
+        width: 58
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1243ff9c38e3bd43ae5c4f1dd8bb6fb
+      internalID: -1675621302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_55
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 19
+        width: 62
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6fa1a62b43162a429fbb210d3a5d998
+      internalID: -1110799130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_56
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 19
+        width: 53
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74e1a904e8b81041a6c6c22a459991e
+      internalID: 1086773471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_57
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 18
+        width: 46
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78cba85bb4d1c3542a9865abd93a5a5c
+      internalID: 1441689175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_58
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 16
+        width: 58
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db3220299eb08b74184ad9f5bf971950
+      internalID: 1867962502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Halberdier_59
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 49
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a8519176f2955a4bbbb407d57792889
+      internalID: 912156370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Halberdier_0: -944258553
+      Halberdier_1: -671376118
+      Halberdier_10: -921648317
+      Halberdier_100: 1923822985
+      Halberdier_101: 992270158
+      Halberdier_102: 1882078022
+      Halberdier_103: 1551033572
+      Halberdier_104: -336241130
+      Halberdier_105: -487127658
+      Halberdier_106: -926793598
+      Halberdier_107: -1104591138
+      Halberdier_108: -167745922
+      Halberdier_109: 1566028999
+      Halberdier_11: -1074600120
+      Halberdier_110: 1439120967
+      Halberdier_111: 678074721
+      Halberdier_112: 606637521
+      Halberdier_113: -51530541
+      Halberdier_114: -254211078
+      Halberdier_115: -2059818576
+      Halberdier_116: -308807010
+      Halberdier_117: 1953648739
+      Halberdier_118: -1501872714
+      Halberdier_119: 475556857
+      Halberdier_12: -153242093
+      Halberdier_120: 1444762969
+      Halberdier_121: 916326036
+      Halberdier_122: 207280422
+      Halberdier_123: 1789338111
+      Halberdier_124: 1812689447
+      Halberdier_125: 2005917724
+      Halberdier_126: -530243372
+      Halberdier_127: -670188214
+      Halberdier_128: -390489594
+      Halberdier_129: 992445637
+      Halberdier_13: 2017968308
+      Halberdier_130: 948144188
+      Halberdier_131: -852179517
+      Halberdier_132: -1099472437
+      Halberdier_133: 476738528
+      Halberdier_134: -1804521606
+      Halberdier_135: -1328814114
+      Halberdier_136: -585935923
+      Halberdier_137: -1256204244
+      Halberdier_138: -2145743337
+      Halberdier_139: -1103359697
+      Halberdier_14: 1448036613
+      Halberdier_140: -223396889
+      Halberdier_141: 596103227
+      Halberdier_15: 1106437148
+      Halberdier_16: -2039183309
+      Halberdier_17: 1803381382
+      Halberdier_18: -1338534364
+      Halberdier_19: 1886489653
+      Halberdier_2: -506181004
+      Halberdier_20: 237495484
+      Halberdier_21: -222522065
+      Halberdier_22: -260157859
+      Halberdier_23: -432554063
+      Halberdier_24: -9292774
+      Halberdier_25: -1849631663
+      Halberdier_26: 1350637119
+      Halberdier_27: 419057486
+      Halberdier_28: -1424425135
+      Halberdier_29: -763236648
+      Halberdier_3: -1444995964
+      Halberdier_30: -732455959
+      Halberdier_31: 1154717501
+      Halberdier_32: 396531645
+      Halberdier_33: -2081102683
+      Halberdier_34: 1095043343
+      Halberdier_35: 616240532
+      Halberdier_36: 1928122364
+      Halberdier_37: -539423331
+      Halberdier_38: 1637853720
+      Halberdier_39: -534002335
+      Halberdier_4: 647153571
+      Halberdier_40: 34056769
+      Halberdier_41: -1912072402
+      Halberdier_42: 358941935
+      Halberdier_43: 1517658702
+      Halberdier_44: -406117231
+      Halberdier_45: 1124421023
+      Halberdier_46: -952370950
+      Halberdier_47: 1295632510
+      Halberdier_48: -521594950
+      Halberdier_49: 2063654980
+      Halberdier_5: 1195991162
+      Halberdier_50: -480803705
+      Halberdier_51: -900770933
+      Halberdier_52: -1147753978
+      Halberdier_53: 1479247465
+      Halberdier_54: -1675621302
+      Halberdier_55: -1110799130
+      Halberdier_56: 1086773471
+      Halberdier_57: 1441689175
+      Halberdier_58: 1867962502
+      Halberdier_59: 912156370
+      Halberdier_6: -148673971
+      Halberdier_60: -719617833
+      Halberdier_61: -2017377959
+      Halberdier_62: 1619410250
+      Halberdier_63: 1609082927
+      Halberdier_64: -1737117883
+      Halberdier_65: -1773801657
+      Halberdier_66: 1904570655
+      Halberdier_67: 1812551951
+      Halberdier_68: 747592848
+      Halberdier_69: 1873629838
+      Halberdier_7: 840706402
+      Halberdier_70: 46950230
+      Halberdier_71: -1227910871
+      Halberdier_72: 1286805351
+      Halberdier_73: -1860229750
+      Halberdier_74: -517166590
+      Halberdier_75: 1016418402
+      Halberdier_76: -1727271626
+      Halberdier_77: -1260378080
+      Halberdier_78: 1984354061
+      Halberdier_79: 160556524
+      Halberdier_8: 83130869
+      Halberdier_80: 63224511
+      Halberdier_81: 1600299234
+      Halberdier_82: 1432038527
+      Halberdier_83: -1926718945
+      Halberdier_84: -1180478167
+      Halberdier_85: 1110453408
+      Halberdier_86: -1553997917
+      Halberdier_87: -272291931
+      Halberdier_88: -1130153383
+      Halberdier_89: -25800903
+      Halberdier_9: -921908997
+      Halberdier_90: -660490343
+      Halberdier_91: 1607137632
+      Halberdier_92: 862162623
+      Halberdier_93: -2097871980
+      Halberdier_94: 1869085703
+      Halberdier_95: -1909332740
+      Halberdier_96: 2126374540
+      Halberdier_97: 683703075
+      Halberdier_98: -1933400154
+      Halberdier_99: -593624774
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
