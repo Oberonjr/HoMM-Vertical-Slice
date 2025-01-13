@@ -133,8 +133,8 @@ public class CombatTurnManager : MonoBehaviour
             Transform spawnLocation = location.transform.GetChild(i);
             //Debug.Log(spawnLocation.name);
             spawnLocation.transform.position = MyUtils.ClosestNode(spawnLocation.transform.position).GridPosition;
-            if (army._units[i].unitPrefab == null) return;
-            GameObject spawnUnit = Instantiate(army._units[i].unitPrefab, spawnLocation.position, Quaternion.identity, spawnLocation.transform);
+            if (army._units[i].stats == null) return;
+            GameObject spawnUnit = Instantiate(army._units[i].stats.prefab, spawnLocation.position, Quaternion.identity, spawnLocation.transform);
             spawnUnit.transform.parent = null;
             Unit unitComponent = spawnUnit.GetComponent<Unit>();
             unitComponent.stackSize = army._units[i].amount;

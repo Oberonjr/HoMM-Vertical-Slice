@@ -49,70 +49,203 @@ MonoBehaviour:
   unitStats: {fileID: 11400000, guid: 143be5930f275b546bafdf3a6c6bb6b3, type: 2}
   currentHP: 0
   currentMovementPoints: 0
-  stackSize: 3
+  stackSize: 0
   hasRetaliated: 0
   isMoving: 0
   IsAI: 0
   UnitName: 
   isUnitTurn: 0
   animator: {fileID: 0}
-  OwnerHero:
-    Name: 
-    Icon: {fileID: 0}
-    Army:
-      owner:
-        Name: 
-        Icon: {fileID: 0}
-        Army:
-          owner:
-            Name: 
-            Icon: {fileID: 0}
-            Army:
-              owner:
-                Name: 
-                Icon: {fileID: 0}
-                Army:
-                  owner:
-                    Name: 
-                    Icon: {fileID: 0}
-                    Army:
-                      owner:
-                        Name: 
-                        AttackStat: 0
-                        DefenseStat: 0
-                        PowerStat: 0
-                        KnowledgeStat: 0
-                        MovementPoints: 0
-                      _units: []
-                    AttackStat: 0
-                    DefenseStat: 0
-                    PowerStat: 0
-                    KnowledgeStat: 0
-                    MovementPoints: 0
-                  _units: []
-                AttackStat: 0
-                DefenseStat: 0
-                PowerStat: 0
-                KnowledgeStat: 0
-                MovementPoints: 0
-              _units: []
-            AttackStat: 0
-            DefenseStat: 0
-            PowerStat: 0
-            KnowledgeStat: 0
-            MovementPoints: 0
-          _units: []
-        AttackStat: 0
-        DefenseStat: 0
-        PowerStat: 0
-        KnowledgeStat: 0
-        MovementPoints: 0
-      _units: []
-    AttackStat: 0
-    DefenseStat: 0
-    PowerStat: 0
-    KnowledgeStat: 0
-    MovementPoints: 0
+  OwnerArmy:
+    owner:
+      Name: 
+      Icon: {fileID: 0}
+      Army:
+        owner:
+          Name: 
+          Icon: {fileID: 0}
+          Army:
+            owner:
+              Name: 
+              Icon: {fileID: 0}
+              Army:
+                owner:
+                  Name: 
+                  Icon: {fileID: 0}
+                  Army:
+                    owner:
+                      Name: 
+                      Icon: {fileID: 0}
+                      AttackStat: 0
+                      DefenseStat: 0
+                      PowerStat: 0
+                      KnowledgeStat: 0
+                      MovementPoints: 0
+                    _units:
+                    - stats: {fileID: 0}
+                      amount: 0
+                      unitPrefab: {fileID: 0}
+                      identifier: 
+                    - stats: {fileID: 0}
+                      amount: 0
+                      unitPrefab: {fileID: 0}
+                      identifier: 
+                    - stats: {fileID: 0}
+                      amount: 0
+                      unitPrefab: {fileID: 0}
+                      identifier: 
+                    - stats: {fileID: 0}
+                      amount: 0
+                      unitPrefab: {fileID: 0}
+                      identifier: 
+                    - stats: {fileID: 0}
+                      amount: 0
+                      unitPrefab: {fileID: 0}
+                      identifier: 
+                    - stats: {fileID: 0}
+                      amount: 0
+                      unitPrefab: {fileID: 0}
+                      identifier: 
+                    - stats: {fileID: 0}
+                      amount: 0
+                      unitPrefab: {fileID: 0}
+                      identifier: 
+                  AttackStat: 0
+                  DefenseStat: 0
+                  PowerStat: 0
+                  KnowledgeStat: 0
+                  MovementPoints: 0
+                _units:
+                - stats: {fileID: 0}
+                  amount: 0
+                  unitPrefab: {fileID: 0}
+                  identifier: 
+                - stats: {fileID: 0}
+                  amount: 0
+                  unitPrefab: {fileID: 0}
+                  identifier: 
+                - stats: {fileID: 0}
+                  amount: 0
+                  unitPrefab: {fileID: 0}
+                  identifier: 
+                - stats: {fileID: 0}
+                  amount: 0
+                  unitPrefab: {fileID: 0}
+                  identifier: 
+                - stats: {fileID: 0}
+                  amount: 0
+                  unitPrefab: {fileID: 0}
+                  identifier: 
+                - stats: {fileID: 0}
+                  amount: 0
+                  unitPrefab: {fileID: 0}
+                  identifier: 
+                - stats: {fileID: 0}
+                  amount: 0
+                  unitPrefab: {fileID: 0}
+                  identifier: 
+              AttackStat: 0
+              DefenseStat: 0
+              PowerStat: 0
+              KnowledgeStat: 0
+              MovementPoints: 0
+            _units:
+            - stats: {fileID: 0}
+              amount: 0
+              unitPrefab: {fileID: 0}
+              identifier: 
+            - stats: {fileID: 0}
+              amount: 0
+              unitPrefab: {fileID: 0}
+              identifier: 
+            - stats: {fileID: 0}
+              amount: 0
+              unitPrefab: {fileID: 0}
+              identifier: 
+            - stats: {fileID: 0}
+              amount: 0
+              unitPrefab: {fileID: 0}
+              identifier: 
+            - stats: {fileID: 0}
+              amount: 0
+              unitPrefab: {fileID: 0}
+              identifier: 
+            - stats: {fileID: 0}
+              amount: 0
+              unitPrefab: {fileID: 0}
+              identifier: 
+            - stats: {fileID: 0}
+              amount: 0
+              unitPrefab: {fileID: 0}
+              identifier: 
+          AttackStat: 0
+          DefenseStat: 0
+          PowerStat: 0
+          KnowledgeStat: 0
+          MovementPoints: 0
+        _units:
+        - stats: {fileID: 0}
+          amount: 0
+          unitPrefab: {fileID: 0}
+          identifier: 
+        - stats: {fileID: 0}
+          amount: 0
+          unitPrefab: {fileID: 0}
+          identifier: 
+        - stats: {fileID: 0}
+          amount: 0
+          unitPrefab: {fileID: 0}
+          identifier: 
+        - stats: {fileID: 0}
+          amount: 0
+          unitPrefab: {fileID: 0}
+          identifier: 
+        - stats: {fileID: 0}
+          amount: 0
+          unitPrefab: {fileID: 0}
+          identifier: 
+        - stats: {fileID: 0}
+          amount: 0
+          unitPrefab: {fileID: 0}
+          identifier: 
+        - stats: {fileID: 0}
+          amount: 0
+          unitPrefab: {fileID: 0}
+          identifier: 
+      AttackStat: 0
+      DefenseStat: 0
+      PowerStat: 0
+      KnowledgeStat: 0
+      MovementPoints: 0
+    _units:
+    - stats: {fileID: 0}
+      amount: 0
+      unitPrefab: {fileID: 0}
+      identifier: 
+    - stats: {fileID: 0}
+      amount: 0
+      unitPrefab: {fileID: 0}
+      identifier: 
+    - stats: {fileID: 0}
+      amount: 0
+      unitPrefab: {fileID: 0}
+      identifier: 
+    - stats: {fileID: 0}
+      amount: 0
+      unitPrefab: {fileID: 0}
+      identifier: 
+    - stats: {fileID: 0}
+      amount: 0
+      unitPrefab: {fileID: 0}
+      identifier: 
+    - stats: {fileID: 0}
+      amount: 0
+      unitPrefab: {fileID: 0}
+      identifier: 
+    - stats: {fileID: 0}
+      amount: 0
+      unitPrefab: {fileID: 0}
+      identifier: 
 --- !u!1 &4586412231369094853
 GameObject:
   m_ObjectHideFlags: 0

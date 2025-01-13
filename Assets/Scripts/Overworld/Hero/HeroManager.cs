@@ -28,7 +28,7 @@ public class HeroManager : MonoBehaviour
 
             if (updateSlot != null)
             {
-                cHeroInfo.Army._units[i] = new UnitSlot(updateSlot.stats, updateSlot.amount, updateSlot.unitPrefab);
+                cHeroInfo.Army._units[i] = new UnitSlot(updateSlot.stats, updateSlot.amount);
             }
             
         }

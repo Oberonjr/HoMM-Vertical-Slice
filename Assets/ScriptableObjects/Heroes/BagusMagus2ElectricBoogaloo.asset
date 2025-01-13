@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47966129b2d40ca47a3774b3932a1369, type: 3}
+  m_Name: BagusMagus2ElectricBoogaloo
+  m_EditorClassIdentifier: 
+  Name: Bagus, the Mad Magus
+  Icon: {fileID: 634184886, guid: aab0522f49cc8f646a8ad147f230e688, type: 3}
+  StartingArmy:
+    owner:
+      Name: 
+      Icon: {fileID: 0}
+      Army:
+        owner:
+          Name: 
+          Icon: {fileID: 0}
+          Army:
+            owner:
+              Name: 
+              Icon: {fileID: 0}
+              Army:
+                owner:
+                  Name: 
+                  Icon: {fileID: 0}
+                  Army:
+                    owner:
+                      Name: 
+                      Icon: {fileID: 0}
+                      AttackStat: 0
+                      DefenseStat: 0
+                      PowerStat: 0
+                      KnowledgeStat: 0
+                      MovementPoints: 0
+                    _units: []
+                  AttackStat: 0
+                  DefenseStat: 0
+                  PowerStat: 0
+                  KnowledgeStat: 0
+                  MovementPoints: 0
+                _units: []
+              AttackStat: 0
+              DefenseStat: 0
+              PowerStat: 0
+              KnowledgeStat: 0
+              MovementPoints: 0
+            _units: []
+          AttackStat: 0
+          DefenseStat: 0
+          PowerStat: 0
+          KnowledgeStat: 0
+          MovementPoints: 0
+        _units: []
+      AttackStat: 0
+      DefenseStat: 0
+      PowerStat: 0
+      KnowledgeStat: 0
+      MovementPoints: 0
+    _units:
+    - stats: {fileID: 0}
+      amount: 0
+      unitPrefab: {fileID: 0}
+      identifier: 
+    - stats: {fileID: 11400000, guid: 02deef72016d525419c4de43a4eabd36, type: 2}
+      amount: 2
+      unitPrefab: {fileID: 1034086194780901988, guid: 1cc01562c10b8c74e82848c4cb037a04, type: 3}
+      identifier: 
+    - stats: {fileID: 0}
+      amount: 0
+      unitPrefab: {fileID: 0}
+      identifier: 
+    - stats: {fileID: 0}
+      amount: 0
+      unitPrefab: {fileID: 0}
+      identifier: 
+    - stats: {fileID: 0}
+      amount: 0
+      unitPrefab: {fileID: 0}
+      identifier: 
+    - stats: {fileID: 0}
+      amount: 0
+      unitPrefab: {fileID: 0}
+      identifier: 
+    - stats: {fileID: 0}
+      amount: 0
+      unitPrefab: {fileID: 0}
+      identifier: 
+  AttackStat: 2
+  DefenseStat: 2
+  PowerStat: 2
+  KnowledgeStat: 2
+  MovementPoints: 5

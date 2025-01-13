@@ -9,18 +9,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bdaab36f220da2499e5bb7e8e7b1fe2, type: 3}
-  m_Name: CastleCapitol
+  m_Script: {fileID: 11500000, guid: f2bb452147d549744b7c90cc3beca818, type: 3}
+  m_Name: Fort
   m_EditorClassIdentifier: 
-  name: 
-  description: 
-  buildScreenSprite: {fileID: 0}
+  name: Fort
+  description: Enables dwellings
+  buildScreenSprite: {fileID: 21300000, guid: 4ea2d08643b16ce41871fbd2cc8937e6, type: 3}
   cost:
-    _serializedList: []
+    _serializedList:
+    - Key: 0
+      Value: 5000
+    - Key: 1
+      Value: 10
+    - Key: 2
+      Value: 10
   prerequisites: []
   buildingToReplace: {fileID: 0}
   buildingToEnable: {fileID: 0}
   hasResources: 0
   hasBuildingPrerequisites: 0
-  income:
-    _serializedList: []

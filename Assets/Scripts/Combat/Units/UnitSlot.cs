@@ -10,18 +10,17 @@ public class UnitSlot
     public UnitStats stats;
     public int amount;
     
-    public GameObject unitPrefab;
+    //public GameObject unitPrefab;
 
-    //[HideInInspector]
-    public string identifier;
+    [HideInInspector] public string identifier;
 
-    public GUID realIdentifier;
+    //public GUID realIdentifier;
     
-    public UnitSlot(UnitStats pStats, int pAmount, GameObject pUnitPrefab = null)
+    public UnitSlot(UnitStats pStats, int pAmount)
     {
         stats = pStats;
         amount = pAmount;
-        unitPrefab = pUnitPrefab;
+        //unitPrefab = pUnitPrefab;
         if(stats != null)identifier = stats.unitName;
     }
 }

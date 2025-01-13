@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2bb452147d549744b7c90cc3beca818, type: 3}
+  m_Name: Tavern
+  m_EditorClassIdentifier: 
+  name: Tavern
+  description: Enable Town Hall
+  buildScreenSprite: {fileID: 21300000, guid: 31fd481a8f906ee44ae9caf294c34db8, type: 3}
+  cost:
+    _serializedList:
+    - Key: 0
+      Value: 500
+    - Key: 1
+      Value: 5
+  prerequisites: []
+  buildingToReplace: {fileID: 0}
+  buildingToEnable: {fileID: 0}
+  hasResources: 0
+  hasBuildingPrerequisites: 0

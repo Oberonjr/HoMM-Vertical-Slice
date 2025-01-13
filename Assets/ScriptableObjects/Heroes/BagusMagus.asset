@@ -64,33 +64,26 @@ MonoBehaviour:
       KnowledgeStat: 0
       MovementPoints: 0
     _units:
+    - stats: {fileID: 11400000, guid: 4994bd79d9180334f8c58494aeec7e32, type: 2}
+      amount: 14
+      identifier: 
+    - stats: {fileID: 11400000, guid: fca0fea4dd7eb8b41a1cd7879a331063, type: 2}
+      amount: 9
+      identifier: 
     - stats: {fileID: 11400000, guid: 15fea2f3a678cae4a89dcdf70f9abef7, type: 2}
+      amount: 4
+      identifier: 
+    - stats: {fileID: 11400000, guid: 07b964a7658fae24b87cb2dbb2919714, type: 2}
       amount: 3
-      unitPrefab: {fileID: 2297909031159763652, guid: 322f49bc07893f249869336fb9bf6c79, type: 3}
       identifier: 
-    - stats: {fileID: 11400000, guid: 02deef72016d525419c4de43a4eabd36, type: 2}
+    - stats: {fileID: 11400000, guid: 4b8293d28fbe6f04ea611f455970c647, type: 2}
       amount: 2
-      unitPrefab: {fileID: 1034086194780901988, guid: 1cc01562c10b8c74e82848c4cb037a04, type: 3}
       identifier: 
     - stats: {fileID: 0}
       amount: 0
-      unitPrefab: {fileID: 0}
       identifier: 
     - stats: {fileID: 0}
       amount: 0
-      unitPrefab: {fileID: 0}
-      identifier: 
-    - stats: {fileID: 0}
-      amount: 0
-      unitPrefab: {fileID: 0}
-      identifier: 
-    - stats: {fileID: 0}
-      amount: 0
-      unitPrefab: {fileID: 0}
-      identifier: 
-    - stats: {fileID: 0}
-      amount: 0
-      unitPrefab: {fileID: 0}
       identifier: 
   AttackStat: 2
   DefenseStat: 2

@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: edea14f82b2cd0848bb708418d60c157, type: 3}
-  m_Name: TestBasic
+  m_Name: Marksman
   m_EditorClassIdentifier: 
-  unitName: Basic Bitch
-  icon: {fileID: 1345657146, guid: aaa5ebf46dadf3441bd59ff60fcf8f11, type: 3}
+  unitName: Marksman
+  icon: {fileID: -377150284, guid: 549601cb4a52e96488ec09d6caed645f, type: 3}
+  prefab: {fileID: 1612155852422991912, guid: 39a711b20a389b6478e2accdbc97866c, type: 3}
   maxHP: 10
-  attack: 3
-  defense: 2
-  damageRange: {x: 2, y: 5}
-  initiative: 10
-  movementSpeed: 8
-  Tier: 4
-  Growth: 4
+  attack: 6
+  defense: 3
+  damageRange: {x: 2, y: 3}
+  initiative: 7
+  movementSpeed: 6
+  Tier: 2
+  Growth: 9
   Cost: 150

@@ -10,25 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85953b760f3f2bc42bb44b00db8948b2, type: 3}
-  m_Name: CastleT4Dwelling
+  m_Name: CastleT2Dwelling
   m_EditorClassIdentifier: 
-  name: Barracks
-  description: Recruit Crusader
-  buildScreenSprite: {fileID: 21300000, guid: 8447a62dc9b02fc4d83ed401072cbd81, type: 3}
+  name: Archery Tower
+  description: Recruit Marksmen
+  buildScreenSprite: {fileID: 21300000, guid: ae531f43aef5174499257cafc3a6ebdd, type: 3}
   cost:
     _serializedList:
     - Key: 0
-      Value: 1500
+      Value: 1000
     - Key: 1
       Value: 5
     - Key: 2
       Value: 5
   prerequisites:
-  - {fileID: 11400000, guid: 5438bcb0d20cf12499918a0ff6d3d86c, type: 2}
+  - {fileID: 11400000, guid: a61d9cbad8f626c44afa3f44a5a858b8, type: 2}
+  - {fileID: 11400000, guid: 1947c4c77281754479119d9ed5446214, type: 2}
   buildingToReplace: {fileID: 0}
   buildingToEnable: {fileID: 0}
   hasResources: 1
   hasBuildingPrerequisites: 1
   dwellingInfo:
-    ProducedUnit: {fileID: 11400000, guid: 15fea2f3a678cae4a89dcdf70f9abef7, type: 2}
-    StationedAmont: 4
+    ProducedUnit: {fileID: 11400000, guid: fca0fea4dd7eb8b41a1cd7879a331063, type: 2}
+    StationedAmont: 0

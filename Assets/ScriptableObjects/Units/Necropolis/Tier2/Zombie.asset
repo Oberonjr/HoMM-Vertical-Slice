@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: edea14f82b2cd0848bb708418d60c157, type: 3}
-  m_Name: TestBasic 2
+  m_Name: Zombie
   m_EditorClassIdentifier: 
-  unitName: Basic-er Bitch
+  unitName: Zombie
   icon: {fileID: 85712922, guid: ea4c9b72f6aed844ca210797956e604a, type: 3}
-  maxHP: 7
+  prefab: {fileID: 1034086194780901988, guid: 1cc01562c10b8c74e82848c4cb037a04, type: 3}
+  maxHP: 20
   attack: 5
-  defense: 0
-  damageRange: {x: 1, y: 6}
+  defense: 5
+  damageRange: {x: 2, y: 3}
   initiative: 6
   movementSpeed: 4
   Tier: 2
-  Growth: 10
-  Cost: 40
+  Growth: 8
+  Cost: 125

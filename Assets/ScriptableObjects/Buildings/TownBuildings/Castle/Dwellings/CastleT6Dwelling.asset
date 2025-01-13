@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85953b760f3f2bc42bb44b00db8948b2, type: 3}
+  m_Name: CastleT6Dwelling
+  m_EditorClassIdentifier: 
+  name: Jousting Arena
+  description: Recruit Champions
+  buildScreenSprite: {fileID: 21300000, guid: f3d79a85b05ac3b4aa9d63099caa0fb0, type: 3}
+  cost:
+    _serializedList:
+    - Key: 0
+      Value: 5000
+    - Key: 1
+      Value: 20
+  prerequisites:
+  - {fileID: 11400000, guid: 605363a93f8a7164c8ad97edc557d09d, type: 2}
+  - {fileID: 11400000, guid: 6bc6c373f93b54745b0b357f1bfdd342, type: 2}
+  - {fileID: 11400000, guid: a61d9cbad8f626c44afa3f44a5a858b8, type: 2}
+  buildingToReplace: {fileID: 0}
+  buildingToEnable: {fileID: 0}
+  hasResources: 1
+  hasBuildingPrerequisites: 1
+  dwellingInfo:
+    ProducedUnit: {fileID: 11400000, guid: 4b8293d28fbe6f04ea611f455970c647, type: 2}
+    StationedAmont: 0
