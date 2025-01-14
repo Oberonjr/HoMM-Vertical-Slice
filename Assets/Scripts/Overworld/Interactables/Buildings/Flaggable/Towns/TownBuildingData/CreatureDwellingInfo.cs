@@ -9,6 +9,8 @@ public class CreatureDwellingInfo
     public UnitStats ProducedUnit;
     public int StationedAmont = 0;
 
+    [HideInInspector] public bool isActive = false;
+    
     public CreatureDwellingInfo()
     {
         //StationedAmont = ProducedUnit.Growth;
@@ -24,7 +26,7 @@ public class CreatureDwellingInfo
     
     public void AddUnitGrowth(NewWeek e)
     {
-        StationedAmont += ProducedUnit.Growth;
+        if(isActive) StationedAmont += ProducedUnit.Growth;
     }
 
     public void RemoveRecruitedUnit(int amount)

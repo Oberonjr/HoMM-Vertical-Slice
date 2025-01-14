@@ -40,7 +40,7 @@ public class OverworldTurnManager : MonoBehaviour
         foreach (HeroManager hero in activeHeroes)
         {
             player1.Heroes.Add(hero);
-            Debug.Log("Added hero to player1");
+            //Debug.Log("Added hero to player1");
         }
 
         foreach (HeroManager ownedHero in player1.Heroes)
@@ -74,24 +74,14 @@ public class OverworldTurnManager : MonoBehaviour
     {
         foreach (Player player in CurrentPlayers)
         {
-            if(!player.hasPlayedTurn) return;
+            if(!player.hasPlayedTurn) continue;
             _calendar.AdvanceTime();
         }
         _currentHero = activeHeroes[currentPlayerIndex];
         OverworldEventBus<OnPlayerTurnStart>.Publish(new OnPlayerTurnStart(ActivePlayer));
+        _currentHero.ReplenishMovementPoints();
+        UpdateMovementSlider();
         
-        
-        // If it's an AI player, simulate their turn.
-        if (_currentHero.isAI)
-        {
-            StartCoroutine(SimulateAITurn());
-        }
-        else
-        {
-            // Replenish movement points for the human player.
-            _currentHero.ReplenishMovementPoints();
-            UpdateMovementSlider();
-        }
     }
 
     private void EndTurn()
@@ -102,21 +92,12 @@ public class OverworldTurnManager : MonoBehaviour
         currentPlayerIndex = (currentPlayerIndex + 1) % activeHeroes.Count;
         StartPlayerTurn();
     }
-
-    private IEnumerator SimulateAITurn()
-    {
-        yield return new WaitForSeconds(1f);
-        Debug.Log("Enemy AI turn being simulated.");
-        EndTurn(); // AI automatically ends its turn.
-    }
+    
 
     private void UpdateMovementSlider()
     {
-        if (!_currentHero.isAI)
-        {
-            movementSlider.maxValue = _currentHero.movementPoints;
-            movementSlider.value = _currentHero.movementPoints;
-        }
+        movementSlider.maxValue = _currentHero.movementPoints;
+        movementSlider.value = _currentHero.movementPoints;
     }
     
 }

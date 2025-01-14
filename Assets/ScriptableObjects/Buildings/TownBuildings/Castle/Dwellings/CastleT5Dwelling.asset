@@ -18,9 +18,13 @@ MonoBehaviour:
   cost:
     _serializedList:
     - Key: 0
-      Value: 5000
+      Value: 2000
     - Key: 1
-      Value: 20
+      Value: 5
+    - Key: 2
+      Value: 5
+    - Key: 3
+      Value: 5
   prerequisites:
   - {fileID: 11400000, guid: a61d9cbad8f626c44afa3f44a5a858b8, type: 2}
   - {fileID: 11400000, guid: 6bc6c373f93b54745b0b357f1bfdd342, type: 2}
@@ -29,6 +33,4 @@ MonoBehaviour:
   buildingToEnable: {fileID: 0}
   hasResources: 1
   hasBuildingPrerequisites: 1
-  dwellingInfo:
-    ProducedUnit: {fileID: 11400000, guid: 07b964a7658fae24b87cb2dbb2919714, type: 2}
-    StationedAmont: 0
+  creatureInfo: {fileID: 11400000, guid: 07b964a7658fae24b87cb2dbb2919714, type: 2}

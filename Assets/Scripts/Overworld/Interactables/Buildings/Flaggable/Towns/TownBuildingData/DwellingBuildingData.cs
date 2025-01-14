@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "DwellingBuildingData", menuName = "TownScreen/DwellingBuildingData")]
 public class DwellingBuildingData : TownBuildingData
 {
-    public CreatureDwellingInfo dwellingInfo;
+    public UnitStats creatureInfo;
 
     public override void OnBuild(TownData town)
     {
@@ -60,9 +60,13 @@ public class DwellingBuildingData : TownBuildingData
         }
 
 // Step 7: Set the dwelling info
-        recruitButtonLogic.dwellingInfo = dwellingInfo;
-        Debug.Log("Successfully set the dwellingInfo for the RecruitButtonLogic.");
+        recruitButtonLogic.dwellingInfo.isActive = true;
+        UnitStats initializeUnit = creatureInfo;
+        recruitButtonLogic.dwellingInfo.ProducedUnit = initializeUnit;
+        Debug.Log("Successfully set the dwellingInfo's ProducedUnit for the RecruitButtonLogic.");
 
-        dwellingInfo.StationedAmont = dwellingInfo.ProducedUnit.Growth;
+        int initialAmount = creatureInfo.Growth;
+        recruitButtonLogic.dwellingInfo.StationedAmont = initialAmount;
+        //dwellingInfo.StationedAmont = dwellingInfo.ProducedUnit.Growth;
     }
 }

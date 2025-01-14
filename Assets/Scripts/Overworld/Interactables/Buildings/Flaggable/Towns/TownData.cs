@@ -18,7 +18,8 @@ public class TownData
 
     [HideInInspector] public bool CanBuild = true;
     
-    public TownData()
+
+    public void InitializeTownData()
     {
         OverworldEventBus<NewDay>.OnEvent += UpdateDailyParameters;
         ResourceAmountGenerated = new SerializedDictionary<ResourceData.ResourceType, int>
@@ -40,7 +41,7 @@ public class TownData
         }
     }
 
-    ~TownData()
+    public void DeinitializeTownData()
     {
         OverworldEventBus<NewDay>.OnEvent -= UpdateDailyParameters;
     }

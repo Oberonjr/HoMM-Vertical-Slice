@@ -12,6 +12,7 @@ public class Town : FlaggableBuilding
     {
         base.InitializeInteractable(e);
         buildingType = BuildingType.TOWN;
+        townData.InitializeTownData();
     }
 
     public override void Interact(HeroManager interactor)
@@ -22,5 +23,9 @@ public class Town : FlaggableBuilding
         OverworldEventBus<OpenTownScreen>.Publish(new OpenTownScreen(townData));
         HeroMovementManager.Instance.allowInput = false;
     }
-    
+
+    public void OnDestroy()
+    {
+        townData.DeinitializeTownData();
+    }
 }

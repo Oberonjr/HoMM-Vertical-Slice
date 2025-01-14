@@ -19,6 +19,7 @@ public class Dwelling : FlaggableBuilding
     public override void Interact(HeroManager interactor)
     {
         base.Interact(interactor);
+        if(!dwellingInfo.isActive)dwellingInfo.isActive = true;
         OverworldEventBus<OpenRecruitScreen>.Publish(new OpenRecruitScreen(dwellingInfo));
     }
    

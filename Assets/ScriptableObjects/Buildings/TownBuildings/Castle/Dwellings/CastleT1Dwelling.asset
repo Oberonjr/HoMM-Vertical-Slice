@@ -27,6 +27,4 @@ MonoBehaviour:
   buildingToEnable: {fileID: 0}
   hasResources: 1
   hasBuildingPrerequisites: 1
-  dwellingInfo:
-    ProducedUnit: {fileID: 11400000, guid: 4994bd79d9180334f8c58494aeec7e32, type: 2}
-    StationedAmont: 0
+  creatureInfo: {fileID: 11400000, guid: 4994bd79d9180334f8c58494aeec7e32, type: 2}
