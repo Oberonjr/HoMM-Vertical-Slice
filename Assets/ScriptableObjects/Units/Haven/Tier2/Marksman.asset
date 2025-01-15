@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edea14f82b2cd0848bb708418d60c157, type: 3}
+  m_Name: Marksman
+  m_EditorClassIdentifier: 
+  unitName: Marksman
+  icon: {fileID: -377150284, guid: 549601cb4a52e96488ec09d6caed645f, type: 3}
+  prefab: {fileID: 1612155852422991912, guid: 39a711b20a389b6478e2accdbc97866c, type: 3}
+  maxHP: 10
+  attack: 6
+  defense: 3
+  damageRange: {x: 2, y: 3}
+  initiative: 7
+  movementSpeed: 6
+  Tier: 2
+  Growth: 9
+  Cost: 150

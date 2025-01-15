@@ -17,7 +17,7 @@ public class Army
         for (int i = 0; i < _units.Length; i++)
         {
             if (_units[i] == null) return;
-            _units[i] = new UnitSlot(null, 0, null);
+            _units[i] = new UnitSlot(null, 0);
         }
     }
     public UnitSlot this[int index]
@@ -94,7 +94,7 @@ public class Army
                 {
                     _units[i].stats = null;
                     _units[i].identifier = null;
-                    _units[i].unitPrefab = null;
+                    
                 }
                 return;
             }

@@ -26,17 +26,43 @@ public class NewWeek: Event{}
 public class NewMonth : Event{}
 
 //UI
+public class OpenTownScreen : Event
+{
+    public TownData town;
+
+    public OpenTownScreen(TownData pTownData)
+    {
+        town = pTownData;
+    }
+    
+}
 public class OpenRecruitScreen : Event
 {
+    public CreatureDwellingInfo dwellingInfo;
     public UnitStats unit;
     public int amount;
 
-    public OpenRecruitScreen(UnitStats pUnit, int pAmount)
+    public OpenRecruitScreen(CreatureDwellingInfo pDwellingInfo)
     {
-        unit = pUnit;
-        amount = pAmount;
+        dwellingInfo = pDwellingInfo;
+        unit = pDwellingInfo.ProducedUnit;
+        amount = pDwellingInfo.StationedAmont;
     }
 
+}
+
+public class OpenBuildScreen : Event
+{
+    public TownBuildingData buildingData;
+    public GameObject buildingToBuild;
+    public GameObject buildingToReplace;
+
+    public OpenBuildScreen(TownBuildingData pBuildingData, GameObject pBuildingToBuild, GameObject pBuildingToReplace)
+    {
+        buildingData = pBuildingData;
+        buildingToBuild = pBuildingToBuild;
+        buildingToReplace = pBuildingToReplace;
+    }
 }
 
 //////////////////////////////////////Player related events

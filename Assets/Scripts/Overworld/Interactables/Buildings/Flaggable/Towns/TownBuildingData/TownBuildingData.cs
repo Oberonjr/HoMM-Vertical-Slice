@@ -15,28 +15,41 @@ public class TownBuildingData : ScriptableObject
 
     public TownBuildingData[] prerequisites;
     public TownBuildingData buildingToReplace;
+    public TownBuildingData buildingToEnable;
+
+    [HideInInspector]public bool hasResources;
+    [HideInInspector]public bool hasBuildingPrerequisites;
+    
+    private bool canBeBuilt = true;
     
     public virtual void OnBuild(TownData town)
     {
         town.builtBuildings.Add(this);
         if(town.builtBuildings.Contains(buildingToReplace)) town.builtBuildings.Remove(buildingToReplace);
         town.ownerPlayer.Kingdom.Economy.SpendResource(cost);
+        canBeBuilt = false;
+        town.CanBuild = false;
     }
 
     public bool CanBeBuilt(TownData town)
     {
+        canBeBuilt = true;
+        hasResources = true;
+        hasBuildingPrerequisites = true;
         foreach (TownBuildingData building in prerequisites)
         {
             if(!town.builtBuildings.Contains(building))
             {
-                return false;
+                hasBuildingPrerequisites = false;
+                canBeBuilt = false;
             }
         }
 
         if (!town.ownerPlayer.Kingdom.Economy.CanSpendResource(cost))
         {
-            return false;  
+            hasResources = false;
+            canBeBuilt = false;  
         }
-        return true;
+        return canBeBuilt;
     }
 }

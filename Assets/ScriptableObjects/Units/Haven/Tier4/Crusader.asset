@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edea14f82b2cd0848bb708418d60c157, type: 3}
+  m_Name: Crusader
+  m_EditorClassIdentifier: 
+  unitName: Crusader
+  icon: {fileID: 1345657146, guid: aaa5ebf46dadf3441bd59ff60fcf8f11, type: 3}
+  prefab: {fileID: 2297909031159763652, guid: 322f49bc07893f249869336fb9bf6c79, type: 3}
+  maxHP: 35
+  attack: 10
+  defense: 12
+  damageRange: {x: 7, y: 10}
+  initiative: 8
+  movementSpeed: 7
+  Tier: 4
+  Growth: 4
+  Cost: 400

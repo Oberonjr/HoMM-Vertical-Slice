@@ -14,7 +14,37 @@ public class TownData
     [SerializedDictionary("Resouce", "Amount")]
     public SerializedDictionary<ResourceData.ResourceType, int> ResourceAmountGenerated;
     
-    public List<TownBuildingData> builtBuildings;
+    public List<TownBuildingData> builtBuildings = new List<TownBuildingData>();
+
+    [HideInInspector] public bool CanBuild = true;
+    
+
+    public void InitializeTownData()
+    {
+        OverworldEventBus<NewDay>.OnEvent += UpdateDailyParameters;
+        ResourceAmountGenerated = new SerializedDictionary<ResourceData.ResourceType, int>
+        {
+            { ResourceData.ResourceType.Gold    , 0},
+            { ResourceData.ResourceType.Wood    , 0},
+            { ResourceData.ResourceType.Ore     , 0},
+            { ResourceData.ResourceType.Crystal , 0}
+        };
+        foreach (IncomeBuildingData incomeBuild in builtBuildings)
+        {
+            foreach (KeyValuePair<ResourceData.ResourceType, int> income in incomeBuild.income)
+            {
+                if (ResourceAmountGenerated.ContainsKey(income.Key))
+                {
+                    ChangeIncome(income.Key, income.Value);
+                }
+            }
+        }
+    }
+
+    public void DeinitializeTownData()
+    {
+        OverworldEventBus<NewDay>.OnEvent -= UpdateDailyParameters;
+    }
     
     void ChangeIncome(ResourceData.ResourceType resourceType, int newAmount)
     {
@@ -37,6 +67,19 @@ public class TownData
         foreach (KeyValuePair<ResourceData.ResourceType, int> resourceIncome in ResourceAmountGenerated)
         {
             income[resourceIncome.Key] -= resourceIncome.Value;
+        }
+    }
+
+    void UpdateDailyParameters(NewDay e)
+    {
+        CanBuild = true;
+    }
+
+    void UpdateWeeklyParameters(NewWeek e)
+    {
+        foreach (DwellingBuildingData dwelling in builtBuildings)
+        {
+            
         }
     }
 }

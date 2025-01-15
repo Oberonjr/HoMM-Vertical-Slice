@@ -18,4 +18,11 @@ MonoBehaviour:
     _serializedList:
     - Key: {fileID: 11400000, guid: 5438bcb0d20cf12499918a0ff6d3d86c, type: 2}
       Value: {fileID: 0}
-  factionUnits: []
+  factionUnits:
+  - {fileID: 11400000, guid: 4994bd79d9180334f8c58494aeec7e32, type: 2}
+  - {fileID: 11400000, guid: fca0fea4dd7eb8b41a1cd7879a331063, type: 2}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 15fea2f3a678cae4a89dcdf70f9abef7, type: 2}
+  - {fileID: 11400000, guid: 07b964a7658fae24b87cb2dbb2919714, type: 2}
+  - {fileID: 11400000, guid: 4b8293d28fbe6f04ea611f455970c647, type: 2}
+  - {fileID: 0}

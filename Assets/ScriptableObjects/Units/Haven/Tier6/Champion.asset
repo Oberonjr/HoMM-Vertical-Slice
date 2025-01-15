@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edea14f82b2cd0848bb708418d60c157, type: 3}
+  m_Name: Champion
+  m_EditorClassIdentifier: 
+  unitName: Champion
+  icon: {fileID: 1979947850, guid: 0952e0ecbc20d30489fde9f8685699d1, type: 3}
+  prefab: {fileID: 3051555020748070651, guid: 50025e16c4b8d784393759a50923082d, type: 3}
+  maxHP: 100
+  attack: 16
+  defense: 16
+  damageRange: {x: 20, y: 25}
+  initiative: 18
+  movementSpeed: 9
+  Tier: 6
+  Growth: 2
+  Cost: 1200

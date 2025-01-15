@@ -7,20 +7,25 @@ using AYellowpaper.SerializedCollections;
 public class Town : FlaggableBuilding
 {
     public TownData townData;
-    public GameObject TownUIScreen; 
     
     public override void InitializeInteractable(InitializeWorld e = null)
     {
         base.InitializeInteractable(e);
         buildingType = BuildingType.TOWN;
+        townData.InitializeTownData();
     }
 
     public override void Interact(HeroManager interactor)
     {
         base.Interact(interactor);
-        TownUIScreen.SetActive(true);
-        BuildPanelLogic.Instance.currentTown = townData;
+        townData.ownerPlayer = owner;
+        OverworldUIManager.Instance.currentTown = townData;
+        OverworldEventBus<OpenTownScreen>.Publish(new OpenTownScreen(townData));
         HeroMovementManager.Instance.allowInput = false;
     }
-    
+
+    public void OnDestroy()
+    {
+        townData.DeinitializeTownData();
+    }
 }

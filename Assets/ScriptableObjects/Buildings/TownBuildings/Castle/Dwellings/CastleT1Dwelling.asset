@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85953b760f3f2bc42bb44b00db8948b2, type: 3}
+  m_Name: CastleT1Dwelling
+  m_EditorClassIdentifier: 
+  name: Guardhouse
+  description: Recruit Halberdier
+  buildScreenSprite: {fileID: 21300000, guid: f5c8b9782a809fd48b55e3b58e7493fe, type: 3}
+  cost:
+    _serializedList:
+    - Key: 0
+      Value: 500
+    - Key: 2
+      Value: 10
+  prerequisites:
+  - {fileID: 11400000, guid: a61d9cbad8f626c44afa3f44a5a858b8, type: 2}
+  buildingToReplace: {fileID: 0}
+  buildingToEnable: {fileID: 0}
+  hasResources: 1
+  hasBuildingPrerequisites: 1
+  creatureInfo: {fileID: 11400000, guid: 4994bd79d9180334f8c58494aeec7e32, type: 2}

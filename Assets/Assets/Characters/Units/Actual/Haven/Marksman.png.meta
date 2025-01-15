@@ -1,0 +1,2199 @@
+fileFormatVersion: 2
+guid: 549601cb4a52e96488ec09d6caed645f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 75
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Marksman_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1347
+        width: 39
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ba4883fba8a884fafa44cefe0c0840
+      internalID: -611291570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1352
+        width: 39
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b4633a27c0647541b72c9734aa0db3c
+      internalID: 1071950275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_2
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 1352
+        width: 39
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723dcb1817de62d479d5cf853e6e3131
+      internalID: 1808936562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_3
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 1352
+        width: 39
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 302db21d11144304c911d96b9d8c086e
+      internalID: 23166947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_4
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1352
+        width: 39
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb70b15ea3374e46b463f2839a3412c
+      internalID: -1258235172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_5
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 1354
+        width: 43
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f80ca3cab28e4840a5177adb818e889
+      internalID: 1978906331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_6
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1354
+        width: 43
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 220f6d6a9d851584aacbbfe8051d6ee8
+      internalID: 998038425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_7
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 1354
+        width: 45
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751f2db4048e6bb4599eefb81cf0c630
+      internalID: 416232115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_8
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1354
+        width: 45
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602dde6fe39ef6640a195727f22e64e8
+      internalID: 682560767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_9
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 1396
+        width: 28
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e2216c72fc4e9b41b367c0a36181415
+      internalID: 1445178285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_52
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1239
+        width: 51
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c397390b4e31aff44880387af8721161
+      internalID: -983370157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_53
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 1239
+        width: 61
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d63d5c625366c434b88043ed37266914
+      internalID: 1387362856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_54
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 1239
+        width: 59
+        height: 77
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c9a98f8f563854489418ea52e94c3e
+      internalID: 1525100643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_55
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1239
+        width: 48
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bcb4bb26d2b1ee4eb2fd916669051c1
+      internalID: 2125775372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_56
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 1239
+        width: 35
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8eb1fa1669d974d8d409feca161115
+      internalID: -1288149741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_57
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1239
+        width: 68
+        height: 92
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c875d2bebffbb9c42b31e2af895fabae
+      internalID: 649816045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_58
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 1274
+        width: 58
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb47d6372a4214b4f8980d1713f04330
+      internalID: -377150284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_59
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1115
+        width: 52
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81594b4b28c290d42b376c373078aaeb
+      internalID: 1542009283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_60
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1115
+        width: 61
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa99c915ff525634fbd873084cb66767
+      internalID: -467403766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_61
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1115
+        width: 61
+        height: 77
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6ccbff028d1494f8852533deddd2ec
+      internalID: 1805040559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_62
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1115
+        width: 52
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4d4e1aeb2a6fa4ca1d8291e4edb73b
+      internalID: -492043276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_63
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1115
+        width: 38
+        height: 89
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 260deae12c444b24a8848183b6b5c031
+      internalID: 345361217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_64
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 1115
+        width: 69
+        height: 77
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb981f859e93da419cc36e9bd81361a
+      internalID: -1005380046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_65
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1000
+        width: 50
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d15466b1ce0f7ff4d9a7e17304940126
+      internalID: -262762276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_66
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1000
+        width: 54
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 412429ca41d02a748947dc840526a8e4
+      internalID: 961099256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_67
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 1000
+        width: 59
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4210d16cabe77d4b9d36506d8e8c51b
+      internalID: -1226223393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_68
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 1000
+        width: 43
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71dafec0063c6c748830a1144e07c532
+      internalID: 758383871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_69
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 1000
+        width: 38
+        height: 87
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51655994597c8df4f9d50a98eeb6e585
+      internalID: 677457089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_111
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 878
+        width: 69
+        height: 77
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e058c64872aae3f4d8b16a86919baf08
+      internalID: 872414729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_112
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 878
+        width: 55
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60bdb015e25dfa34cbd266e90fa56a2c
+      internalID: 1357550684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_113
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 878
+        width: 87
+        height: 85
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed23dbdddac31543a3f07fb4e3c18fb
+      internalID: 935824278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_114
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 878
+        width: 41
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1340a804ae4dac245a542a87130c094e
+      internalID: -1117781881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_115
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 877
+        width: 73
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692d5da8a55dced4db2a2dcb4610ec17
+      internalID: 1593456721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_116
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 877
+        width: 44
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb290b27fcec367479f560a56ce8b7de
+      internalID: 1637516406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_117
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 753
+        width: 37
+        height: 77
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b1223ff89ec20140b13cf892aa3f5a7
+      internalID: 2000787139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_118
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 754
+        width: 54
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f883f3cb5be8fc42979aa5a88908036
+      internalID: 1640537324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_119
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 754
+        width: 88
+        height: 83
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1e669415cad0aa439c3019403297761
+      internalID: 773298595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_120
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 754
+        width: 33
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5f20bfe0c1fe924387a055ff1118f69
+      internalID: 1530466673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_121
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 754
+        width: 66
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1c15dc311b4364f9b559e7fcbd17de
+      internalID: -351474913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_122
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 754
+        width: 54
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67eb046c29b29d0488ac67c62c853ae0
+      internalID: -189511002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_123
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 635
+        width: 37
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f244f7f55c71d024194909f03930350a
+      internalID: -938205600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_124
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 635
+        width: 57
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84e0cb854049e249bdbc2c3636e8134
+      internalID: -1142811715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_125
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 635
+        width: 87
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 981c9c2616bc6a44b8a71dd6e8246330
+      internalID: -2070094259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_126
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 635
+        width: 32
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca0771b2c4c8d2a428b5e94e868584bd
+      internalID: 668381538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_127
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 635
+        width: 59
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e329041168c54b4db9217fe37a4956e
+      internalID: -846811938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_128
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 635
+        width: 53
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7cbd0f6bb190b438cf1a27b6ba94e8
+      internalID: -265525760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_129
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 635
+        width: 37
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4171b1ed1af4f9c45b3f98fae91edf94
+      internalID: -962660134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_130
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 523
+        width: 48
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 144582e2f1b7dd545b9ca1d986de9ebd
+      internalID: -1018950533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_131
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 523
+        width: 48
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a86d64a84f08e794cad1f78fa2e4c96f
+      internalID: -1568727168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_132
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 523
+        width: 37
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f169bf9a905565e4d8da4a56bad74213
+      internalID: -644675976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_133
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 523
+        width: 36
+        height: 69
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e389428ca77b84fbf4c80e264634f5
+      internalID: 322916754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_134
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 521
+        width: 43
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ad335578f074384bbc7115bfddfcb86
+      internalID: 570591934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_135
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 521
+        width: 49
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee33a536e54c7548b7c2154a74ae6a0
+      internalID: 871953298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_136
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 412
+        width: 85
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae6de341d1a86394ba1e0a1d78fbcbd7
+      internalID: -30556801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_137
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 412
+        width: 91
+        height: 69
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1df075e6061a9374791545a15a9c0a0c
+      internalID: -74475693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_138
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 412
+        width: 86
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a30b5e16493d047911bf62c9dac2b2
+      internalID: 2062774526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_139
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 412
+        width: 68
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a64f46df7205a40ad5611d8149fcb8
+      internalID: 107713272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_140
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 413
+        width: 64
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91294474e55b8fe4f9f704e6078181e2
+      internalID: 1027631024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_141
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 412
+        width: 50
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2167abedbfbcf748805406eebb06529
+      internalID: -1422437304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_142
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 286
+        width: 87
+        height: 85
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e177c9641bd4ac44cb6e532052934d33
+      internalID: 1075964718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_143
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 287
+        width: 76
+        height: 95
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc19daec57972448b9234f5257f5173
+      internalID: -455687133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_144
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 290
+        width: 55
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb468defa331af84d842a6ce9a8fc204
+      internalID: 2067891889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_145
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 294
+        width: 46
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c0da93cc6cae84980e0564a0ea626c
+      internalID: -300473275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_146
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 297
+        width: 41
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd1b634d65073943b776904da1dcdbf
+      internalID: 238159195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_147
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 295
+        width: 43
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03af415e076faa4cbd74b448028b709
+      internalID: 947258101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_148
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 170
+        width: 44
+        height: 77
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e980891309b3e4e8c59a330ef6132c
+      internalID: -1930262114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_149
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 170
+        width: 51
+        height: 77
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 626c32d4c53098742a816c6c7b9bb17b
+      internalID: 400194111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_150
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 170
+        width: 47
+        height: 77
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 365cfec2f7dfe1b459bb1e797be1f45e
+      internalID: -1927017826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_151
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 172
+        width: 47
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45d3c10ea60a55429494476bb8a9e3a
+      internalID: -123971676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_152
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 174
+        width: 43
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff6a1db67099ff4da335be10e7695df
+      internalID: 258786974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_153
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 169
+        width: 37
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c11ed08d38dbf42ac7b7cb43bd6aa5
+      internalID: 1968874795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_154
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 169
+        width: 36
+        height: 77
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 385e28e5739ca2640a7f29b6705e198f
+      internalID: 1812661943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_155
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 61
+        width: 37
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2429f7655977164f995a33cca3f390a
+      internalID: -1725244504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_156
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 62
+        width: 39
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74072272d9014a447b72751239cf6e66
+      internalID: 565840182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_157
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 62
+        width: 42
+        height: 77
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71118f9da6ec1fc48b91ae2c0174d179
+      internalID: -1107684127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_158
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 63
+        width: 50
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a73b849a3af7464b8542b2f0a5d9b92
+      internalID: 286105005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_159
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 63
+        width: 49
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b53798976297c4bb9f3afeb864dc56
+      internalID: -1105474708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_160
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 11
+        width: 4
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b184d1fbffd454d86463da8ff6c48c
+      internalID: -651023750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_161
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 15
+        width: 22
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f19bedaf28272b44b34e876052604cd
+      internalID: 1651708357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_162
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 19
+        width: 28
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c01f454f34651d4e972dfcdb55ea80e
+      internalID: -1719938712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_163
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 23
+        width: 30
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442968989d125c6488797ad4385ed463
+      internalID: 2087689678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_164
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 24
+        width: 30
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c99dec9a5958f449fa1c60c7fba3b4
+      internalID: 1219022113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_165
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 23
+        width: 30
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0570630857d614348aec43714c30ee07
+      internalID: 730811953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_166
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 20
+        width: 28
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d460f5c8a072d994e85f7d7cc1449748
+      internalID: 1029373929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_167
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 15
+        width: 22
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81efb1fbf355fcc47bca8987fb7a9509
+      internalID: 119690435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_168
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 11
+        width: 4
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758a848fb379cf74085a81093b228c50
+      internalID: -991694749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_169
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 2
+        width: 33
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2b0755e10b2e74382bf1669879fd47
+      internalID: 145338224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_170
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 2
+        width: 36
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a62a7af431e8f45a8f08b0f857e362
+      internalID: -1325246714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_171
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 2
+        width: 39
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b02d5406db1785d4e825c1f294816641
+      internalID: 1481971965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_172
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 2
+        width: 39
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c77c5c1a30706d48bbdb5c3da7a50c2
+      internalID: 36333984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marksman_173
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 2
+        width: 37
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ffa90c801e6faf4db775b673d804526
+      internalID: 449621053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Marksman_0: -611291570
+      Marksman_1: 1071950275
+      Marksman_10: 1373000676
+      Marksman_100: -655739932
+      Marksman_101: 924254437
+      Marksman_102: 1631469794
+      Marksman_103: 862931829
+      Marksman_104: 1360100786
+      Marksman_105: 1080392920
+      Marksman_106: -1334729648
+      Marksman_107: 1214879484
+      Marksman_108: 995822908
+      Marksman_109: -320626467
+      Marksman_11: 1008650986
+      Marksman_110: -1112101549
+      Marksman_111: 872414729
+      Marksman_112: 1357550684
+      Marksman_113: 935824278
+      Marksman_114: -1117781881
+      Marksman_115: 1593456721
+      Marksman_116: 1637516406
+      Marksman_117: 2000787139
+      Marksman_118: 1640537324
+      Marksman_119: 773298595
+      Marksman_12: -617216550
+      Marksman_120: 1530466673
+      Marksman_121: -351474913
+      Marksman_122: -189511002
+      Marksman_123: -938205600
+      Marksman_124: -1142811715
+      Marksman_125: -2070094259
+      Marksman_126: 668381538
+      Marksman_127: -846811938
+      Marksman_128: -265525760
+      Marksman_129: -962660134
+      Marksman_13: -2127272465
+      Marksman_130: -1018950533
+      Marksman_131: -1568727168
+      Marksman_132: -644675976
+      Marksman_133: 322916754
+      Marksman_134: 570591934
+      Marksman_135: 871953298
+      Marksman_136: -30556801
+      Marksman_137: -74475693
+      Marksman_138: 2062774526
+      Marksman_139: 107713272
+      Marksman_14: -1731018594
+      Marksman_140: 1027631024
+      Marksman_141: -1422437304
+      Marksman_142: 1075964718
+      Marksman_143: -455687133
+      Marksman_144: 2067891889
+      Marksman_145: -300473275
+      Marksman_146: 238159195
+      Marksman_147: 947258101
+      Marksman_148: -1930262114
+      Marksman_149: 400194111
+      Marksman_15: -1768149694
+      Marksman_150: -1927017826
+      Marksman_151: -123971676
+      Marksman_152: 258786974
+      Marksman_153: 1968874795
+      Marksman_154: 1812661943
+      Marksman_155: -1725244504
+      Marksman_156: 565840182
+      Marksman_157: -1107684127
+      Marksman_158: 286105005
+      Marksman_159: -1105474708
+      Marksman_16: 2019923198
+      Marksman_160: -651023750
+      Marksman_161: 1651708357
+      Marksman_162: -1719938712
+      Marksman_163: 2087689678
+      Marksman_164: 1219022113
+      Marksman_165: 730811953
+      Marksman_166: 1029373929
+      Marksman_167: 119690435
+      Marksman_168: -991694749
+      Marksman_169: 145338224
+      Marksman_17: -587906624
+      Marksman_170: -1325246714
+      Marksman_171: 1481971965
+      Marksman_172: 36333984
+      Marksman_173: 449621053
+      Marksman_18: -500972154
+      Marksman_19: 536193403
+      Marksman_2: 1808936562
+      Marksman_20: 403790610
+      Marksman_21: 827455492
+      Marksman_22: -258027352
+      Marksman_23: -1126196863
+      Marksman_24: -602649575
+      Marksman_25: 357643751
+      Marksman_26: -426172165
+      Marksman_27: 1638713550
+      Marksman_28: -2080144939
+      Marksman_29: -1215692521
+      Marksman_3: 23166947
+      Marksman_30: -1546742730
+      Marksman_31: -713312229
+      Marksman_32: -1325836570
+      Marksman_33: -1999611750
+      Marksman_34: -1613695295
+      Marksman_35: 1417680812
+      Marksman_36: -1079669692
+      Marksman_37: -1782729387
+      Marksman_38: -2135977106
+      Marksman_39: -1222164089
+      Marksman_4: -1258235172
+      Marksman_40: -15128209
+      Marksman_41: -126019094
+      Marksman_42: 1135095003
+      Marksman_43: 794063862
+      Marksman_44: 2139685636
+      Marksman_45: -553395110
+      Marksman_46: -1426471986
+      Marksman_47: 866323824
+      Marksman_48: -723580411
+      Marksman_49: 420744461
+      Marksman_5: 1978906331
+      Marksman_50: 1953109600
+      Marksman_51: -1872078305
+      Marksman_52: -983370157
+      Marksman_53: 1387362856
+      Marksman_54: 1525100643
+      Marksman_55: 2125775372
+      Marksman_56: -1288149741
+      Marksman_57: 649816045
+      Marksman_58: -377150284
+      Marksman_59: 1542009283
+      Marksman_6: 998038425
+      Marksman_60: -467403766
+      Marksman_61: 1805040559
+      Marksman_62: -492043276
+      Marksman_63: 345361217
+      Marksman_64: -1005380046
+      Marksman_65: -262762276
+      Marksman_66: 961099256
+      Marksman_67: -1226223393
+      Marksman_68: 758383871
+      Marksman_69: 677457089
+      Marksman_7: 416232115
+      Marksman_70: 680518138
+      Marksman_71: -1614454556
+      Marksman_72: 1165141738
+      Marksman_73: -1345666346
+      Marksman_74: 1986294563
+      Marksman_75: -1295215592
+      Marksman_76: -384967667
+      Marksman_77: 266691999
+      Marksman_78: 1022273469
+      Marksman_79: -747526820
+      Marksman_8: 682560767
+      Marksman_80: -1076582057
+      Marksman_81: -928130637
+      Marksman_82: 2094796044
+      Marksman_83: 267825655
+      Marksman_84: 629210225
+      Marksman_85: -42414069
+      Marksman_86: -147111658
+      Marksman_87: 620556196
+      Marksman_88: 990509935
+      Marksman_89: -390725818
+      Marksman_9: 1445178285
+      Marksman_90: -480521823
+      Marksman_91: 62214484
+      Marksman_92: -2125019975
+      Marksman_93: -474307451
+      Marksman_94: 58070080
+      Marksman_95: 1458448092
+      Marksman_96: -451848361
+      Marksman_97: 847887871
+      Marksman_98: -191909988
+      Marksman_99: -1243361304
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

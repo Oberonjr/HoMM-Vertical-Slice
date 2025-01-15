@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2bb452147d549744b7c90cc3beca818, type: 3}
+  m_Name: Fort
+  m_EditorClassIdentifier: 
+  name: Fort
+  description: Enables dwellings
+  buildScreenSprite: {fileID: 21300000, guid: 4ea2d08643b16ce41871fbd2cc8937e6, type: 3}
+  cost:
+    _serializedList:
+    - Key: 0
+      Value: 5000
+    - Key: 1
+      Value: 10
+    - Key: 2
+      Value: 10
+  prerequisites: []
+  buildingToReplace: {fileID: 0}
+  buildingToEnable: {fileID: 0}
+  hasResources: 0
+  hasBuildingPrerequisites: 0

@@ -10,6 +10,7 @@ public class UnitStats : ScriptableObject
     [Header("General Info")]
     public string unitName;
     public Sprite icon;
+    public GameObject prefab;
     #endregion
         
     #region CombatStats
