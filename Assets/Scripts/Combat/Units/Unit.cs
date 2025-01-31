@@ -19,8 +19,7 @@ public class Unit : MonoBehaviour
     public bool IsAI;
     public Action QueuedAction;
     
-    //[HideInInspector]
-    public string UnitName;
+    [HideInInspector]public string UnitName;
     [HideInInspector]public bool isUnitTurn;
     [HideInInspector]public Animator animator;
     [FormerlySerializedAs("OwnerHero")] [HideInInspector]public Army OwnerArmy; 
@@ -39,16 +38,9 @@ public class Unit : MonoBehaviour
             stackSizeText = transform.GetComponentInChildren<TMPro.TMP_Text>() ??
                             throw new System.Exception($"No text component found on {name}'s Canvas child");
             stackSizeText.text = stackSize.ToString();
-        MyUtils.LateStart(0.1f, () =>
-        {
-        });
 
     }
     
-    private void OnDisable()
-    {
-        
-    }
 
     public void TakeDamage(int damage)
     {

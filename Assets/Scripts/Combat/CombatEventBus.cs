@@ -2,7 +2,6 @@ using System;
 using UnityEngine;
 
 public abstract class Event{}
-
 public static class CombatEventBus<T> where T : Event
 {
     public static event Action<T> OnEvent;

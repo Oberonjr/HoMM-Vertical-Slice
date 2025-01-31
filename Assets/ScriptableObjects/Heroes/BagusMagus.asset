@@ -70,14 +70,14 @@ MonoBehaviour:
     - stats: {fileID: 11400000, guid: fca0fea4dd7eb8b41a1cd7879a331063, type: 2}
       amount: 9
       identifier: 
-    - stats: {fileID: 11400000, guid: 15fea2f3a678cae4a89dcdf70f9abef7, type: 2}
-      amount: 4
+    - stats: {fileID: 0}
+      amount: 0
       identifier: 
-    - stats: {fileID: 11400000, guid: 07b964a7658fae24b87cb2dbb2919714, type: 2}
-      amount: 3
+    - stats: {fileID: 0}
+      amount: 0
       identifier: 
-    - stats: {fileID: 11400000, guid: 4b8293d28fbe6f04ea611f455970c647, type: 2}
-      amount: 2
+    - stats: {fileID: 0}
+      amount: 0
       identifier: 
     - stats: {fileID: 0}
       amount: 0

@@ -42,28 +42,18 @@ public class Pathfinding : MonoBehaviour
         while (openList.Count > 0)
         {
             Node currentNode = openList.OrderBy(n => n.FCost).ThenBy(n => n.HCost).First();
-
             if (currentNode == targetNode)
             {
-                
                 GeneralEventBus<GeneratePathEvent>.Publish(new GeneratePathEvent(RetracePath(startNode, targetNode)));
                 return RetracePath(startNode, targetNode);
             }
-
             openList.Remove(currentNode);
             closedList.Add(currentNode);
-
             foreach (KeyValuePair<Node, float> neighbor in currentNode.neighbours)
             {
                 if (!neighbor.Key.IsWalkable || closedList.Contains(neighbor.Key)) continue;
-
-                // Calculate distance between current node and neighbor node
                 float distanceToNeighbor = Vector2.Distance(currentNode.GridPosition, neighbor.Key.GridPosition);
-
-                // Calculate the arbitrary cost from the other script (neighbor.Value in this case)
                 float arbitraryCost = neighbor.Value;
-
-                // Calculate the final movement cost using both the distance and arbitrary cost, weighted
                 float newMovementCostToNeighbor = 
                     currentNode.GCost 
                     + (distanceToNeighbor * distanceWeight) 
@@ -73,13 +63,11 @@ public class Pathfinding : MonoBehaviour
                     neighbor.Key.GCost = newMovementCostToNeighbor;
                     neighbor.Key.HCost = (distanceToNeighbor * distanceWeight) + (arbitraryCost * arbitraryCostWeight);
                     neighbor.Key.ParentNode = currentNode;
-
                     if (!openList.Contains(neighbor.Key))
                         openList.Add(neighbor.Key);
                 }
             }
         }
-
         Debug.Log("Pathfinder found no path");
         return null; 
     }

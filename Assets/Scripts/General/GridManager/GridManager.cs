@@ -45,9 +45,6 @@ public class GridManager : MonoBehaviour
                 
                 Node currentNode = new Node(gridPosition, isWalkable, movementCost);
                 grid[gridPosition] = currentNode;
-                //Instantiate(temp, new Vector3(gridPosition.x, gridPosition.y, 0), Quaternion.identity);
-
-
                 GameObject tempObject = new GameObject();
                 tempObject.name = "Location" + index;
                 index++;
@@ -55,8 +52,6 @@ public class GridManager : MonoBehaviour
                 tempObjects.Add(tempObject);
                 BoxCollider2D nodeCollider = tempObject.AddComponent<BoxCollider2D>();
                 nodeCollider.size = tileSize * 1.2f;
-                //nodeCollider.isTrigger = true;
-                
                 currentNode.Collider = nodeCollider;
             }
         }
